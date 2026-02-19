@@ -207,15 +207,15 @@ export default function Home() {
           <div className="mt-10 grid md:grid-cols-2 gap-6">
             <Testimonial
               quote="SSB's industry-focused curriculum and practical exposure prepared me for the consulting world. The mentorship and live projects made all the difference."
-              name="Chellam Gowthami"
-              role="Accenture, 2021-2023"
-              img="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop"
+              name="H ASMA BANU"
+              role="HR Executive, Tech Mahindra, 2022-2024"
+              img="../src/assets/test1.png"
             />
             <Testimonial
               quote="The analytical thinking and business fundamentals from SSB helped me excel in e-commerce. Strong foundation for a career in analytics and operations."
-              name="Kuruba Sainath"
-              role="Catalogue Analyst, Amazon, 2017-2019"
-              img="https://images.unsplash.com/photo-1614850715731-3d4377f1f70b?q=80&w=800&auto=format&fit=crop"
+              name="BABA FAKRUDDIEN N"
+              role="Developer, TCS, 2020-2022"
+              img="../src/assets/test2.png"
             />
           </div>
         </div>

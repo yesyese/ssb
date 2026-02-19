@@ -27,7 +27,7 @@ export default function AboutChairperson() {
                     border: '1px solid var(--border-light)'
                   }} className="p-4 sm:p-6 md:p-8 rounded-xl">
                     <img 
-                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=400&auto=format&fit=crop"
+                      src="../src/assets/chairman.png"
                       alt="Dr. Vijay Baskar Reddy - Chairperson"
                       className="w-40 h-40 sm:w-52 sm:h-52 md:w-[220px] md:h-[220px] rounded-full object-cover mx-auto mb-6 block border-4 border-[var(--brand)]"
                     />

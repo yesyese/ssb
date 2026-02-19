@@ -255,7 +255,7 @@ export default function AboutOverview() {
                     border: '1px solid var(--border-light)'
                   }}>
                     <img 
-                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=400&auto=format&fit=crop"
+                      src="../src/assets/chairman.png"
                       alt="Dr. Vijay Baskar Reddy - Chairman"
                       style={{
                         width: '220px',

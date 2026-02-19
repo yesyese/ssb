@@ -140,7 +140,7 @@ export default function GoverningBody() {
         lineHeight: 0 // Prevents extra ghost space at bottom of image
       }}>
         <img
-          src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=400&auto=format&fit=crop"
+          src="../src/assets/dean.jpeg"
           alt="Dr. M. Balakoteswari"
           className="w-40 h-40 sm:w-52 sm:h-52 md:w-60 md:h-60 rounded-lg object-cover block"
         />

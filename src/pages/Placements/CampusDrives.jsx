@@ -87,6 +87,64 @@ export default function CampusDrives() {
                 </table>
               </div>
             </div>
+           <div className="panel">
+  <h2>Upcoming Campus Drives</h2>
+  <div className="overflow-x-auto">
+    <table className="w-full border-collapse">
+      <thead>
+        <tr className="border-b border-[var(--border-light)]">
+          <th className="text-left p-3">Company</th>
+          <th className="text-left p-3">Date</th>
+          <th className="text-left p-3">Profiles</th>
+          <th className="text-left p-3">Eligibility</th>
+          <th className="text-left p-3">Package (LPA)</th>
+        </tr>
+      </thead>
+      <tbody>
+        {/* Sutherland */}
+        <tr className="border-b border-[var(--border-light)]">
+          <td className="p-3">Sutherland</td>
+          <td className="p-3">Feb 25th</td>
+          <td className="p-3">Consultant</td>
+          <td className="p-3">MBA</td>
+          <td className="p-3">2.7LPA</td>
+        </tr>
+        {/* TCS */}
+        <tr className="border-b border-[var(--border-light)]">
+          <td className="p-3">TCS</td>
+          <td className="p-3">-</td>
+          <td className="p-3">IT & BPS</td>
+          <td className="p-3">MBA</td>
+          <td className="p-3">-</td>
+        </tr>
+        {/* FUNNL */}
+        <tr className="border-b border-[var(--border-light)]">
+          <td className="p-3">FUNNL</td>
+          <td className="p-3">-</td>
+          <td className="p-3">B2B Sales</td>
+          <td className="p-3">MBA</td>
+          <td className="p-3">1.8LPA</td>
+        </tr>
+        {/* Middle Earth HR */}
+        <tr className="border-b border-[var(--border-light)]">
+          <td className="p-3">Middle Earth HR</td>
+          <td className="p-3">-</td>
+          <td className="p-3">Sales Executives</td>
+          <td className="p-3">MBA</td>
+          <td className="p-3">2.5LPA</td>
+        </tr>
+        {/* Learning Routes */}
+        <tr className="border-b border-[var(--border-light)]">
+          <td className="p-3">Learning Routes</td>
+          <td className="p-3">-</td>
+          <td className="p-3">Sales Associate</td>
+          <td className="p-3">MBA</td>
+          <td className="p-3">6LPA</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 
             <div className="panel">
               <h2>Campus Drive Process</h2>
@@ -196,30 +254,33 @@ export default function CampusDrives() {
             </div>
 
             <div className="panel">
-              <h2>Recent Success Stories</h2>
-              <div className="grid md:grid-cols-3 gap-6">
-                <div className="card">
-                  <h4 className="font-semibold mb-2">TechGiant Corp</h4>
-                  <p className="text-sm mb-2">25 students selected</p>
-                  <p className="text-xs text-[var(--text-dim)]">Average package: 8.5 LPA</p>
-                  <p className="text-xs text-[var(--text-dim)]">Roles: Business Analyst, Project Manager</p>
-                </div>
-                
-                <div className="card">
-                  <h4 className="font-semibold mb-2">Global Consulting</h4>
-                  <p className="text-sm mb-2">18 students selected</p>
-                  <p className="text-xs text-[var(--text-dim)]">Average package: 12.0 LPA</p>
-                  <p className="text-xs text-[var(--text-dim)]">Roles: Management Consultant</p>
-                </div>
-                
-                <div className="card">
-                  <h4 className="font-semibold mb-2">FinanceFirst Ltd</h4>
-                  <p className="text-sm mb-2">15 students selected</p>
-                  <p className="text-xs text-[var(--text-dim)]">Average package: 9.2 LPA</p>
-                  <p className="text-xs text-[var(--text-dim)]">Roles: Financial Analyst, Investment Banker</p>
-                </div>
-              </div>
-            </div>
+  <h2 className="text-1xl font-bold mb-6">Recent Success Stories</h2>
+  <div className="grid md:grid-cols-3 gap-6">
+    {/* 1. Corizo Ed Tech */}
+    <div className="card border p-4 rounded-lg shadow-sm">
+      <h4 className="font-semibold mb-2">Corizo Ed Tech</h4>
+      <p className="text-sm mb-2 text-blue-600 font-medium">3 students selected</p>
+      <p className="text-xs text-[var(--text-dim)]">Package: 6.5 LPA</p>
+      <p className="text-xs text-[var(--text-dim)]">Role: Inside Sales Representative</p>
+    </div>
+    
+    {/* 2. Glow logics Solutions Pvt Ltd */}
+    <div className="card border p-4 rounded-lg shadow-sm">
+      <h4 className="font-semibold mb-2">Glow logics Solutions Pvt Ltd</h4>
+      <p className="text-sm mb-2 text-blue-600 font-medium">12 students selected</p>
+      <p className="text-xs text-[var(--text-dim)]">Package: 7 LPA</p>
+      <p className="text-xs text-[var(--text-dim)]">Role: Inside Sales Representative</p>
+    </div>
+    
+    {/* 3. Inspire AI Pvt Ltd */}
+    <div className="card border p-4 rounded-lg shadow-sm">
+      <h4 className="font-semibold mb-2">Inspire AI Pvt Ltd</h4>
+      <p className="text-sm mb-2 text-blue-600 font-medium">26 students selected</p>
+      <p className="text-xs text-[var(--text-dim)]">Package: 6.2 LPA</p>
+      <p className="text-xs text-[var(--text-dim)]">Role: Business Development Associate</p>
+    </div>
+  </div>
+</div>
 
             <div className="panel">
               <h2>Campus Drive Statistics (2023-24)</h2>

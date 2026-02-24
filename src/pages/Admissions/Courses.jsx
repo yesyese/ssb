@@ -217,7 +217,7 @@ export default function Courses() {
                         : 'bg-[var(--surface-2)] text-[var(--text)] border border-[var(--border-light)] hover:bg-[var(--surface-3)]'
                     }`}
                   >
-                    MBA (120 Seats)
+                    MBA (180 Seats)
                   </button>
                   <button
                     onClick={() => setSelectedProgram('pgdm')}
@@ -227,7 +227,7 @@ export default function Courses() {
                         : 'bg-[var(--surface-2)] text-[var(--text)] border border-[var(--border-light)] hover:bg-[var(--surface-3)]'
                     }`}
                   >
-                    PGDM (60 Seats)
+                    PGDM 
                   </button>
                 </div>
               </div>

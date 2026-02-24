@@ -1,6 +1,6 @@
 import React from 'react';
 import SectionHeader from '../../components/ui/SectionHeader';
-import riseImage from "../../assets/B.Tech & M.Tech-12.jpg";  // ✅ Better way to import image
+import riseImage from "../../assets/B.Tech & M.Tech-11.jpg";
 
 export default function AboutRISE() {
   return (

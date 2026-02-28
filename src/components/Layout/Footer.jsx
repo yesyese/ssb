@@ -34,7 +34,6 @@ export default function Footer() {
             <div className="mt-2">
               <p>mail : admissions.director@sanskrithibschool.com</p>
               <p>📞 +91 9100064545</p>
-              <p>📞 +91 9100074545</p>
             </div>
           </div>
         </div>

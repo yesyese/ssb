@@ -237,14 +237,94 @@ export const NAV = [
     description: 'Institutional committees and governance',
     children: [
       { 
+        label: 'IQAC',
+        href: '/committees/iqac',
+        description: 'Internal quality assurance and academic quality enhancement'
+      },
+      { 
         label: 'Anti Ragging', 
         href: '/committees/anti-ragging',
         description: 'Anti-ragging measures and reporting'
       },
-      { 
-        label: 'All Other Committees', 
-        href: '/committees/all-committees',
-        description: 'Grievance Redressal, NPTEL, Academic, IIC, R&D, Women Empowerment, and more'
+      {
+        label: 'Anti Sexual Harassment',
+        href: '/committees/anti-sexual-harassment',
+        description: 'Anti-sexual harassment measures and reporting'
+      },
+      {
+        label: 'Internal Complaint',
+        href: '/committees/internal-complaint',
+        description: 'Addressing workplace harassment and discrimination'
+      },
+      {
+        label: 'Grievance Redressal',
+        href: '/committees/grievance-redressal',
+        description: 'Student grievance handling and resolution'
+      },
+      {
+        label: 'NPTEL',
+        href: '/committees/nptel',
+        description: 'NPTEL local chapter activities and support'
+      },
+      {
+        label: 'Academic Committee',
+        href: '/committees/academic',
+        description: 'Academic governance and oversight'
+      },
+      {
+        label: 'IIC Committee',
+        href: '/committees/iic',
+        description: 'Innovation and entrepreneurship initiatives'
+      },
+      {
+        label: 'R&D Cell',
+        href: '/committees/rnd-cell',
+        description: 'Research and development activities'
+      },
+      {
+        label: 'Women Empowerment',
+        href: '/committees/women-empowerment',
+        description: 'Women support and empowerment initiatives'
+      },
+      {
+        label: 'Library Committee',
+        href: '/committees/library',
+        description: 'Library policy and resource management'
+      },
+      {
+        label: 'Student Welfare',
+        href: '/committees/student-welfare',
+        description: 'Student support services and welfare initiatives'
+      },
+      {
+        label: 'Games & Sports',
+        href: '/committees/games-sports',
+        description: 'Sports, fitness, and recreational activities'
+      },
+      {
+        label: 'Extra Curricular',
+        href: '/committees/extra-curricular',
+        description: 'Co-curricular and cultural activity management'
+      },
+      {
+        label: 'Career Guidance',
+        href: '/committees/career-guidance',
+        description: 'Career counseling and professional development'
+      },
+      {
+        label: 'SC/ST Cell',
+        href: '/committees/sc-st-cell',
+        description: 'Support and grievance redressal for SC/ST students'
+      },
+      {
+        label: 'Finance Committee',
+        href: '/committees/finance',
+        description: 'Financial planning and oversight'
+      },
+      {
+        label: 'Alumni Cell',
+        href: '/committees/alumni-cell',
+        description: 'Alumni relations and engagement'
       }
     ]
   },

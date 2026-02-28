@@ -77,27 +77,27 @@ export default function GamesSports() {
                   <tbody>
                     <tr className="border-b border-[var(--border-light)]">
                       <td className="p-3 font-semibold">Sports Coordinator</td>
-                      <td className="p-3">Prof. [Name]</td>
+                      <td className="p-3">Prof. Shaheer</td>
                       <td className="p-3">Physical Education</td>
-                      <td className="p-3">+91-XXXX-XXXXXX</td>
+                      <td className="p-3">+91-63040 93116</td>
                     </tr>
                     <tr className="border-b border-[var(--border-light)]">
                       <td className="p-3 font-semibold">Fitness Instructor</td>
-                      <td className="p-3">Mr./Ms. [Name]</td>
+                      <td className="p-3">Mr. Ramu</td>
                       <td className="p-3">Fitness Training</td>
-                      <td className="p-3">+91-XXXX-XXXXXX</td>
+                      <td className="p-3">+91-63020 70194</td>
                     </tr>
                     <tr className="border-b border-[var(--border-light)]">
                       <td className="p-3 font-semibold">Sports Captain (Male)</td>
-                      <td className="p-3">[Student Name]</td>
-                      <td className="p-3">Cricket/Football</td>
-                      <td className="p-3">+91-XXXX-XXXXXX</td>
+                      <td className="p-3">Kullayappa</td>
+                      <td className="p-3">Cricket / Football</td>
+                      <td className="p-3">+91-9701714178</td>
                     </tr>
                     <tr className="border-b border-[var(--border-light)]">
                       <td className="p-3 font-semibold">Sports Captain (Female)</td>
-                      <td className="p-3">[Student Name]</td>
-                      <td className="p-3">Badminton/Volleyball</td>
-                      <td className="p-3">+91-XXXX-XXXXXX</td>
+                      <td className="p-3">Lavanaya Bai</td>
+                      <td className="p-3">Badminton / Volleyball</td>
+                      <td className="p-3">+91-7093249434</td>
                     </tr>
                   </tbody>
                 </table>

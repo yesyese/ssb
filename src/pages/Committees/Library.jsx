@@ -73,25 +73,25 @@ export default function LibraryCommittee() {
                   <tbody>
                     <tr className="border-b border-[var(--border-light)]">
                       <td className="p-3 font-semibold">Chairperson</td>
-                      <td className="p-3">Dr. [Name]</td>
+                      <td className="p-3">Dr. Bala Koteswari</td>
                       <td className="p-3">Dean Academic Affairs</td>
                       <td className="p-3">Administration</td>
                     </tr>
                     <tr className="border-b border-[var(--border-light)]">
                       <td className="p-3 font-semibold">Librarian</td>
-                      <td className="p-3">Mr./Ms. [Name]</td>
+                      <td className="p-3">Mr. Obulapati</td>
                       <td className="p-3">Chief Librarian</td>
                       <td className="p-3">Library Services</td>
                     </tr>
                     <tr className="border-b border-[var(--border-light)]">
                       <td className="p-3 font-semibold">Faculty Representative</td>
-                      <td className="p-3">Prof. [Name]</td>
+                      <td className="p-3">Prof. Rajeshwari</td>
                       <td className="p-3">Senior Faculty</td>
                       <td className="p-3">Management</td>
                     </tr>
                     <tr className="border-b border-[var(--border-light)]">
                       <td className="p-3 font-semibold">Student Representative</td>
-                      <td className="p-3">[Student Name]</td>
+                      <td className="p-3">Gousia</td>
                       <td className="p-3">Student Council Member</td>
                       <td className="p-3">Final Year</td>
                     </tr>

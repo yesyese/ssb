@@ -59,6 +59,15 @@ export default function WomenEmpowerment() {
             </div>
 
             <div className="panel">
+              <h2>Cell Contact</h2>
+              <div className="space-y-1 text-sm">
+                <p><strong>Co-ordinator:</strong> Prof. Aradhana</p>
+                <p><strong>Email:</strong> aradhana.a@sanskrithibschool.com</p>
+                <p><strong>Phone:</strong> +91-93986 60034</p>
+              </div>
+            </div>
+
+            <div className="panel">
               <h2>Annual Statistics</h2>
               <div className="grid md:grid-cols-4 gap-6">
                 <div className="text-center card">

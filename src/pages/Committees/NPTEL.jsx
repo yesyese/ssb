@@ -25,6 +25,14 @@ export default function NPTEL() {
             </div>
 
             <div className="panel">
+              <h2>Local Chapter Note</h2>
+              <p>
+                The NPTEL Local Chapter promotes quality online education through certification
+                programs across Computer Science, Management, Mathematics, and Humanities.
+              </p>
+            </div>
+
+            <div className="panel">
               <h2>What is NPTEL?</h2>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="card">

@@ -24,6 +24,14 @@ export default function AcademicCommittee() {
             </div>
 
             <div className="panel">
+              <h2>Committee Note</h2>
+              <p>
+                The College Academic Committee oversees curriculum development and academic
+                policies ensuring alignment with industry requirements.
+              </p>
+            </div>
+
+            <div className="panel">
               <h2>Committee Composition</h2>
               <div className="overflow-x-auto">
                 <table className="w-full border-collapse">

@@ -65,27 +65,27 @@ export default function SCSTCell() {
                   <tbody>
                     <tr className="border-b border-[var(--border-light)]">
                       <td className="p-3 font-semibold">Chairperson</td>
-                      <td className="p-3">Dr. [Name]</td>
+                      <td className="p-3">Dr. Bala Koteswari</td>
                       <td className="p-3">Dean Student Affairs</td>
-                      <td className="p-3">+91-XXXX-XXXXXX</td>
+                      <td className="p-3">+91-9100974516</td>
                     </tr>
                     <tr className="border-b border-[var(--border-light)]">
                       <td className="p-3 font-semibold">Coordinator</td>
-                      <td className="p-3">Prof. [Name]</td>
+                      <td className="p-3">Prof. Vedavyas</td>
                       <td className="p-3">Faculty Coordinator</td>
-                      <td className="p-3">+91-XXXX-XXXXXX</td>
+                      <td className="p-3">+91-94911 34309</td>
                     </tr>
                     <tr className="border-b border-[var(--border-light)]">
                       <td className="p-3 font-semibold">SC Representative</td>
-                      <td className="p-3">[Student Name]</td>
+                      <td className="p-3">SaiDeepa</td>
                       <td className="p-3">Student Representative</td>
-                      <td className="p-3">+91-XXXX-XXXXXX</td>
+                      <td className="p-3">+91-8639337639</td>
                     </tr>
                     <tr className="border-b border-[var(--border-light)]">
                       <td className="p-3 font-semibold">ST Representative</td>
-                      <td className="p-3">[Student Name]</td>
+                      <td className="p-3">Swapna Bai</td>
                       <td className="p-3">Student Representative</td>
-                      <td className="p-3">+91-XXXX-XXXXXX</td>
+                      <td className="p-3">+91-7386075128</td>
                     </tr>
                   </tbody>
                 </table>

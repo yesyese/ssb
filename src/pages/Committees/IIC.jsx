@@ -24,6 +24,15 @@ export default function IIC() {
             </div>
 
             <div className="panel">
+              <h2>IIC Contact</h2>
+              <div className="space-y-1 text-sm">
+                <p><strong>Coordinator:</strong> Prof. Vedavyas</p>
+                <p><strong>Email:</strong> iic@sanskrithibschool.com</p>
+                <p><strong>Phone:</strong> +91-93986 60034</p>
+              </div>
+            </div>
+
+            <div className="panel">
               <h2>Vision & Mission</h2>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="card">

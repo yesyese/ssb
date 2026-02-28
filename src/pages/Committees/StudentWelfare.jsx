@@ -73,27 +73,27 @@ export default function StudentWelfare() {
                   <tbody>
                     <tr className="border-b border-[var(--border-light)]">
                       <td className="p-3 font-semibold">Chairperson</td>
-                      <td className="p-3">Dr. [Name]</td>
+                      <td className="p-3">Dr. Bala Koteswari</td>
                       <td className="p-3">Dean Student Affairs</td>
-                      <td className="p-3">+91-XXXX-XXXXXX</td>
+                      <td className="p-3">+91-9100974516</td>
                     </tr>
                     <tr className="border-b border-[var(--border-light)]">
                       <td className="p-3 font-semibold">Coordinator</td>
-                      <td className="p-3">Prof. [Name]</td>
+                      <td className="p-3">Prof. Girish</td>
                       <td className="p-3">Student Welfare Officer</td>
-                      <td className="p-3">+91-XXXX-XXXXXX</td>
+                      <td className="p-3">+91-63630 73453</td>
                     </tr>
                     <tr className="border-b border-[var(--border-light)]">
                       <td className="p-3 font-semibold">Faculty Representative</td>
-                      <td className="p-3">Dr. [Name]</td>
+                      <td className="p-3">Prof. Aradhana</td>
                       <td className="p-3">Senior Faculty</td>
-                      <td className="p-3">+91-XXXX-XXXXXX</td>
+                      <td className="p-3">+91-79050 71707</td>
                     </tr>
                     <tr className="border-b border-[var(--border-light)]">
                       <td className="p-3 font-semibold">Student Representative</td>
-                      <td className="p-3">[Student Name]</td>
+                      <td className="p-3">Vishwanath</td>
                       <td className="p-3">Student Council President</td>
-                      <td className="p-3">+91-XXXX-XXXXXX</td>
+                      <td className="p-3">+91-6305808290</td>
                     </tr>
                   </tbody>
                 </table>

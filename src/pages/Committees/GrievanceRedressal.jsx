@@ -67,31 +67,31 @@ export default function GrievanceRedressal() {
                   <tbody>
                     <tr className="border-b border-[var(--border-light)]">
                       <td className="p-3 font-semibold">Chairperson</td>
-                      <td className="p-3">Dr. [Name]</td>
+                      <td className="p-3">Dr. Bala Koteswari</td>
                       <td className="p-3">Dean Academic Affairs</td>
                       <td className="p-3">Administration</td>
                     </tr>
                     <tr className="border-b border-[var(--border-light)]">
                       <td className="p-3 font-semibold">Coordinator</td>
-                      <td className="p-3">Prof. [Name]</td>
+                      <td className="p-3">Prashanthi</td>
                       <td className="p-3">Senior Faculty</td>
                       <td className="p-3">Management</td>
                     </tr>
                     <tr className="border-b border-[var(--border-light)]">
                       <td className="p-3 font-semibold">Faculty Representative</td>
-                      <td className="p-3">Dr. [Name]</td>
+                      <td className="p-3">Dr. Bhabani Shankar</td>
                       <td className="p-3">Associate Professor</td>
                       <td className="p-3">Business Administration</td>
                     </tr>
                     <tr className="border-b border-[var(--border-light)]">
                       <td className="p-3 font-semibold">Student Representative (Senior)</td>
-                      <td className="p-3">[Student Name]</td>
+                      <td className="p-3">Krishnaveni</td>
                       <td className="p-3">Student Council President</td>
                       <td className="p-3">MBA Final Year</td>
                     </tr>
                     <tr className="border-b border-[var(--border-light)]">
                       <td className="p-3 font-semibold">Student Representative (Junior)</td>
-                      <td className="p-3">[Student Name]</td>
+                      <td className="p-3">Saipriya</td>
                       <td className="p-3">Student Council Member</td>
                       <td className="p-3">BBA Second Year</td>
                     </tr>

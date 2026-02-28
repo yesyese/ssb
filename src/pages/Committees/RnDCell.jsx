@@ -24,6 +24,16 @@ export default function RnDCell() {
             </div>
 
             <div className="panel">
+              <h2>R & D Contact</h2>
+              <div className="space-y-1 text-sm">
+                <p><strong>R&D Coordinator:</strong> Dr. Bhabani Shankar Padhy</p>
+                <p><strong>Email:</strong> R&amp;D@sanskrithibschool.com</p>
+                <p><strong>Phone:</strong> +91-94919 88398</p>
+                <p><strong>Office:</strong> R&amp;D Cell, Sanskrithi School of Business</p>
+              </div>
+            </div>
+
+            <div className="panel">
               <h2>Research Areas</h2>
               <div className="grid md:grid-cols-3 gap-6">
                 <div>

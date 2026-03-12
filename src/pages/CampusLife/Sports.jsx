@@ -199,19 +199,21 @@ export default function SportsFacility() {
               
               <div className="grid md:grid-cols-2 gap-8">
                 {sportsPrograms.map((program, i) => (
-                  <div key={i} className="p-6 rounded-xl bg-[var(--surface-1)] border border-[var(--border-light)]">
-                    <div className="flex justify-between items-start mb-3">
-                      <h3 className="text-lg font-semibold text-[var(--text)]">{program.program}</h3>
-                      <div className="flex gap-2">
-                        <span className="px-3 py-1 bg-[var(--glass-bg)] backdrop-blur-sm border border-[var(--glass-border)] text-[var(--accent)] rounded-full text-sm font-medium">
+                  <div key={i} className="p-4 sm:p-6 rounded-xl bg-[var(--surface-1)] border border-[var(--border-light)]">
+                    <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2 sm:gap-3 mb-3">
+                      <h3 className="text-base sm:text-lg font-semibold text-[var(--text)] break-words">
+                        {program.program}
+                      </h3>
+                      <div className="flex flex-wrap gap-2 sm:justify-end">
+                        <span className="px-3 py-1 bg-[var(--glass-bg)] backdrop-blur-sm border border-[var(--glass-border)] text-[var(--accent)] rounded-full text-xs sm:text-sm font-medium">
                           {program.frequency}
                         </span>
-                        <span className="px-3 py-1 bg-[var(--accent)]/10 text-[var(--accent)] rounded-full text-sm">
+                        <span className="px-3 py-1 bg-[var(--accent)]/10 text-[var(--accent)] rounded-full text-xs sm:text-sm">
                           {program.type}
                         </span>
                       </div>
                     </div>
-                    <p className="text-[var(--text-soft)] leading-relaxed">{program.description}</p>
+                    <p className="text-[var(--text-soft)] text-sm leading-relaxed">{program.description}</p>
                   </div>
                 ))}
               </div>

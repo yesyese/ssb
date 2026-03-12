@@ -213,7 +213,7 @@ export default function AdmissionsCommittee() {
                     </div>
                     
                     <div className="space-y-3">
-                      <div className="grid grid-cols-2 gap-4">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
                           <h4 className="font-semibold text-[var(--text)] text-sm mb-1">Qualification</h4>
                           <p className="text-[var(--text-soft)] text-sm">{member.qualification}</p>
@@ -230,14 +230,14 @@ export default function AdmissionsCommittee() {
                       </div>
                       
                       <div className="pt-3 border-t border-[var(--border-light)]">
-                        <div className="grid grid-cols-2 gap-2 text-xs">
-                          <div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                          <div className="break-words">
                             <span className="text-[var(--text-soft)]">Email: </span>
-                            <span className="text-[var(--text)]">{member.email}</span>
+                            <span className="text-[var(--text)] break-words">{member.email}</span>
                           </div>
-                          <div>
+                          <div className="break-words">
                             <span className="text-[var(--text-soft)]">Phone: </span>
-                            <span className="text-[var(--text)]">{member.phone}</span>
+                            <span className="text-[var(--text)] break-words">{member.phone}</span>
                           </div>
                         </div>
                       </div>

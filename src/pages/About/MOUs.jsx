@@ -102,17 +102,20 @@ export default function MOUs() {
                 Active Memorandums of Understanding
               </h2>
               
-              <div style={{ display: 'grid', gap: '3rem' }}>
+              <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
                 {mouData.map((mou, index) => (
-                  <div key={index} style={{
-                    background: 'var(--glass-bg)',
-                    backdropFilter: 'var(--glass-backdrop)',
-                    border: '1px solid var(--border-light)',
-                    borderRadius: 'var(--radius-xl)',
-                    padding: '2.5rem',
-                    position: 'relative',
-                    overflow: 'hidden'
-                  }}>
+                  <div
+                    key={index}
+                    style={{
+                      background: 'var(--glass-bg)',
+                      backdropFilter: 'var(--glass-backdrop)',
+                      border: '1px solid var(--border-light)',
+                      borderRadius: 'var(--radius-xl)',
+                      padding: '2rem',
+                      position: 'relative',
+                      overflow: 'hidden'
+                    }}
+                  >
                     {/* Background decoration */}
                     <div style={{
                       position: 'absolute',
@@ -124,7 +127,10 @@ export default function MOUs() {
                       borderRadius: '50%'
                     }} />
                     
-                    <div style={{ display: 'grid', gridTemplateColumns: '80px 1fr', gap: '2rem', alignItems: 'start', position: 'relative', zIndex: 1 }}>
+                    <div
+                      className="grid gap-4 sm:grid-cols-[80px_minmax(0,1fr)] items-start"
+                      style={{ position: 'relative', zIndex: 1 }}
+                    >
                       <div style={{
                         fontSize: '3em',
                         textAlign: 'center',
@@ -137,18 +143,27 @@ export default function MOUs() {
                       </div>
                       
                       <div>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
-                          <h3 style={{ color: mou.color, fontSize: '1.6em', fontWeight: 'bold', margin: 0 }}>
+                        <div
+                          className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 mb-4"
+                          style={{ marginBottom: 0 }}
+                        >
+                          <h3
+                            style={{ color: mou.color, fontSize: '1.3em', fontWeight: 'bold', margin: 0 }}
+                            className="break-words"
+                          >
                             {mou.title}
                           </h3>
-                          <span style={{
-                            background: mou.color + '20',
-                            color: mou.color,
-                            padding: '0.3rem 0.8rem',
-                            borderRadius: 'var(--radius)',
-                            fontSize: '0.8em',
-                            fontWeight: 'bold'
-                          }}>
+                          <span
+                            style={{
+                              background: mou.color + '20',
+                              color: mou.color,
+                              padding: '0.2rem 0.7rem',
+                              borderRadius: 'var(--radius)',
+                              fontSize: '0.75em',
+                              fontWeight: 'bold'
+                            }}
+                            className="inline-flex w-max"
+                          >
                             {mou.date}
                           </span>
                         </div>

@@ -57,8 +57,8 @@ export default function IQAC() {
 
   <div className="space-y-4 max-w-5xl mx-auto">
     {/* Row 1: Chair Person */}
-    <div className="flex flex-col sm:flex-row gap-4">
-      <div className="w-48 flex items-center justify-center text-center text-white font-bold p-4 rounded-xl  border-gray-300 shadow-lg">
+    <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+      <div className="w-full sm:w-48 flex items-center justify-center text-center text-white font-bold p-3 sm:p-4 rounded-xl border-gray-300 shadow-lg text-sm sm:text-base">
         Chair Person
       </div>
       <div className="flex-1 flex items-center  px-6 py-4 rounded-lg shadow-sm text-lg"style = {{background: 'var(--glass-bg) ', backdropFilter: 'var(--glass-backdrop)'}}>
@@ -67,8 +67,8 @@ export default function IQAC() {
     </div>
 
     {/* Row 2: Coordinator */}
-    <div className="flex flex-col sm:flex-row gap-4">
-      <div className="w-48 flex items-center justify-center text-center  text-white font-bold p-4 rounded-xl  border-gray-300 shadow-lg">
+    <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+      <div className="w-full sm:w-48 flex items-center justify-center text-center text-white font-bold p-3 sm:p-4 rounded-xl border-gray-300 shadow-lg text-sm sm:text-base">
         IQAC Co-coordinator
       </div>
       <div className="flex-1 flex items-center bg-gradient-to-b px-6 py-4 rounded-lg shadow-sm text-lg" style = {{background: 'var(--glass-bg) ', backdropFilter: 'var(--glass-backdrop)'}}>
@@ -79,8 +79,8 @@ export default function IQAC() {
     </div>
 
     {/* Row 3: Admin Officer */}
-    <div className="flex flex-col sm:flex-row gap-4">
-      <div className="w-48 flex items-center justify-center text-center  to-[#00B0F0] text-white font-bold p-4 rounded-xl  border-gray-300 shadow-lg ">
+    <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+      <div className="w-full sm:w-48 flex items-center justify-center text-center to-[#00B0F0] text-white font-bold p-3 sm:p-4 rounded-xl border-gray-300 shadow-lg text-sm sm:text-base">
         Senior Administrative Officer
       </div>
       <div className="flex-1 flex items-center  px-6 py-4 rounded-lg shadow-sm text-lg"style = {{background: 'var(--glass-bg) ', backdropFilter: 'var(--glass-backdrop)'}}>
@@ -91,11 +91,11 @@ export default function IQAC() {
     </div>
 
     {/* Row 4: Senior Professors */}
-    <div className="flex gap-4">
-      <div className="w-48 flex items-center text-white justify-center text-center  text-black font-bold p-4 rounded-xl  border-gray-300 shadow-lg">
+    <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+      <div className="w-full sm:w-48 flex items-center justify-center text-center text-black font-bold p-3 sm:p-4 rounded-xl border-gray-300 shadow-lg text-sm sm:text-base">
         Senior Professors
       </div>
-      <div className="flex-1 flex flex-col justify-center  px-6 py-4 rounded-lg shadow-sm text-lg"style = {{background: 'var(--glass-bg) ', backdropFilter: 'var(--glass-backdrop)'}}>
+      <div className="flex-1 flex flex-col justify-center px-4 sm:px-6 py-4 rounded-lg shadow-sm text-base sm:text-lg" style = {{background: 'var(--glass-bg) ', backdropFilter: 'var(--glass-backdrop)'}}>
         <ul className="list-disc list-inside space-y-1">
           <li>Dr. Bhabani Shankar, Associate Professor</li>
           <li>E. Prashanthi. COE, Admission Director and Associate Professor.</li>

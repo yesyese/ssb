@@ -247,26 +247,41 @@ export default function Ranks() {
                 
                 <div className="space-y-6">
                   {rankAnalysis.map((rank, i) => (
-                    <div key={i} className="p-6 rounded-xl bg-[var(--surface-1)] border border-[var(--border-light)] hover:bg-[var(--surface-2)] transition-colors">
-                      <div className="flex items-start gap-6">
-                        <div className={`w-20 h-20 rounded-full bg-gradient-to-r ${rank.color} flex items-center justify-center text-white font-bold shadow-lg flex-shrink-0`}>
+                    <div
+                      key={i}
+                      className="p-4 sm:p-6 rounded-xl bg-[var(--surface-1)] border border-[var(--border-light)] hover:bg-[var(--surface-2)] transition-colors"
+                    >
+                      <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                        <div
+                          className={`w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-r ${rank.color} flex items-center justify-center text-white font-bold shadow-lg flex-shrink-0 text-sm sm:text-base`}
+                        >
                           {rank.range.split(' - ')[0].replace(/,/g, 'K').replace('000', '')}
                         </div>
-                        <div className="flex-1">
-                          <div className="flex items-center gap-3 mb-3">
-                            <h3 className="text-xl font-semibold text-[var(--text)]">Rank {rank.range}</h3>
-                            <span className={`px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r ${rank.color} text-white`}>
+                        <div className="flex-1 min-w-0">
+                          <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 mb-3">
+                            <h3 className="text-lg sm:text-xl font-semibold text-[var(--text)] break-words">
+                              Rank {rank.range}
+                            </h3>
+                            <span className={`inline-flex px-3 py-1 rounded-full text-xs sm:text-sm font-medium bg-gradient-to-r ${rank.color} text-white`}>
                               {rank.category}
                             </span>
                           </div>
-                          <div className="grid md:grid-cols-2 gap-4">
+                          <div className="grid gap-3 md:gap-4 md:grid-cols-2">
                             <div>
-                              <h4 className="font-semibold text-[var(--text)] mb-2">Admission Prospects</h4>
-                              <p className="text-[var(--text-soft)] text-sm leading-relaxed">{rank.prospects}</p>
+                              <h4 className="font-semibold text-[var(--text)] mb-1 sm:mb-2 text-sm sm:text-base">
+                                Admission Prospects
+                              </h4>
+                              <p className="text-[var(--text-soft)] text-xs sm:text-sm leading-relaxed">
+                                {rank.prospects}
+                              </p>
                             </div>
                             <div>
-                              <h4 className="font-semibold text-[var(--text)] mb-2">College Options</h4>
-                              <p className="text-[var(--text-soft)] text-sm leading-relaxed">{rank.colleges}</p>
+                              <h4 className="font-semibold text-[var(--text)] mb-1 sm:mb-2 text-sm sm:text-base">
+                                College Options
+                              </h4>
+                              <p className="text-[var(--text-soft)] text-xs sm:text-sm leading-relaxed">
+                                {rank.colleges}
+                              </p>
                             </div>
                           </div>
                         </div>

@@ -331,6 +331,18 @@ export const NAV = [
   },
 
   { 
+    label: 'Mandatory Disclosure', 
+    href: '/mandatory-disclosure',
+    description: 'Institutional policies, approvals, and statutory documents'
+  },
+
+  { 
+    label: 'Grievance Redressal', 
+    href: '/grievance-redressal',
+    description: 'Online grievance redressal registration and policy'
+  },
+
+  { 
     label: 'NAAC', 
     href: '/naac',
     description: 'NAAC criteria and document repository'

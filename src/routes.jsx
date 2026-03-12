@@ -66,6 +66,8 @@ const ExaminationDownloads = lazy(() => import('./pages/Examinations/Downloads.j
 const UploadPdf = lazy(() => import('./pages/UploadPdf.jsx'));
 const NAAC = lazy(() => import('./pages/NAAC.jsx'));
 const DVV = lazy(() => import('./pages/NAAC/DVV.jsx'));
+const MandatoryDisclosure = lazy(() => import('./pages/MandatoryDisclosure.jsx'));
+const GrievanceRedressalPage = lazy(() => import('./pages/GrievanceRedressalPage.jsx'));
 const Placements = lazy(() => import('./pages/Placements.jsx'));
 
 // Placements sub-pages
@@ -176,6 +178,8 @@ export default [
   { path: '/upload-pdf', element: createElement(UploadPdf) },
   { path: '/naac', element: createElement(NAAC) },
   { path: '/naac/dvv', element: createElement(DVV) },
+  { path: '/mandatory-disclosure', element: createElement(MandatoryDisclosure) },
+  { path: '/grievance-redressal', element: createElement(GrievanceRedressalPage) },
   { path: '/placements', element: createElement(Placements) },
   
   // Placements sub-pages

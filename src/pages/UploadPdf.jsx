@@ -220,7 +220,11 @@ export default function UploadPdf() {
         });
 
       if (uploadError) {
-        throw new Error(uploadError.message || 'Upload failed');
+        const msg = uploadError.message || 'Upload failed';
+        if (msg.toLowerCase().includes('exceeded') && msg.toLowerCase().includes('size')) {
+          throw new Error(`${msg} Supabase Free plan allows 50MB per file. For 200MB: Dashboard → Storage → Settings → set Global file size limit (Pro plan), or upgrade plan.`);
+        }
+        throw new Error(msg);
       }
 
       const { data: urlData } = supabase.storage.from(PDF_BUCKET).getPublicUrl(filePath);
@@ -518,7 +522,7 @@ export default function UploadPdf() {
 
                 <div>
                   <label className="block text-sm font-medium text-[var(--text-soft)] mb-2">6. PDF File *</label>
-                  <p className="text-xs text-[var(--text-muted)] mb-2">Maximum file size: {MAX_FILE_SIZE_MB} MB (large files supported)</p>
+                  <p className="text-xs text-[var(--text-muted)] mb-2">Maximum file size: {MAX_FILE_SIZE_MB} MB. Supabase Free plan allows 50MB only — for 200MB uploads set Global file size limit in Dashboard → Storage → Settings (Pro plan).</p>
                   <label className="flex items-center justify-center gap-3 px-4 py-6 rounded-xl bg-[var(--surface-1)] border-2 border-dashed border-[var(--border-light)] hover:border-[var(--brand)]/50 cursor-pointer transition-colors">
                     <Upload className="w-8 h-8 text-[var(--text-muted)]" />
                     <span className="text-[var(--text-soft)]">

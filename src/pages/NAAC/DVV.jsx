@@ -184,7 +184,13 @@ function DocumentCell({ criterionId, sectionId, metricId, slotId, label, bySlot,
       const { error: uploadError } = await supabase.storage
         .from(PDF_BUCKET)
         .upload(fileName, file, { cacheControl: '3600', upsert: false });
-      if (uploadError) throw new Error(uploadError.message);
+      if (uploadError) {
+        const msg = uploadError.message || 'Upload failed';
+        if (msg.toLowerCase().includes('exceeded') && msg.toLowerCase().includes('size')) {
+          throw new Error(`${msg} Supabase Free plan allows 50MB. For 200MB: Dashboard → Storage → Settings → Global file size limit (Pro plan).`);
+        }
+        throw new Error(msg);
+      }
       const { data: urlData } = supabase.storage.from(PDF_BUCKET).getPublicUrl(fileName);
       const fileUrl = urlData?.publicUrl ?? '';
       const row = {

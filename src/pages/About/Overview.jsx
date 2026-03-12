@@ -65,7 +65,7 @@ export default function AboutOverview() {
                 Our journey began with a simple yet powerful vision - to create business leaders who lead with purpose
               </p>
               
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'center', marginBottom: '3rem' }}>
+              <div className="grid gap-8 lg:grid-cols-2 mb-12 items-center">
                 <div>
                   <img 
                     src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?q=80&w=800&auto=format&fit=crop"
@@ -76,7 +76,7 @@ export default function AboutOverview() {
                     SSB Campus - A blend of tradition and modernity
                   </p>
                 </div>
-                <div style={{ padding: '1rem' }}>
+                <div className="px-4">
                   <h3 style={{ marginBottom: '1.5rem', color: 'var(--brand)' }}>The Foundation</h3>
                   <p style={{ marginBottom: '1.5rem', lineHeight: '1.6', color: 'var(--text-primary)' }}>
                     Established in 2008 in the spiritual town of Puttaparthi, Sanskrithi School of Business 
@@ -97,8 +97,8 @@ export default function AboutOverview() {
                 </div>
               </div>
 
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'center' }}>
-                <div style={{ padding: '1rem' }}>
+              <div className="grid gap-8 lg:grid-cols-2 items-center">
+                <div className="px-4">
                   <h3 style={{ marginBottom: '1.5rem', color: 'var(--brand)' }}>Our Growth</h3>
                   <p style={{ marginBottom: '1.5rem', lineHeight: '1.6', color: 'var(--text-primary)' }}>
                     From humble beginnings with 60 students, we have grown into a premier institution with 
@@ -127,7 +127,7 @@ export default function AboutOverview() {
                 Guiding principles that shape our educational philosophy and institutional direction
               </p>
               
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', marginBottom: '3rem' }}>
+              <div className="grid gap-8 lg:grid-cols-2 mb-12">
                 <div style={{ 
                   padding: '2rem', 
                   background: 'var(--surface-1)', 
@@ -228,8 +228,8 @@ export default function AboutOverview() {
             }}>
               <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>Chairman's Message</h2>
               
-              <div style={{ display: 'grid', gridTemplateColumns: '350px 1fr', gap: '4rem', alignItems: 'start' }}>
-                <div style={{ textAlign: 'center', position: 'sticky', top: '2rem' }}>
+              <div className="grid gap-8 lg:grid-cols-[minmax(0,320px)_minmax(0,1fr)] items-start">
+                <div style={{ textAlign: 'center' }}>
                   <div style={{ 
                     background: 'var(--glass-bg)',
                     backdropFilter: 'var(--glass-backdrop)',

@@ -57,7 +57,7 @@ export default function IQAC() {
 
   <div className="space-y-4 max-w-5xl mx-auto">
     {/* Row 1: Chair Person */}
-    <div className="flex gap-4">
+    <div className="flex flex-col sm:flex-row gap-4">
       <div className="w-48 flex items-center justify-center text-center text-white font-bold p-4 rounded-xl  border-gray-300 shadow-lg">
         Chair Person
       </div>
@@ -67,7 +67,7 @@ export default function IQAC() {
     </div>
 
     {/* Row 2: Coordinator */}
-    <div className="flex gap-4">
+    <div className="flex flex-col sm:flex-row gap-4">
       <div className="w-48 flex items-center justify-center text-center  text-white font-bold p-4 rounded-xl  border-gray-300 shadow-lg">
         IQAC Co-coordinator
       </div>
@@ -79,7 +79,7 @@ export default function IQAC() {
     </div>
 
     {/* Row 3: Admin Officer */}
-    <div className="flex gap-4">
+    <div className="flex flex-col sm:flex-row gap-4">
       <div className="w-48 flex items-center justify-center text-center  to-[#00B0F0] text-white font-bold p-4 rounded-xl  border-gray-300 shadow-lg ">
         Senior Administrative Officer
       </div>

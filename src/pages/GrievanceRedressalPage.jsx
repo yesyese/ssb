@@ -17,21 +17,42 @@ export default function GrievanceRedressalPage() {
     const { name, value } = e.target;
     setFormState((prev) => ({ ...prev, [name]: value }));
   };
+const handleSubmit = async (e) => {
+  e.preventDefault();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Placeholder: could be wired to backend or email
-    alert('Your grievance has been recorded. The Grievance Redressal Cell will review it shortly.');
-    setFormState({
-      name: '',
-      regNo: '',
-      department: '',
-      email: '',
-      phone: '',
-      description: '',
-      date: '',
+  const url = "https://script.google.com/macros/s/AKfycbybysxsbuR-najOjjiQ2WQezrPeWS5HglecKGCuyuAZfEIciFnSQl0PqbYQ1-B7Lg5p/exec";
+
+  const formData = new FormData();
+
+  Object.keys(formState).forEach((key) => {
+    formData.append(key, formState[key]);
+  });
+
+  try {
+
+    await fetch(url, {
+      method: "POST",
+      body: formData,
+      mode: "no-cors"
     });
-  };
+
+    alert("Grievance submitted successfully");
+
+    setFormState({
+      name: "",
+      regNo: "",
+      department: "",
+      email: "",
+      phone: "",
+      description: "",
+      date: "",
+    });
+
+  } catch (error) {
+    console.error(error);
+    alert("Submission failed");
+  }
+};
 
   return (
     <div className="main-content">
@@ -176,4 +197,3 @@ export default function GrievanceRedressalPage() {
     </div>
   );
 }
-

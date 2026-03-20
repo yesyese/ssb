@@ -361,8 +361,9 @@ export default function Home() {
                   />
                   <QuickLink
                     title="Exam Results"
-                    href="/examinations"
+                    href="https://ssbptpexam.in/pages/common/login.jsf"
                     icon="📊"
+                    external
                   />
                 </div>
               </div>
@@ -604,11 +605,12 @@ function AnnouncementItem({ title, desc, link }) {
   );
 }
 
-function QuickLink({ title, href, icon }) {
+function QuickLink({ title, href, icon, external }) {
   return (
     <a
       href={href}
       className="flex items-center gap-3 p-2 rounded-lg hover:bg-[var(--surface-2)] transition-colors group"
+      {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
     >
       <span className="text-lg">{icon}</span>
       <span className="text-[var(--text)] group-hover:text-[var(--brand)] transition-colors">

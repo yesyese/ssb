@@ -276,7 +276,7 @@ export default function AboutOverview() {
                           chairman@sanskrithibschool.com
                         </a>
                         <br/>
-                        <a href="https://www.linkedin.com/in/vijay-reddy" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--brand-light)', textDecoration: 'none' }}>
+                        <a href="https://www.linkedin.com/in/vijay-reddy-bhaskar-29a3b95a/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--brand-light)', textDecoration: 'none' }}>
                           LinkedIn Profile
                         </a>
                       </div>

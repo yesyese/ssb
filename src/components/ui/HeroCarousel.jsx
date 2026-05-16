@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import home1 from '../../assets/home/20260202_121419.jpg';
 import home2 from '../../assets/home/20260202_121633.jpg';
 import home3 from '../../assets/home/20260202_122858.jpg';
-import logo from '../../assets/newlogo.png';
 
 const HeroCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -52,11 +51,6 @@ const HeroCarousel = () => {
 
   return (
     <section className="hero-carousel">
-        {/* Sticky Logo - Top Left */}
-        <Link to="/" className="absolute top-4 left-4 sm:top-6 sm:left-6 z-20 flex items-center">
-          <img src={logo} alt="SSB Logo" className="h-10 sm:h-12 md:h-14 w-auto object-contain drop-shadow-lg" style={{ filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.3))' }} />
-        </Link>
-
         {/* Floating decorative elements */}
         <div className="floating-elements"></div>
 
@@ -71,38 +65,38 @@ const HeroCarousel = () => {
               <div className="container mx-auto px-4 max-w-6xl">
                 <div className="text-white max-w-3xl">
                   {/* Badge */}
-                  <div className="inline-flex items-center gap-2 rounded-full bg-white/20 border border-white/30 px-4 py-2 text-sm mb-6">
-                    <span className="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+                  <div className="inline-flex items-center gap-2 rounded-full bg-white/10 border border-white/20 px-3 py-1.5 text-xs sm:text-sm text-white/90 mb-5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[var(--brand-light)]"></span>
                     {slide.badge}
                   </div>
 
                   {/* Main Title */}
-                  <h1 className="text-5xl md:text-7xl font-bold leading-[1.1] tracking-tight mb-8">
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-[1.15] tracking-tight mb-6 text-white">
                     {slide.title}{' '}
-                    <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+                    <span className="text-[var(--brand-light)]">
                       {slide.highlight}
                     </span>
                   </h1>
 
                   {/* Subtitle */}
-                  <p className="text-xl md:text-2xl text-white/90 mb-10 leading-relaxed">
+                  <p className="text-base sm:text-lg md:text-xl text-white/85 mb-8 leading-relaxed max-w-2xl">
                     {slide.subtitle}
                   </p>
 
                   {/* Action Buttons - All lead to unified inquiry form */}
-                  <div className="flex flex-wrap mt-9 gap-4 mb-12">
+                  <div className="flex flex-wrap gap-3 mb-10">
                     <a
                       href="/inquiry"
-                      className="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold text-lg transition-all hover:scale-105 hover:shadow-2xl"
+                      className="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-[var(--brand)] hover:bg-[var(--brand-dark)] text-white font-semibold text-sm sm:text-base transition-colors"
                     >
                       Start Admissions
-                      <svg width="20" height="20" viewBox="0 0 24 24" className="opacity-90">
+                      <svg width="18" height="18" viewBox="0 0 24 24" className="opacity-90">
                         <path fill="currentColor" d="M5 12h12.17l-4.58-4.59L13 6l7 7-7 7-1.41-1.41L17.17 13H5z"/>
                       </svg>
                     </a>
                     <a
                       href="/inquiry"
-                      className="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-white/15 border border-white/30 text-white font-semibold text-lg transition-all hover:bg-white/25"
+                      className="inline-flex items-center px-6 py-3 rounded-md bg-white/10 border border-white/30 text-white font-semibold text-sm sm:text-base hover:bg-white/15 transition-colors"
                     >
                       Schedule Visit
                     </a>

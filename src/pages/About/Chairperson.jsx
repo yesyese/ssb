@@ -1,19 +1,19 @@
 import React from 'react';
 import SectionHeader from '../../components/ui/SectionHeader';
-import chairman from "../../assets/chairman.png";
+import chairman from "../../assets/chairman.jpg";
 export default function AboutChairperson() {
   return (
     <div className="main-content">
       <div className="section-spacing">
         <div className="container">
           <SectionHeader
-            title="About Chairperson"
-            subtitle="Message from our Chairperson"
+            title="About Chairman"
+            subtitle="Message from our Chairman"
             description="Leadership vision and guidance for SSB Puttaparthi"
           />
-          
+
           <div className="space-y-section">
-            {/* Chairperson Profile Section */}
+            {/* Chairman Profile Section */}
             <div className="panel" style={{ 
               background: 'linear-gradient(135deg, var(--surface-1) 0%, var(--surface-2) 100%)',
               border: '1px solid var(--border-light)'
@@ -26,45 +26,33 @@ export default function AboutChairperson() {
                     boxShadow: 'var(--shadow-medium)',
                     border: '1px solid var(--border-light)'
                   }} className="p-4 sm:p-6 md:p-8 rounded-xl">
-                    <img 
+                    <img
                       src={chairman}
-                      alt="B. Vijay Bhaskar Reddy - Chairperson"
+                      alt="B. Vijay Reddy - Chairman, Sanskrithi Group"
                       className="w-40 h-40 sm:w-52 sm:h-52 md:w-[220px] md:h-[220px] rounded-full object-cover mx-auto mb-6 block border-4 border-[var(--brand)]"
                     />
                     <h3 style={{ marginBottom: '0.5rem', color: 'var(--brand)', fontSize: '1.4em' }}>
-                      B. Vijay Bhaskar Reddy
+                      B. Vijay Reddy
                     </h3>
                     <p style={{ fontWeight: 'bold', marginBottom: '0.5rem', color: 'var(--accent)' }}>
-                      Chairperson & Founder
+                      Founder &amp; Chairman
                     </p>
-                    <p style={{ fontSize: '0.9em', color: 'var(--text)', lineHeight: '1.4' }}>
-                      Ph.D in Management<br/>
-                      IIM Ahmedabad<br/>
-                      30+ years experience in<br/>
-                      Academia & Industry
+                    <p style={{ fontSize: '0.9em', color: 'var(--text-soft)', lineHeight: '1.4' }}>
+                      Sanskrithi Group of Institutions
                     </p>
-                    
-                    <div style={{ marginTop: '2rem', padding: '1rem', background: 'var(--surface-1)', borderRadius: 'var(--radius)', border: '1px solid var(--border-light)' }}>
-                      <div style={{ fontSize: '0.9em', color: 'var(--text)', marginBottom: '0.5rem' }}>
-                        Awards & Recognition
-                      </div>
-                      <div style={{ fontSize: '0.8em', color: 'var(--text)' }}>
-                        • Excellence in Education Award 2020<br/>
-                        • Industry Leadership Recognition<br/>
-                        • Academic Excellence Honor<br/>
-                        • Business Innovation Award
-                      </div>
-                    </div>
 
-                    <div style={{ marginTop: '1.5rem', padding: '1rem', background: 'var(--surface-2)', borderRadius: 'var(--radius)', border: '1px solid var(--border-light)' }}>
-                      <div style={{ fontSize: '0.9em', color: 'var(--text)', marginBottom: '0.5rem' }}>
-                        Professional Experience
+                    <div style={{ marginTop: '1.5rem', padding: '1rem', background: 'var(--surface-1)', borderRadius: 'var(--radius)', border: '1px solid var(--border-light)' }}>
+                      <div style={{ fontSize: '0.85em', color: 'var(--text-soft)', marginBottom: '0.5rem' }}>
+                        Contact
                       </div>
-                      <div style={{ fontSize: '0.8em', color: 'var(--text)' }}>
-                        • Former Vice President, TCS<br/>
-                        • Board Member, AICTE<br/>
-                        • Consultant, Multiple MNCs<br/>
-                        • Author of 15+ Research Papers
+                      <div style={{ fontSize: '0.85em', color: 'var(--text)', wordBreak: 'break-word' }}>
+                        <a href="mailto:chairman@sanskrithibschool.com" style={{ color: 'var(--brand-light)', textDecoration: 'none' }}>
+                          chairman@sanskrithibschool.com
+                        </a>
+                        <br/>
+                        <a href="https://www.linkedin.com/in/vijay-reddy-bhaskar-29a3b95a" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--brand-light)', textDecoration: 'none' }}>
+                          LinkedIn Profile
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -72,7 +60,7 @@ export default function AboutChairperson() {
                 
                 <div className="p-4 sm:p-6 md:p-8">
                   <h2 style={{ color: 'var(--text)', textAlign: 'center', marginBottom: '3rem', fontSize: '2.2em' }} className="text-xl sm:text-2xl">
-                    Chairperson's Message
+                    Chairman's Message
                   </h2>
                   
                   <div style={{ 
@@ -156,15 +144,15 @@ export default function AboutChairperson() {
                     </p>
                   </div>
                   
-                  <div style={{ 
+                  <div style={{
                     textAlign: 'right',
                     borderTop: '2px solid var(--brand)',
                     fontWeight: 'bold',
                     color: 'var(--brand)'
                   }} className="pt-4 sm:pt-6 text-base sm:text-lg md:text-xl">
                     Warm Regards,<br/>
-                    <span style={{ fontSize: '1.1em' }}>B. Vijay Bhaskar Reddy</span><br/>
-                    <span style={{ fontSize: '0.9em', color: 'var(--text-soft)' }}>Chairperson & Founder</span>
+                    <span style={{ fontSize: '1.1em' }}>B. Vijay Reddy</span><br/>
+                    <span style={{ fontSize: '0.9em', color: 'var(--text-soft)' }}>Founder &amp; Chairman, Sanskrithi Group</span>
                   </div>
                 </div>
               </div>

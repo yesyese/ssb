@@ -20,10 +20,10 @@ export const NAV = [
         href: '/about/mission-vision',
         description: 'Our mission, vision, and values'
       },
-      { 
-        label: 'About Chairperson', 
+      {
+        label: 'About Chairman',
         href: '/about/chairperson',
-        description: 'Message from our Chairperson'
+        description: 'Message from our Chairman'
       },
       { 
         label: 'Governing Body', 

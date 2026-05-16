@@ -3,7 +3,7 @@ import SectionHeader from '../../components/ui/SectionHeader';
 import dean from "../../assets/dean.jpeg";
 // --- Complete Data Objects ---
 const governingBody = [
-  { name: "Mr. Vijay Bhaskar Reddy", affiliation: "Chairperson", designation: "Chairperson" },
+  { name: "Mr. B. Vijay Reddy", affiliation: "Founder & Chairman, Sanskrithi Group", designation: "Chairman" },
   { name: "Mr. B. Parthasarathy Reddy", affiliation: "SSB", designation: "Member" },
   { name: "Mr. S. Pavan Reddy", affiliation: "SSB", designation: "Member" },
   { name: "Ms. S. Rajitha", affiliation: "SSB", designation: "Member" },

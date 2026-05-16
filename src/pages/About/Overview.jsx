@@ -1,6 +1,6 @@
 import React from 'react';
 import SectionHeader from '../../components/ui/SectionHeader';
-import chairman from "../../assets/chairman.png";
+import chairman from "../../assets/chairman.jpg";
 export default function AboutOverview() {
   const statGroupStyle = {
     display: 'flex',
@@ -23,25 +23,25 @@ export default function AboutOverview() {
       expertise: "Human Resources, Academic Leadership, Management Studies"
     },
     {
-      name: "Mrs. E Prasanthi",
-      position: "Associate Professor, Head of Department",
+      name: "Mrs. E Prashanthi",
+      position: "Controller of Examinations & Associate Professor",
       qualification: "MBA (PhD)",
       experience: "8+ years Teaching, 3 years Industry",
       expertise: "Finance, Entrepreneurship, Management"
     },
     {
       name: "Dr. Bhabani Shankar Padhy",
-      position: "Associate Professor",
+      position: "Vice Principal & Professor",
       qualification: "PhD, MPhil, MBA, MSc (Chemistry), BSc",
       experience: "12+ years in Academia",
       expertise: "Management Research, Interdisciplinary Studies"
     },
     {
-      name: "Prakash Sharma VN",
-      position: "Assistant Professor",
-      qualification: "M.Com, MBA, FCMA",
-      experience: "10+ years in Management Education",
-      expertise: "Cost Accounting, Financial Management"
+      name: "A. Aradhana",
+      position: "Head of the Department & Associate Professor",
+      qualification: "",
+      experience: "",
+      expertise: ""
     },
     {
       name: "Ms. S Khuteja",
@@ -238,7 +238,7 @@ export default function AboutOverview() {
               background: 'linear-gradient(135deg, var(--surface-1) 0%, var(--surface-2) 100%)',
               border: '1px solid var(--border-light)'
             }}>
-              <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>Chairperson's Message</h2>
+              <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>Chairman's Message</h2>
               
               <div className="grid gap-8 lg:grid-cols-[minmax(0,320px)_minmax(0,1fr)] items-start">
                 <div style={{ textAlign: 'center' }}>
@@ -250,9 +250,9 @@ export default function AboutOverview() {
                     boxShadow: 'var(--shadow-medium)',
                     border: '1px solid var(--border-light)'
                   }}>
-                    <img 
+                    <img
                       src={chairman}
-                      alt="B. Vijay Bhaskar Reddy - Chairperson"
+                      alt="B. Vijay Reddy - Chairman, Sanskrithi Group"
                       style={{
                         width: 'min(220px, 100%)',
                         aspectRatio: '1 / 1',
@@ -263,21 +263,22 @@ export default function AboutOverview() {
                         border: '4px solid var(--brand)'
                       }}
                     />
-                    <h3 style={{ marginBottom: '0.5rem', color: 'var(--brand)', fontSize: '1.4em' }}>B. Vijay Bhaskar Reddy</h3>
-                    <p style={{ fontWeight: 'bold', marginBottom: '0.5rem', color: 'var(--accent)' }}>Chairperson & Founder</p>
+                    <h3 style={{ marginBottom: '0.5rem', color: 'var(--brand)', fontSize: '1.4em' }}>B. Vijay Reddy</h3>
+                    <p style={{ fontWeight: 'bold', marginBottom: '0.5rem', color: 'var(--accent)' }}>Founder &amp; Chairman</p>
                     <p style={{ fontSize: '0.9em', color: 'var(--text-muted)', lineHeight: '1.4' }}>
-                      Ph.D in Management<br/>
-                      IIM Ahmedabad<br/>
-                      30+ years experience in<br/>
-                      Academia & Industry
+                      Sanskrithi Group of Institutions
                     </p>
-                    
-                    <div style={{ marginTop: '2rem', padding: '1rem', background: 'var(--surface-1)', borderRadius: '8px' }}>
-                      <div style={{ fontSize: '0.9em', color: 'var(--text-muted)', marginBottom: '0.5rem' }}>Awards & Recognition</div>
-                      <div style={{ fontSize: '0.8em', color: 'var(--text-dim)' }}>
-                        • Excellence in Education Award<br/>
-                        • Industry Leadership Recognition<br/>
-                        • Academic Excellence Honor
+
+                    <div style={{ marginTop: '1.5rem', padding: '1rem', background: 'var(--surface-1)', borderRadius: '8px' }}>
+                      <div style={{ fontSize: '0.85em', color: 'var(--text-muted)', marginBottom: '0.5rem' }}>Contact</div>
+                      <div style={{ fontSize: '0.8em', color: 'var(--text-soft)', wordBreak: 'break-word' }}>
+                        <a href="mailto:chairman@sanskrithibschool.com" style={{ color: 'var(--brand-light)', textDecoration: 'none' }}>
+                          chairman@sanskrithibschool.com
+                        </a>
+                        <br/>
+                        <a href="https://www.linkedin.com/in/vijay-reddy" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--brand-light)', textDecoration: 'none' }}>
+                          LinkedIn Profile
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -366,7 +367,7 @@ export default function AboutOverview() {
                     We invite you to be part of this transformative journey.
                   </p>
                   
-                  <div style={{ 
+                  <div style={{
                     textAlign: 'right',
                     borderTop: '2px solid var(--brand)',
                     paddingTop: '1rem',
@@ -374,7 +375,7 @@ export default function AboutOverview() {
                     fontWeight: 'bold',
                     color: 'var(--brand)'
                   }}>
-                    - B. Vijay Bhaskar Reddy
+                    - B. Vijay Reddy
                   </div>
                 </div>
               </div>
@@ -424,21 +425,25 @@ export default function AboutOverview() {
                     }}>
                       {member.position}
                     </p>
-                    <p style={{ 
-                      color: 'var(--text-soft)', 
-                      fontStyle: 'italic', 
-                      marginBottom: '0.5rem',
-                      fontSize: '0.9em'
-                    }}>
-                      {member.qualification}
-                    </p>
-                    <p style={{ 
-                      color: 'var(--text-dim)', 
-                      marginBottom: '1rem',
-                      fontSize: '0.85em'
-                    }}>
-                      {member.experience}
-                    </p>
+                    {member.qualification && (
+                      <p style={{
+                        color: 'var(--text-soft)',
+                        fontStyle: 'italic',
+                        marginBottom: '0.5rem',
+                        fontSize: '0.9em'
+                      }}>
+                        {member.qualification}
+                      </p>
+                    )}
+                    {member.experience && (
+                      <p style={{
+                        color: 'var(--text-dim)',
+                        marginBottom: '1rem',
+                        fontSize: '0.85em'
+                      }}>
+                        {member.experience}
+                      </p>
+                    )}
                     
                   </div>
                 ))}

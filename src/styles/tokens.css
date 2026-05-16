@@ -1,27 +1,25 @@
 :root {
-  /* ===== Professional College Brand Colors ===== */
-  --brand: #D94436;             /* Primary red */
-  --brand-light: #F27D72;       /* Light coral */
-  --brand-dark: #b8352a;
+  /* ===== Sanskrithi Group Brand Palette (sseptp-aligned) ===== */
+  --brand: #8E3D19;             /* Deep brown — primary */
+  --brand-dark: #6F2F14;        /* Darker brown for hover */
+  --brand-light: #F9843D;       /* Warm orange — secondary accent */
 
-  --accent: #7B9AD4;            /* Light blue - readable on dark theme */
-  --accent-primary: #7B9AD4;
-  --accent-secondary: #9CB4DC;
+  --accent: #F9843D;            /* Orange — eyebrows, underlines, highlights */
+  --accent-primary: #F9843D;
+  --accent-secondary: #FFB87A;  /* Soft peach */
 
-  /* Professional Dark Theme Base */
-  --base: #0F1419;              /* Professional dark blue-gray */
-  --base-light: #1C2128;        /* Slightly lighter */
-  --base-medium: #161B22;       /* Medium tone */
-  --base-dark: #0A0E13;         /* Darker tone */
+  /* ===== Default: DARK theme ===== */
+  --base: #0F1419;
+  --base-light: #1C2128;
+  --base-medium: #161B22;
+  --base-dark: #0A0E13;
 
-  /* Refined Text System */
-  --text: #F6F8FA;              /* Clean white for headings */
-  --text-primary: #E6EDF3;      /* Primary body text */
-  --text-soft: #C9D1D9;         /* Secondary text */
-  --text-dim: #8B949E;          /* Tertiary text */
-  --text-muted: #6E7681;        /* Subtle/disabled text */
+  --text: #F6F8FA;
+  --text-primary: #E6EDF3;
+  --text-soft: #C9D1D9;
+  --text-dim: #8B949E;
+  --text-muted: #6E7681;
 
-  /* Professional Glass & Surfaces */
   --surface-0: rgba(246,248,250,0.03);
   --surface-1: rgba(246,248,250,0.06);
   --surface-2: rgba(246,248,250,0.09);
@@ -32,50 +30,41 @@
   --glass-border: rgba(246,248,250,0.15);
   --glass-backdrop: blur(16px) saturate(180%);
 
-  /* Professional Card System */
   --card: 246 248 250 / 8%;
   --card-strong: 246 248 250 / 12%;
   --card-hover: 246 248 250 / 15%;
 
-  /* Professional Borders */
   --border-light: rgba(246,248,250,0.12);
   --border-medium: rgba(246,248,250,0.20);
   --border-strong: rgba(246,248,250,0.30);
 
-  /* Professional Shadow System */
   --shadow-soft: 0 4px 12px rgba(0,0,0,0.15), 0 2px 4px rgba(0,0,0,0.12);
   --shadow-medium: 0 8px 24px rgba(0,0,0,0.20), 0 4px 8px rgba(0,0,0,0.16);
   --shadow-elev: 0 16px 48px rgba(0,0,0,0.28), 0 8px 16px rgba(0,0,0,0.20);
-  --shadow-glow: 0 0 0 1px rgba(217,68,54,0.20), 0 8px 32px rgba(52,73,115,0.15);
+  --shadow-glow: 0 0 0 1px rgba(142,61,25,0.20), 0 8px 32px rgba(249,132,61,0.20);
 
-  /* Consistent Border Radius */
-  --radius: 0.875rem;
-  --radius-sm: 0.625rem;
-  --radius-md: 1.125rem;
-  --radius-lg: 1.5rem;
-  --radius-xl: 2rem;
-  --radius-2xl: 2.5rem;
+  --radius: 0.625rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.875rem;
+  --radius-lg: 1.125rem;
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
 
-  /* Smooth Transitions */
   --transition-fast: 0.15s cubic-bezier(.2,.8,.2,1);
   --transition-medium: 0.25s cubic-bezier(.2,.8,.2,1);
   --transition-slow: 0.4s cubic-bezier(.2,.8,.2,1);
 
-  /* Layout */
-  --header-height: 80px;
+  --header-height: 84px;
 
-  /* Professional Background System */
   --campus-gradient:
-    radial-gradient(1400px 800px at 50% 0%, rgba(52,73,115,0.06), transparent 70%),
-    radial-gradient(800px 600px at 100% 100%, rgba(217,68,54,0.04), transparent 60%),
+    radial-gradient(1400px 800px at 50% 0%, rgba(142,61,25,0.10), transparent 70%),
+    radial-gradient(800px 600px at 100% 100%, rgba(249,132,61,0.06), transparent 60%),
     linear-gradient(180deg, var(--base-dark) 0%, var(--base) 30%, var(--base-medium) 70%, var(--base) 100%);
 
-  /* Professional Gradients */
   --brand-gradient: linear-gradient(135deg, var(--brand) 0%, var(--brand-light) 100%);
   --accent-gradient: linear-gradient(135deg, var(--accent) 0%, var(--accent-secondary) 100%);
   --surface-gradient: linear-gradient(135deg, var(--surface-1) 0%, var(--surface-2) 100%);
 
-  /* Z-index scale */
   --z-dropdown: 1000;
   --z-sticky: 1020;
   --z-fixed: 1030;
@@ -86,41 +75,64 @@
   --z-toast: 1080;
 }
 
-/* ===== Optional Light Variant (toggle via .theme-light on <html>) ===== */
+/* ===== Light theme — opt-in via .theme-light on a wrapper ===== */
 .theme-light {
-  --base: #F2F2F2;
-  --base-light: #ffffff;
-  --base-medium: #e6e6e6;
-  --base-dark: #cccccc;
+  color: #2A2A2A;
+  background-color: #FFFFFF;
+  --base: #FFFFFF;
+  --base-light: #FFFFFF;
+  --base-medium: #FAF8F5;
+  --base-dark: #F4F1EC;
 
-  --text: #0D0D0D;
-  --text-primary: #1a1a1a;
-  --text-soft: #444444;
-  --text-dim: #666666;
-  --text-muted: #888888;
+  --text: #1A1A1A;
+  --text-primary: #2A2A2A;
+  --text-soft: #555555;
+  --text-dim: #767676;
+  --text-muted: #8A8A8A;
 
-  --surface-0: rgba(13, 13, 13, 0.03);
-  --surface-1: rgba(13, 13, 13, 0.06);
-  --surface-2: rgba(13, 13, 13, 0.08);
-  --surface-3: rgba(13, 13, 13, 0.12);
+  --surface-0: rgba(26,26,26,0.02);
+  --surface-1: rgba(26,26,26,0.04);
+  --surface-2: rgba(26,26,26,0.06);
+  --surface-3: rgba(26,26,26,0.09);
 
-  --glass-bg: rgba(242, 242, 242, 0.92);
-  --glass-border: rgba(13,13,13,0.12);
+  --glass-bg: rgba(255,255,255,0.92);
+  --glass-border: rgba(26,26,26,0.10);
 
-  --border-light: rgba(13,13,13,0.08);
-  --border-medium: rgba(13,13,13,0.12);
-  --border-strong: rgba(13,13,13,0.16);
-
-  /* Light theme keeps the original deep blue accent (readable on light bg) */
-  --accent: #344973;
-  --accent-primary: #344973;
-  --accent-secondary: #5a6d94;
+  --border-light: rgba(26,26,26,0.08);
+  --border-medium: rgba(26,26,26,0.14);
+  --border-strong: rgba(26,26,26,0.22);
 
   --campus-gradient:
-    radial-gradient(1200px 600px at 50% -10%, rgba(52,73,115,0.08), transparent 60%),
-    linear-gradient(135deg, #F2F2F2 0%, #ffffff 50%, #e6e6e6 100%);
+    linear-gradient(180deg, #FFFFFF 0%, #FAF8F5 60%, #FFFFFF 100%);
+}
+
+/* ===== Dark theme — opt-in inside light wrappers (e.g. Header) ===== */
+.theme-dark {
+  color: #E6EDF3;
+  --base: #0F1419;
+  --base-light: #1C2128;
+  --base-medium: #161B22;
+  --base-dark: #0A0E13;
+
+  --text: #F6F8FA;
+  --text-primary: #E6EDF3;
+  --text-soft: #C9D1D9;
+  --text-dim: #8B949E;
+  --text-muted: #6E7681;
+
+  --surface-0: rgba(246,248,250,0.03);
+  --surface-1: rgba(246,248,250,0.06);
+  --surface-2: rgba(246,248,250,0.09);
+  --surface-3: rgba(246,248,250,0.12);
+
+  --glass-bg: rgba(246,248,250,0.08);
+  --glass-border: rgba(246,248,250,0.15);
+
+  --border-light: rgba(246,248,250,0.12);
+  --border-medium: rgba(246,248,250,0.20);
+  --border-strong: rgba(246,248,250,0.30);
 }
 
 @media (min-width: 768px) {
-  :root { --header-height: 88px; }
+  :root { --header-height: 92px; }
 }

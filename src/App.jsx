@@ -2,6 +2,7 @@ import React, { Suspense, useEffect } from 'react';
 import { Link, Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Layout/Header.jsx';
 import Footer from './components/Layout/Footer.jsx';
+import ApplyNowFab from './components/Layout/ApplyNowFab.jsx';
 import routes from './routes.jsx';
 
 
@@ -28,7 +29,7 @@ export default function App() {
     <div className="min-h-screen flex flex-col">
       <ScrollToTop />
       <Header />
-      <main className="flex-1 min-w-0 overflow-x-hidden">
+      <main className="theme-light flex-1 min-w-0 overflow-x-hidden bg-[var(--base)]">
         <Suspense fallback={
           <div className="flex items-center justify-center min-h-[50vh] p-16">
             <div className="text-center">
@@ -45,6 +46,7 @@ export default function App() {
         </Suspense>
       </main>
       <Footer />
+      <ApplyNowFab />
     </div>
   );
 }

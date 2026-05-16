@@ -6,9 +6,9 @@ import Stats from '../components/ui/Stats.jsx';
 
 export default function About() {
   return (
-    <>
+    <div className="theme-dark bg-[var(--base)]">
       <Helmet><title>About SSB — Sanskrithi School of Business</title></Helmet>
-      
+
       {/* Hero Section */}
       <section className="relative container section-spacing overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-brand/10 to-accent-primary/10 rounded-full blur-3xl opacity-30"></div>
@@ -256,6 +256,6 @@ export default function About() {
           ))}
         </div>
       </section>
-    </>
+    </div>
   );
 }

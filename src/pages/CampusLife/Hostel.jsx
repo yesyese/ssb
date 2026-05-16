@@ -1,6 +1,12 @@
 import React from 'react';
 import SectionHeader from '../../components/ui/SectionHeader';
 import Card from '../../components/ui/Card';
+import hostelHero from '../../assets/campus/hostel/hostel-study-1.jpg';
+import hostelGroup1 from '../../assets/campus/hostel/hostel-group-1.jpg';
+import hostelGroup2 from '../../assets/campus/hostel/hostel-group-2.jpg';
+import hostelGroup3 from '../../assets/campus/hostel/hostel-group-3.jpg';
+import hostelRoom from '../../assets/campus/hostel/hostel-room.jpg';
+import hostelStudy2 from '../../assets/campus/hostel/hostel-study-2.jpg';
 
 export default function HostelFacility() {
   const hostelTypes = [
@@ -111,6 +117,16 @@ export default function HostelFacility() {
           />
           
           <div className="space-y-section">
+            {/* Hostel Hero Image */}
+            <div className="rounded-2xl overflow-hidden border border-[var(--border-light)]">
+              <img
+                src={hostelHero}
+                alt="Student studying at her desk inside the SSB hostel"
+                className="w-full h-[260px] sm:h-[360px] md:h-[440px] object-cover"
+                loading="lazy"
+              />
+            </div>
+
             {/* Hostel Introduction */}
             <Card className="text-center bg-gradient-to-r from-[var(--surface-1)] to-[var(--surface-2)]">
               <h2 className="text-3xl font-bold gradient-text mb-6">Residential Living Experience</h2>
@@ -143,6 +159,25 @@ export default function HostelFacility() {
                 </div>
               </div>
             </Card>
+
+            {/* Hostel Gallery */}
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
+              {[
+                { src: hostelGroup1, alt: 'Students studying together in hostel common room' },
+                { src: hostelStudy2, alt: 'Hostel study area' },
+                { src: hostelRoom, alt: 'Hostel room' },
+                { src: hostelGroup2, alt: 'Hostel common space' },
+                { src: hostelGroup3, alt: 'Hostel residents' },
+              ].map((img, i) => (
+                <img
+                  key={i}
+                  src={img.src}
+                  alt={img.alt}
+                  className="w-full h-[160px] sm:h-[200px] md:h-[220px] object-cover rounded-xl border border-[var(--border-light)]"
+                  loading="lazy"
+                />
+              ))}
+            </div>
 
             {/* Hostel Types */}
             <div className="space-y-12">

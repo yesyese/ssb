@@ -17,6 +17,10 @@ import {
 } from 'lucide-react';
 import SectionHeader from '../../components/ui/SectionHeader';
 import Card from '../../components/ui/Card';
+import campusHero from '../../assets/campus/classrooms/digital-classroom-2.jpg';
+import resourceCenter from '../../assets/campus/resource-center.jpg';
+import digitalClassroom1 from '../../assets/campus/classrooms/digital-classroom-1.jpg';
+import classroomStudents from '../../assets/campus/classrooms/classroom-students.jpg';
 
 export default function AboutSSBCampus() {
   const campusHighlights = [
@@ -190,6 +194,16 @@ export default function AboutSSBCampus() {
           />
 
           <div className="space-y-section">
+            {/* Campus Hero Image */}
+            <div className="rounded-2xl overflow-hidden border border-[var(--border-light)]">
+              <img
+                src={campusHero}
+                alt="Modern SSB campus classroom with linear LED lighting and individual study desks"
+                className="w-full h-[260px] sm:h-[360px] md:h-[440px] object-cover"
+                loading="lazy"
+              />
+            </div>
+
             <Card className="text-center bg-gradient-to-r from-[var(--surface-1)] to-[var(--surface-2)]">
               <h2 className="text-3xl font-bold gradient-text mb-6">Welcome to Sanskrithi Campus</h2>
               <p className="text-[var(--text-soft)] text-lg leading-relaxed mb-8 max-w-4xl mx-auto">
@@ -222,6 +236,28 @@ export default function AboutSSBCampus() {
                 })}
               </div>
             </Card>
+
+            {/* Campus Gallery */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <img
+                src={digitalClassroom1}
+                alt="SSB digital classroom with theater-style seating"
+                className="w-full h-[200px] md:h-[240px] object-cover rounded-xl border border-[var(--border-light)]"
+                loading="lazy"
+              />
+              <img
+                src={classroomStudents}
+                alt="SSB students attending a class"
+                className="w-full h-[200px] md:h-[240px] object-cover rounded-xl border border-[var(--border-light)]"
+                loading="lazy"
+              />
+              <img
+                src={resourceCenter}
+                alt="SSB resource centre and front desk"
+                className="w-full h-[200px] md:h-[240px] object-cover rounded-xl border border-[var(--border-light)]"
+                loading="lazy"
+              />
+            </div>
 
             <div className="space-y-12">
               {campusInfrastructure.map((category, i) => (

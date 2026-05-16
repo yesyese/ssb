@@ -1,73 +1,60 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
-export default function SectionHeader({ 
-  eyebrow, 
-  title, 
-  subtitle, 
-  center = false, 
-  large = false,
-  className = "",
-  animated = true 
+/**
+ * SectionHeader — sseptp-inspired pattern:
+ *   - small uppercase orange eyebrow (subtitle)
+ *   - large title in primary brand colour
+ *   - 64px orange underline under the title
+ *   - optional muted description below
+ *
+ * Props
+ *   - title (required)
+ *   - subtitle: short eyebrow text rendered above the title in uppercase orange
+ *   - description: longer paragraph rendered below the title in muted grey
+ *   - eyebrow: alias for subtitle (kept for older callsites)
+ *   - center: centre everything (default true) — most pages want this
+ *   - className: extra wrapper classes
+ *
+ * Old callsites passed { title, subtitle, description } — this signature is
+ * preserved so the swap is non-breaking.
+ */
+export default function SectionHeader({
+  title,
+  subtitle,
+  eyebrow,
+  description,
+  center = true,
+  className = '',
 }) {
-  const containerClasses = `
-    ${center ? 'text-center' : ''} 
-    ${large ? 'mb-16' : 'mb-12'} 
-    ${className}
-  `.trim();
-
-  const titleClasses = `
-    ${large ? 'text-4xl md:text-5xl lg:text-6xl' : 'text-3xl md:text-4xl lg:text-5xl'} 
-    font-bold text-[var(--text)] leading-tight tracking-tight
-  `.trim();
-
-  const subtitleClasses = `
-    text-[var(--text-soft)] mt-4 text-lg md:text-xl leading-relaxed
-    ${center ? 'max-w-4xl mx-auto' : 'max-w-3xl'}
-  `.trim();
-
-  const content = (
-    <div className={containerClasses}>
-      {eyebrow && (
-        <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-[var(--brand)]/20 to-[var(--accent)]/20 border border-[var(--brand)]/30 backdrop-blur-sm mb-6">
-          <div className="w-2 h-2 bg-[var(--accent)] rounded-full mr-3 animate-pulse"></div>
-          <span className="text-[var(--brand-light)] tracking-wider uppercase text-sm font-semibold">
-            {eyebrow}
-          </span>
-        </div>
-      )}
-      
-      <h2 className={titleClasses}>
-        {title}
-      </h2>
-      
-      {subtitle && (
-        <p className={subtitleClasses}>
-          {subtitle}
-        </p>
-      )}
-      
-      {/* Decorative underline for centered headers */}
-      {center && (
-        <div className="flex justify-center mt-8">
-          <div className="w-24 h-1 bg-gradient-to-r from-transparent via-[var(--accent)] to-transparent rounded-full"></div>
-        </div>
-      )}
-    </div>
-  );
-
-  if (!animated) {
-    return content;
-  }
+  const eyebrowText = eyebrow || subtitle;
+  const align = center ? 'text-center items-center' : 'text-left items-start';
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      viewport={{ once: true }}
-    >
-      {content}
-    </motion.div>
+    <div className={`flex flex-col ${align} mb-10 md:mb-12 ${className}`}>
+      {eyebrowText && (
+        <span className="text-[11px] sm:text-xs font-semibold tracking-[0.18em] uppercase text-[var(--accent)] mb-3">
+          {eyebrowText}
+        </span>
+      )}
+
+      <h2 className="text-[var(--brand)] font-bold text-2xl sm:text-3xl md:text-[2.25rem] leading-tight tracking-tight mb-3 max-w-3xl">
+        {title}
+      </h2>
+
+      <span
+        aria-hidden="true"
+        className="block h-[3px] w-16 rounded-full bg-[var(--accent)] mb-5"
+      />
+
+      {description && (
+        <p
+          className={`text-[var(--text-soft)] text-base md:text-lg leading-relaxed max-w-2xl ${
+            center ? 'mx-auto' : ''
+          }`}
+        >
+          {description}
+        </p>
+      )}
+    </div>
   );
 }

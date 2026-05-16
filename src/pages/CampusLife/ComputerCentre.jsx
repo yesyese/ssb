@@ -1,5 +1,8 @@
 import React from 'react';
 import SectionHeader from '../../components/ui/SectionHeader';
+import labsHero from '../../assets/campus/computer-centre/labs-students.jpg';
+import labWide from '../../assets/campus/computer-centre/lab-wide.jpg';
+import labSide from '../../assets/campus/computer-centre/lab-side.jpg';
 
 export default function ComputerCentre() {
   return (
@@ -11,16 +14,42 @@ export default function ComputerCentre() {
             subtitle="IT infrastructure and computer labs"
             description="State-of-the-art computing facilities for digital learning"
           />
-          
+
           <div className="space-y-section">
+            {/* Hero Image */}
+            <div className="rounded-2xl overflow-hidden border border-[var(--border-light)]">
+              <img
+                src={labsHero}
+                alt="SSB students working in the computer lab"
+                className="w-full h-[260px] sm:h-[360px] md:h-[440px] object-cover"
+                loading="lazy"
+              />
+            </div>
+
             <div className="panel">
               <h2>Computing Infrastructure</h2>
               <p>
-                The Computer Centre at SSB Puttaparthi is equipped with modern computing 
-                facilities and high-speed internet connectivity to support academic and 
-                research activities. Our labs provide students with hands-on experience 
+                The Computer Centre at SSB Puttaparthi is equipped with modern computing
+                facilities and high-speed internet connectivity to support academic and
+                research activities. Our labs provide students with hands-on experience
                 with the latest technology and software applications.
               </p>
+            </div>
+
+            {/* Lab Gallery */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <img
+                src={labWide}
+                alt="Wide view of SSB computer lab with students at workstations"
+                className="w-full h-[220px] md:h-[300px] object-cover rounded-xl border border-[var(--border-light)]"
+                loading="lazy"
+              />
+              <img
+                src={labSide}
+                alt="SSB students at computer lab desks"
+                className="w-full h-[220px] md:h-[300px] object-cover rounded-xl border border-[var(--border-light)]"
+                loading="lazy"
+              />
             </div>
 
             <div className="panel">

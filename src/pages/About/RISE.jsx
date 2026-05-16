@@ -9,7 +9,7 @@ import riseImage6 from "../../assets/666.jpeg";
 
 export default function AboutRISE() {
   return (
-    <div className="main-content ">
+    <div className="theme-dark main-content bg-[var(--base)]">
       <div className="section-spacing">
         <div className="container mx-auto px-0"> {/* Removed container side padding */}
           <SectionHeader

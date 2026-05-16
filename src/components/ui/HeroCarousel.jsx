@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import home1 from '../../assets/home/20260202_121419.jpg';
-import home2 from '../../assets/home/20260202_121633.jpg';
-import home3 from '../../assets/home/20260202_122858.jpg';
+import home2 from '../../assets/campus/classrooms/digital-classroom-2.jpg';
+import home3 from '../../assets/campus/library/ssb-library.jpg';
 
 const HeroCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -41,7 +41,7 @@ const HeroCarousel = () => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % carouselSlides.length);
     }, 6000); // Auto-advance every 6 seconds
-    
+
     return () => clearInterval(interval);
   }, [carouselSlides.length]);
 

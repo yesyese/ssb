@@ -1,6 +1,9 @@
 import React from 'react';
 import SectionHeader from '../../components/ui/SectionHeader';
 import Card from '../../components/ui/Card';
+import libraryHero from '../../assets/campus/library/ssb-library.jpg';
+import libraryStudents1 from '../../assets/campus/library/library-students-1.jpg';
+import libraryStudents2 from '../../assets/campus/library/library-students-2.jpg';
 
 export default function Library() {
   const libraryResources = [
@@ -106,12 +109,22 @@ export default function Library() {
           />
           
           <div className="space-y-section">
+            {/* Library Hero Image */}
+            <div className="rounded-2xl overflow-hidden border border-[var(--border-light)]">
+              <img
+                src={libraryHero}
+                alt="SSB Library interior with study tables and book stacks"
+                className="w-full h-[260px] sm:h-[360px] md:h-[440px] object-cover"
+                loading="lazy"
+              />
+            </div>
+
             {/* Library Introduction */}
             <Card className="text-center bg-gradient-to-r from-[var(--surface-1)] to-[var(--surface-2)]">
               <h2 className="text-3xl font-bold gradient-text mb-6">Academic Resource Center</h2>
               <p className="text-[var(--text-soft)] text-lg leading-relaxed mb-8 max-w-4xl mx-auto">
-                The Sanskrithi Library serves as the intellectual heart of our campus, providing students and 
-                faculty with access to extensive collections, digital resources, and modern facilities that 
+                The Sanskrithi Library serves as the intellectual heart of our campus, providing students and
+                faculty with access to extensive collections, digital resources, and modern facilities that
                 support learning, teaching, and research across all disciplines.
               </p>
               
@@ -160,6 +173,22 @@ export default function Library() {
                   </div>
                 </Card>
               ))}
+            </div>
+
+            {/* Library Gallery */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <img
+                src={libraryStudents1}
+                alt="Students studying at the SSB library"
+                className="w-full h-[240px] md:h-[300px] object-cover rounded-xl border border-[var(--border-light)]"
+                loading="lazy"
+              />
+              <img
+                src={libraryStudents2}
+                alt="Students reading at the SSB library"
+                className="w-full h-[240px] md:h-[300px] object-cover rounded-xl border border-[var(--border-light)]"
+                loading="lazy"
+              />
             </div>
 
             {/* Library Facilities */}

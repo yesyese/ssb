@@ -1,6 +1,8 @@
 import React from 'react';
 import SectionHeader from '../../components/ui/SectionHeader';
 import chairman from "../../assets/chairman.jpg";
+import foundationImage from "../../assets/campus/resource-center.jpg";
+import classroomImage from "../../assets/campus/classrooms/digital-classroom-2.jpg";
 export default function AboutOverview() {
   const statGroupStyle = {
     display: 'flex',
@@ -79,13 +81,13 @@ export default function AboutOverview() {
               
               <div className="grid gap-8 lg:grid-cols-2 mb-12 items-center">
                 <div>
-                  <img 
-                    src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?q=80&w=800&auto=format&fit=crop"
-                    alt="SSB Campus Heritage Building"
+                  <img
+                    src={foundationImage}
+                    alt="Sanskrithi School of Business resource centre"
                     className="image-frame"
                   />
                   <p className="image-caption">
-                    SSB Campus - A blend of tradition and modernity
+                    SSB Campus — modern facilities, focused learning
                   </p>
                 </div>
                 <div className="px-4">

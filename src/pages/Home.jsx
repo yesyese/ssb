@@ -126,7 +126,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="relative bg-[var(--base)] text-[var(--text)] bg-mesh">
+    <div className="theme-dark relative bg-[var(--base)] text-[var(--text)] bg-mesh">
 
       {/* Hero Carousel */}
       <HeroCarousel />

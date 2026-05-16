@@ -119,7 +119,7 @@ export default function MOUs() {
                 Active Memorandums of Understanding
               </h2>
               
-              <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+              <div className="grid gap-8 lg:grid-cols-2">
                 {mouData.map((mou, index) => (
                   <div
                     key={index}
@@ -159,8 +159,8 @@ export default function MOUs() {
                       }}>
                         {mou.icon}
                       </div>
-                      
-                      <div>
+
+                      <div className="min-w-0">
                         <div
                           className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 mb-4"
                           style={{ marginBottom: 0 }}

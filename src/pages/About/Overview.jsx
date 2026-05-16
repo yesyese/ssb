@@ -238,7 +238,7 @@ export default function AboutOverview() {
               background: 'linear-gradient(135deg, var(--surface-1) 0%, var(--surface-2) 100%)',
               border: '1px solid var(--border-light)'
             }}>
-              <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>Chairman's Message</h2>
+              <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>Chairperson's Message</h2>
               
               <div className="grid gap-8 lg:grid-cols-[minmax(0,320px)_minmax(0,1fr)] items-start">
                 <div style={{ textAlign: 'center' }}>
@@ -252,7 +252,7 @@ export default function AboutOverview() {
                   }}>
                     <img 
                       src={chairman}
-                      alt="B. Vijay Bhaskar Reddy - Chairman"
+                      alt="B. Vijay Bhaskar Reddy - Chairperson"
                       style={{
                         width: 'min(220px, 100%)',
                         aspectRatio: '1 / 1',
@@ -264,9 +264,10 @@ export default function AboutOverview() {
                       }}
                     />
                     <h3 style={{ marginBottom: '0.5rem', color: 'var(--brand)', fontSize: '1.4em' }}>B. Vijay Bhaskar Reddy</h3>
-                    <p style={{ fontWeight: 'bold', marginBottom: '0.5rem', color: 'var(--accent)' }}>Chairman & Founder</p>
+                    <p style={{ fontWeight: 'bold', marginBottom: '0.5rem', color: 'var(--accent)' }}>Chairperson & Founder</p>
                     <p style={{ fontSize: '0.9em', color: 'var(--text-muted)', lineHeight: '1.4' }}>
-                      Ph.D IIM Ahmedabad<br/>
+                      Ph.D in Management<br/>
+                      IIM Ahmedabad<br/>
                       30+ years experience in<br/>
                       Academia & Industry
                     </p>

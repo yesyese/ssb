@@ -207,7 +207,7 @@ export default function Courses() {
                         : 'bg-[var(--surface-2)] text-[var(--text)] border border-[var(--border-light)] hover:bg-[var(--surface-3)]'
                     }`}
                   >
-                    BBA (120 Seats)
+                    BBA ({programs.bba.totalSeats} Seats)
                   </button>
                   <button
                     onClick={() => setSelectedProgram('mba')}
@@ -217,7 +217,7 @@ export default function Courses() {
                         : 'bg-[var(--surface-2)] text-[var(--text)] border border-[var(--border-light)] hover:bg-[var(--surface-3)]'
                     }`}
                   >
-                    MBA (180 Seats)
+                    MBA ({programs.mba.totalSeats} Seats)
                   </button>
                   <button
                     onClick={() => setSelectedProgram('pgdm')}
@@ -227,8 +227,8 @@ export default function Courses() {
                         : 'bg-[var(--surface-2)] text-[var(--text)] border border-[var(--border-light)] hover:bg-[var(--surface-3)]'
                     }`}
                   >
-                    PGDM 
-                  </button>
+                    PGDM ({programs.pgdm.totalSeats} Seats)
+</button>
                 </div>
               </div>
             </Card>

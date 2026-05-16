@@ -4,9 +4,9 @@
   --brand-light: #F27D72;       /* Light coral */
   --brand-dark: #b8352a;
 
-  --accent: #344973;            /* Deep blue */
-  --accent-primary: #344973;
-  --accent-secondary: #5a6d94;
+  --accent: #7B9AD4;            /* Light blue - readable on dark theme */
+  --accent-primary: #7B9AD4;
+  --accent-secondary: #9CB4DC;
 
   /* Professional Dark Theme Base */
   --base: #0F1419;              /* Professional dark blue-gray */
@@ -110,6 +110,11 @@
   --border-light: rgba(13,13,13,0.08);
   --border-medium: rgba(13,13,13,0.12);
   --border-strong: rgba(13,13,13,0.16);
+
+  /* Light theme keeps the original deep blue accent (readable on light bg) */
+  --accent: #344973;
+  --accent-primary: #344973;
+  --accent-secondary: #5a6d94;
 
   --campus-gradient:
     radial-gradient(1200px 600px at 50% -10%, rgba(52,73,115,0.08), transparent 60%),

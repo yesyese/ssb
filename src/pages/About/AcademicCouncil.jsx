@@ -4,7 +4,7 @@ import SectionHeader from '../../components/ui/SectionHeader';
 export default function AcademicCouncil() {
   const councilMembers = [
     {
-      name: "B. Vijaya Bhaskar Reddy",
+      name: "B. Vijay Bhaskar Reddy",
       position: "Chairperson - Academic Council",
       qualification: "Ph.D in Management, IIM Ahmedabad",
       role: "Strategic Academic Leadership & Vision"

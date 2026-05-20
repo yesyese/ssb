@@ -39,7 +39,7 @@ export default function ExaminationCalendar() {
                 </div>
 
                 <div className="flex items-center justify-between border p-3 rounded-lg">
-                  <span>2025 I & II Sem Academic Calendar BBA Autonomous Batch</span>
+                  <span>2025 I & II Sem Academic Calendar BBA / BBA Honours Autonomous Batch</span>
                   <a
                     href="\pdf\2025 I & II Sem Academic Calender BBA Autonomous Batch.docx"
                     download
@@ -61,7 +61,7 @@ export default function ExaminationCalendar() {
                 </div>
 
                 <div className="flex items-center justify-between border p-3 rounded-lg">
-                  <span>2025 Academic Calendar BBA Autonomous Batch</span>
+                  <span>2025 Academic Calendar BBA / BBA Honours Autonomous Batch</span>
                   <a
                     href="\pdf\2025 Academic Calender BBA Autonomous Batch.pdf"
                     download

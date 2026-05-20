@@ -47,7 +47,7 @@ const committeeSections = [
         ["Coordinator", "Prashanthi", "Senior Faculty", "Management"],
         ["Faculty Representative", "Dr. Bhabani Shankar", "Associate Professor", "Business Administration"],
         ["Student Rep (Senior)", "Krishnaveni", "Student Council President", "MBA Final Year"],
-        ["Student Rep (Junior)", "Saipriya", "Student Council Member", "BBA Second Year"],
+        ["Student Rep (Junior)", "Saipriya", "Student Council Member", "BBA / BBA Honours Second Year"],
       ]
     ),
   },

@@ -95,7 +95,7 @@ export default function CampusLife() {
 
   const studentLife = [
     {
-      event: "Catalyst (BBA Fest)",
+      event: "Catalyst (BBA / BBA Honours Fest)",
       description: "Annual cultural and technical fest showcasing student talents and creativity",
       type: "Cultural Event",
       frequency: "Annual"

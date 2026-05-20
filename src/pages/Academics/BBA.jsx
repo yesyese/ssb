@@ -7,18 +7,18 @@ export default function AboutBBA() {
       <div className="section-spacing">
         <div className="container">
           <SectionHeader
-            title="About BBA"
+            title="About BBA / BBA Honours"
             subtitle="Bachelor of Business Administration program"
             description="Comprehensive undergraduate business education"
           />
-          
+
           <div className="space-y-section">
             <div className="panel">
-              <h2>BBA Program Overview</h2>
+              <h2>BBA / BBA Honours Program Overview</h2>
               <p>
-                The Bachelor of Business Administration (BBA) program is designed to provide 
-                students with a strong foundation in business principles and management practices. 
-                Our comprehensive curriculum covers all major areas of business including finance, 
+                The Bachelor of Business Administration (BBA / BBA Honours) program is designed to provide
+                students with a strong foundation in business principles and management practices.
+                Our comprehensive curriculum covers all major areas of business including finance,
                 marketing, human resources, and operations management.
               </p>
             </div>
@@ -26,7 +26,7 @@ export default function AboutBBA() {
             <div className="panel">
               <h2>Program Highlights</h2>
               <ul className="list-disc list-inside space-y-2">
-                <li>3-year undergraduate program</li>
+                <li>3-year undergraduate program (BBA / BBA Honours)</li>
                 <li>Industry-oriented curriculum</li>
                 <li>Experienced faculty with industry background</li>
                 <li>Practical learning through case studies and projects</li>
@@ -38,8 +38,8 @@ export default function AboutBBA() {
             <div className="panel">
               <h2>Career Opportunities</h2>
               <p>
-                BBA graduates can pursue careers in various fields including corporate management, 
-                consulting, banking, marketing, human resources, and entrepreneurship. Many graduates 
+                BBA / BBA Honours graduates can pursue careers in various fields including corporate management,
+                consulting, banking, marketing, human resources, and entrepreneurship. Many graduates
                 also choose to pursue higher education like MBA or specialized master's programs.
               </p>
             </div>

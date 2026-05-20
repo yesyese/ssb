@@ -29,7 +29,7 @@ const SECTIONS = [
     color: '#F9843D',
     href: '/academics/mba',
     items: [
-      { label: 'BBA', href: '/academics/bba' },
+      { label: 'BBA / BBA Honours', href: '/academics/bba' },
       { label: 'MBA', href: '/academics/mba' },
       { label: 'Courses Offered', href: '/admissions/courses' },
       { label: 'Academic Calendar', href: '/admissions/calendar' },
@@ -265,11 +265,11 @@ export default function MenuOverlay({ open, onClose }) {
               <span className="truncate">admissions.director@sanskrithibschool.com</span>
             </a>
             <a
-              href="tel:+919100064545"
+              href="tel:+919100974544"
               className="flex items-center gap-2 hover:text-white transition-colors"
             >
               <Phone className="w-3.5 h-3.5 flex-shrink-0" />
-              +91 9100 064 545
+              +91 9100 974 544
             </a>
           </div>
 

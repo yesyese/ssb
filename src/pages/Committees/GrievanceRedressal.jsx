@@ -93,7 +93,7 @@ export default function GrievanceRedressal() {
                       <td className="p-3 font-semibold">Student Representative (Junior)</td>
                       <td className="p-3">Saipriya</td>
                       <td className="p-3">Student Council Member</td>
-                      <td className="p-3">BBA Second Year</td>
+                      <td className="p-3">BBA / BBA Honours Second Year</td>
                     </tr>
                   </tbody>
                 </table>

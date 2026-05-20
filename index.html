@@ -11,6 +11,24 @@
     <title>Sanskrithi School of Business</title>
   </head>
   <body>
+    <!--
+      Static form scaffold for Netlify Forms. This is hidden and only exists
+      so Netlify's build step can detect the form fields. The actual form
+      lives in src/pages/Inquiry.jsx and submits via fetch().
+    -->
+    <form name="inquiry" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="inquiry" />
+      <input type="text" name="inquiryType" />
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <input type="text" name="qualification" />
+      <input type="text" name="programInterest" />
+      <input type="text" name="subject" />
+      <textarea name="message"></textarea>
+      <input type="text" name="bot-field" />
+    </form>
+
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

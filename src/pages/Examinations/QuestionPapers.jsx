@@ -109,10 +109,10 @@ export default function PreviousQuestionPapers() {
             </div>
 
             <div className="panel">
-              <h2>BBA Program Question Papers</h2>
+              <h2>BBA / BBA Honours Question Papers</h2>
               <div className="grid md:grid-cols-3 gap-6">
                 <div>
-                  <h4 className="font-semibold mb-2">First Year BBA (2023-24)</h4>
+                  <h4 className="font-semibold mb-2">First Year BBA / BBA Honours (2023-24)</h4>
                   <ul className="list-disc list-inside space-y-1 text-sm">
                     <li>📄 Principles of Management - [Download]</li>
                     <li>📄 Business Mathematics - [Download]</li>
@@ -122,7 +122,7 @@ export default function PreviousQuestionPapers() {
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-2">Second Year BBA (2023-24)</h4>
+                  <h4 className="font-semibold mb-2">Second Year BBA / BBA Honours (2023-24)</h4>
                   <ul className="list-disc list-inside space-y-1 text-sm">
                     <li>📄 Cost Accounting - [Download]</li>
                     <li>📄 Marketing Management - [Download]</li>
@@ -132,7 +132,7 @@ export default function PreviousQuestionPapers() {
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-2">Third Year BBA (2023-24)</h4>
+                  <h4 className="font-semibold mb-2">Third Year BBA / BBA Honours (2023-24)</h4>
                   <ul className="list-disc list-inside space-y-1 text-sm">
                     <li>📄 Strategic Management - [Download]</li>
                     <li>📄 International Business - [Download]</li>

@@ -11,7 +11,7 @@ const inquiryTypes = [
   { value: 'other', label: 'Other', icon: MessageSquare }
 ];
 
-const programs = ['BBA', 'MBA', 'PGDM'];
+const programs = ['BBA / BBA Honours', 'MBA', 'PGDM'];
 const qualifications = ['10+2 / Intermediate', 'Graduation', 'Post Graduation', 'Other'];
 
 export default function Inquiry() {
@@ -37,8 +37,10 @@ export default function Inquiry() {
     setIsSubmitting(true);
     setSubmitStatus(null);
 
+    // Netlify Forms expects application/x-www-form-urlencoded POST to '/'
+    // with a 'form-name' field matching the static form in index.html.
     const payload = {
-      timestamp: new Date().toISOString(),
+      'form-name': 'inquiry',
       inquiryType: formData.inquiryType,
       name: formData.name,
       email: formData.email,
@@ -46,42 +48,33 @@ export default function Inquiry() {
       qualification: formData.qualification,
       programInterest: formData.programInterest,
       subject: formData.subject,
-      message: formData.message
+      message: formData.message,
+      'bot-field': '', // Honeypot, must stay empty
     };
 
-    const scriptUrl = import.meta.env.VITE_GOOGLE_SCRIPT_URL;
+    const body = new URLSearchParams(payload).toString();
 
     try {
-      if (scriptUrl) {
-        // Use form POST (avoids CORS) - submit to hidden iframe
-        const form = document.getElementById('inquiry-gsheet-form');
-        if (form) {
-          const inputs = form.querySelectorAll('input[data-field]');
-          inputs.forEach((input) => {
-            const key = input.getAttribute('data-field');
-            if (payload[key] !== undefined) input.value = payload[key];
-          });
-          form.submit();
-          // Assume success after form submit (no CORS to read response)
+      const isLocalDev =
+        typeof window !== 'undefined' && /localhost|127\.0\.0\.1/.test(window.location.hostname);
+
+      if (isLocalDev) {
+        // Vite dev server doesn't run Netlify form ingestion — log only.
+        console.log('[Inquiry] Netlify form would submit (dev mode):', payload);
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', phone: '', qualification: '', programInterest: '', inquiryType: 'admission', subject: '', message: '' });
+      } else {
+        const res = await fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body,
+        });
+        if (res.ok) {
           setSubmitStatus('success');
           setFormData({ name: '', email: '', phone: '', qualification: '', programInterest: '', inquiryType: 'admission', subject: '', message: '' });
         } else {
-          // Fallback: try fetch (works if script returns CORS headers)
-          const res = await fetch(scriptUrl, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(payload)
-          });
-          if (res.ok) {
-            setSubmitStatus('success');
-            setFormData({ name: '', email: '', phone: '', qualification: '', programInterest: '', inquiryType: 'admission', subject: '', message: '' });
-          } else throw new Error('Submit failed');
+          throw new Error(`Submit failed with status ${res.status}`);
         }
-      } else {
-        // No URL - dev mode: log and show success
-        console.log('Form data (add VITE_GOOGLE_SCRIPT_URL to .env for Google Sheets):', payload);
-        setSubmitStatus('success');
-        setFormData({ name: '', email: '', phone: '', qualification: '', programInterest: '', inquiryType: 'admission', subject: '', message: '' });
       }
     } catch (err) {
       console.error(err);
@@ -91,33 +84,8 @@ export default function Inquiry() {
     }
   };
 
-  const scriptUrl = import.meta.env.VITE_GOOGLE_SCRIPT_URL || '';
-
   return (
     <div className="main-content min-h-screen">
-      {/* Hidden form for Google Sheets (avoids CORS) */}
-      {scriptUrl && (
-        <>
-          <iframe name="inquiry-gsheet-frame" title="Form submit" className="hidden w-0 h-0 border-0" aria-hidden="true" />
-          <form
-            id="inquiry-gsheet-form"
-            method="POST"
-            action={scriptUrl}
-            target="inquiry-gsheet-frame"
-            className="hidden"
-          >
-            <input type="hidden" name="timestamp" data-field="timestamp" />
-            <input type="hidden" name="inquiryType" data-field="inquiryType" />
-            <input type="hidden" name="name" data-field="name" />
-            <input type="hidden" name="email" data-field="email" />
-            <input type="hidden" name="phone" data-field="phone" />
-            <input type="hidden" name="qualification" data-field="qualification" />
-            <input type="hidden" name="programInterest" data-field="programInterest" />
-            <input type="hidden" name="subject" data-field="subject" />
-            <input type="hidden" name="message" data-field="message" />
-          </form>
-        </>
-      )}
       <div className="section-spacing">
         <div className="container">
           <motion.div
@@ -160,7 +128,16 @@ export default function Inquiry() {
                   </div>
                 )}
 
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form
+                  name="inquiry"
+                  method="POST"
+                  data-netlify="true"
+                  data-netlify-honeypot="bot-field"
+                  onSubmit={handleSubmit}
+                  className="space-y-6"
+                >
+                  <input type="hidden" name="form-name" value="inquiry" />
+                  <input type="hidden" name="bot-field" />
                   <div>
                     <label className="block text-sm font-medium text-[var(--text-soft)] mb-2">I want to *</label>
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
@@ -330,9 +307,9 @@ export default function Inquiry() {
                     <Mail className="w-5 h-5 text-[var(--brand)]" />
                     admissions.director@sanskrithibschool.com
                   </a>
-                  <a href="tel:+919100064545" className="flex items-center gap-3 hover:text-[var(--brand)] transition-colors">
+                  <a href="tel:+919100974544" className="flex items-center gap-3 hover:text-[var(--brand)] transition-colors">
                     <Phone className="w-5 h-5 text-[var(--brand)]" />
-                    +91 9100064545
+                    +91 9100974544
                   </a>
                 </div>
               </div>

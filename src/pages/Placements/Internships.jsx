@@ -247,7 +247,7 @@ export default function Internships() {
                 
                 <div className="card">
                   <h4 className="font-semibold mb-2">Sneha Patel</h4>
-                  <p className="text-sm mb-2">BBA, Class of 2024</p>
+                  <p className="text-sm mb-2">BBA / BBA Honours, Class of 2024</p>
                   <p className="text-xs text-[var(--text-dim)]">Internship: TCS (Business Development)</p>
                   <p className="text-xs text-[var(--text-dim)]">PPO: ₹8 LPA as Business Analyst</p>
                 </div>

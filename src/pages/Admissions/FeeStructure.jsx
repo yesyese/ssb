@@ -3,44 +3,113 @@ import SectionHeader from '../../components/ui/SectionHeader';
 import Card from '../../components/ui/Card';
 
 export default function FeeStructure() {
-  const [selectedProgram, setSelectedProgram] = useState('mba');
+  const [selectedProgram, setSelectedProgram] = useState('bba');
 
   const feeStructure = {
-    mba: {
-      title: "MBA Program",
-      duration: "2 Years",
-      totalFee: "₹1,26,000",
-      yearlyFee: "₹63,000",
+    bba: {
+      title: "BBA / BBA Honours — Bachelor of Business Administration",
+      duration: "3 Years",
+      totalFee: "₹1,80,000 (College fee, full program)",
+      yearlyFee: "₹60,000 / year",
+      years: 3,
       breakdown: [
-        { component: "Tuition Fee", year1: "₹50,000", year2: "₹50,000", total: "₹1,00,000" },
-        { component: "Development Fee", year1: "₹8,000", year2: "₹8,000", total: "₹16,000" },
-        { component: "Library Fee", year1: "₹2,000", year2: "₹2,000", total: "₹4,000" },
-        { component: "Exam Fee", year1: "₹2,000", year2: "₹2,000", total: "₹4,000" },
-        { component: "Lab Fee", year1: "₹1,000", year2: "₹1,000", total: "₹2,000" }
-      ]
+        {
+          component: "College Fee (Tuition Fee)",
+          year1: "₹60,000",
+          year2: "₹60,000",
+          year3: "₹60,000",
+          total: "₹1,80,000",
+        },
+        {
+          component: "Hostel Fee *",
+          year1: "₹80,000",
+          year2: "₹80,000",
+          year3: "₹80,000",
+          total: "₹2,40,000",
+          note: "Optional — annual accommodation",
+        },
+        {
+          component: "Transportation Fee *",
+          year1: "₹27,500",
+          year2: "₹27,500",
+          year3: "₹27,500",
+          total: "₹82,500",
+          note: "Optional — Route: Dharmavaram, Kadiri, Gorantla",
+        },
+      ],
+      footnote:
+        "* Hostel and Transportation fees are optional and charged only if availed. Transportation fee applies for the listed route; other routes on request.",
+    },
+    mba: {
+      title: "MBA — Master of Business Administration",
+      duration: "2 Years",
+      totalFee: "₹2,50,000 (College fees, full program)",
+      yearlyFee: "₹1,25,000 / year",
+      years: 2,
+      breakdown: [
+        {
+          component: "College Fee (Counselling Fee)",
+          year1: "₹50,000",
+          year2: "₹50,000",
+          total: "₹1,00,000",
+        },
+        {
+          component: "College Fee (Management Fee)",
+          year1: "₹75,000",
+          year2: "₹75,000",
+          total: "₹1,50,000",
+        },
+        {
+          component: "Hostel Fee *",
+          year1: "₹80,000",
+          year2: "₹80,000",
+          total: "₹1,60,000",
+          note: "Optional — annual accommodation",
+        },
+        {
+          component: "Transportation Fee *",
+          year1: "₹27,500",
+          year2: "₹27,500",
+          total: "₹55,000",
+          note: "Optional — Route: Dharmavaram, Kadiri, Gorantla",
+        },
+      ],
+      footnote:
+        "* Hostel and Transportation fees are optional and charged only if availed.",
     },
     pgdm: {
-      title: "PGDM Program", 
+      title: "PGDM — Post Graduate Diploma in Management",
       duration: "2 Years",
-      totalFee: "₹1,40,000",
-      yearlyFee: "₹70,000",
+      totalFee: "₹4,00,000 (College fees, full program)",
+      yearlyFee: "₹2,00,000 / year",
+      years: 2,
       breakdown: [
-        { component: "Tuition Fee", year1: "₹55,000", year2: "₹55,000", total: "₹1,10,000" },
-        { component: "Development Fee", year1: "₹10,000", year2: "₹10,000", total: "₹20,000" },
-        { component: "Library Fee", year1: "₹2,500", year2: "₹2,500", total: "₹5,000" },
-        { component: "Exam Fee", year1: "₹2,000", year2: "₹2,000", total: "₹4,000" },
-        { component: "Lab Fee", year1: "₹500", year2: "₹500", total: "₹1,000" }
-      ]
+        {
+          component: "College Fee (Tuition Fee)",
+          year1: "₹2,00,000",
+          year2: "₹2,00,000",
+          total: "₹4,00,000",
+          note: "₹1,00,000 per semester (4 semesters)",
+        },
+        {
+          component: "Hostel Fee *",
+          year1: "₹80,000",
+          year2: "₹80,000",
+          total: "₹1,60,000",
+          note: "Optional — annual accommodation",
+        },
+        {
+          component: "Transportation Fee *",
+          year1: "₹27,500",
+          year2: "₹27,500",
+          total: "₹55,000",
+          note: "Optional — Route: Dharmavaram, Kadiri, Gorantla",
+        },
+      ],
+      footnote:
+        "* Hostel and Transportation fees are optional and charged only if availed.",
     }
   };
-
-  const additionalFees = [
-    { item: "Application Fee", amount: "₹1,000", note: "Non-refundable, paid once during application" },
-    { item: "Admission Fee", amount: "₹5,000", note: "Paid upon confirmation of admission" },
-    { item: "Caution Deposit", amount: "₹10,000", note: "Refundable at the end of the program" },
-    { item: "Hostel Fee (per year)", amount: "₹45,000", note: "Includes accommodation and meals" },
-    { item: "Transport Fee (per year)", amount: "₹12,000", note: "Optional, based on route" }
-  ];
 
   const scholarships = [
     { name: "Sai Prudent Scholarship", coverage: "Up to 50%", criteria: "Merit-based, entrance exam score" },
@@ -64,7 +133,17 @@ export default function FeeStructure() {
             <Card>
               <div className="text-center mb-10">
                 <h2 className="text-2xl font-bold text-[var(--text)] mb-6">Select Program</h2>
-                <div className="flex justify-center gap-6">
+                <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
+                  <button
+                    onClick={() => setSelectedProgram('bba')}
+                    className={`px-6 py-3 rounded-xl font-semibold transition-all ${
+                      selectedProgram === 'bba'
+                        ? 'bg-gradient-to-r from-[var(--brand)] to-[var(--brand-light)] text-white shadow-lg'
+                        : 'bg-[var(--surface-2)] text-[var(--text)] border border-[var(--border-light)] hover:bg-[var(--surface-3)]'
+                    }`}
+                  >
+                    BBA / BBA Honours
+                  </button>
                   <button
                     onClick={() => setSelectedProgram('mba')}
                     className={`px-6 py-3 rounded-xl font-semibold transition-all ${
@@ -96,7 +175,7 @@ export default function FeeStructure() {
                   <div className="w-12 h-12 rounded-lg bg-[var(--glass-bg)] backdrop-blur-sm border border-[var(--glass-border)] flex items-center justify-center">
                     <span className="text-2xl">💰</span>
                   </div>
-                  {feeStructure[selectedProgram].title} - Fee Breakdown
+                  {feeStructure[selectedProgram].title}
                 </h2>
                 <div className="flex items-center gap-6">
                   <span className="text-[var(--text-soft)]">Duration: {feeStructure[selectedProgram].duration}</span>
@@ -105,54 +184,62 @@ export default function FeeStructure() {
               </div>
 
               <div className="overflow-x-auto">
-                <table className="w-full border-collapse">
-                  <thead>
-                    <tr className="border-b border-[var(--border-light)]">
-                      <th className="text-left p-4 text-[var(--text)] font-semibold">Fee Component</th>
-                      <th className="text-center p-4 text-[var(--text)] font-semibold">Year 1</th>
-                      <th className="text-center p-4 text-[var(--text)] font-semibold">Year 2</th>
-                      <th className="text-center p-4 text-[var(--text)] font-semibold">Total</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {feeStructure[selectedProgram].breakdown.map((fee, i) => (
-                      <tr key={i} className="border-b border-[var(--border-light)] hover:bg-[var(--surface-1)] transition-colors">
-                        <td className="p-4 text-[var(--text)]">{fee.component}</td>
-                        <td className="p-4 text-center text-[var(--text-soft)]">{fee.year1}</td>
-                        <td className="p-4 text-center text-[var(--text-soft)]">{fee.year2}</td>
-                        <td className="p-4 text-center font-semibold text-[var(--text)]">{fee.total}</td>
-                      </tr>
-                    ))}
-                    <tr className="bg-[var(--surface-1)] font-bold">
-                      <td className="p-4 text-[var(--text)]">Total Program Fee</td>
-                      <td className="p-4 text-center text-[var(--text)]">{feeStructure[selectedProgram].yearlyFee}</td>
-                      <td className="p-4 text-center text-[var(--text)]">{feeStructure[selectedProgram].yearlyFee}</td>
-                      <td className="p-4 text-center text-2xl text-[var(--text)]">{feeStructure[selectedProgram].totalFee}</td>
-                    </tr>
-                  </tbody>
-                </table>
+                {(() => {
+                  const program = feeStructure[selectedProgram];
+                  const years = program.years || 2;
+                  const hasNotes = program.breakdown.some((row) => row.note);
+                  return (
+                    <table className="w-full border-collapse">
+                      <thead>
+                        <tr className="border-b border-[var(--border-light)]">
+                          <th className="text-left p-4 text-[var(--text)] font-semibold">Particulars</th>
+                          <th className="text-center p-4 text-[var(--text)] font-semibold">Year 1</th>
+                          <th className="text-center p-4 text-[var(--text)] font-semibold">Year 2</th>
+                          {years >= 3 && (
+                            <th className="text-center p-4 text-[var(--text)] font-semibold">Year 3</th>
+                          )}
+                          <th className="text-center p-4 text-[var(--text)] font-semibold">Total</th>
+                          {hasNotes && (
+                            <th className="text-left p-4 text-[var(--text)] font-semibold">Notes</th>
+                          )}
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {program.breakdown.map((fee, i) => (
+                          <tr key={i} className="border-b border-[var(--border-light)] hover:bg-[var(--surface-1)] transition-colors">
+                            <td className="p-4 text-[var(--text)]">{fee.component}</td>
+                            <td className="p-4 text-center text-[var(--text-soft)]">{fee.year1}</td>
+                            <td className="p-4 text-center text-[var(--text-soft)]">{fee.year2}</td>
+                            {years >= 3 && (
+                              <td className="p-4 text-center text-[var(--text-soft)]">{fee.year3 || '—'}</td>
+                            )}
+                            <td className="p-4 text-center font-semibold text-[var(--text)]">{fee.total}</td>
+                            {hasNotes && (
+                              <td className="p-4 text-[var(--text-soft)] text-sm">{fee.note || '—'}</td>
+                            )}
+                          </tr>
+                        ))}
+                        <tr className="bg-[var(--surface-1)] font-bold">
+                          <td className="p-4 text-[var(--text)]">Total Program Fee</td>
+                          <td className="p-4 text-center text-[var(--text)]">{program.yearlyFee}</td>
+                          <td className="p-4 text-center text-[var(--text)]">{program.yearlyFee}</td>
+                          {years >= 3 && (
+                            <td className="p-4 text-center text-[var(--text)]">{program.yearlyFee}</td>
+                          )}
+                          <td className="p-4 text-center text-2xl text-[var(--text)]">{program.totalFee}</td>
+                          {hasNotes && <td className="p-4" />}
+                        </tr>
+                      </tbody>
+                    </table>
+                  );
+                })()}
               </div>
-            </Card>
 
-            {/* Additional Fees */}
-            <Card>
-              <h2 className="text-2xl font-bold text-[var(--text)] mb-6 flex items-center gap-3">
-                <span className="text-3xl">📋</span>
-                Additional Fees & Charges
-              </h2>
-              <div className="grid gap-4">
-                {additionalFees.map((fee, i) => (
-                  <div key={i} className="p-4 rounded-lg bg-[var(--surface-1)] border border-[var(--border-light)]">
-                    <div className="flex justify-between items-start">
-                      <div>
-                        <h4 className="font-semibold text-[var(--text)] mb-1">{fee.item}</h4>
-                        <p className="text-[var(--text-soft)] text-sm">{fee.note}</p>
-                      </div>
-                      <span className="font-bold text-[var(--text)] text-lg">{fee.amount}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
+              {feeStructure[selectedProgram].footnote && (
+                <p className="mt-4 text-sm text-[var(--text-soft)] italic">
+                  {feeStructure[selectedProgram].footnote}
+                </p>
+              )}
             </Card>
 
             {/* Payment Schedule */}

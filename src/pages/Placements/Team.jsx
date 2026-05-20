@@ -92,7 +92,7 @@ export default function PlacementTeam() {
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-2">BBA Coordinator</h4>
+                  <h4 className="font-semibold mb-2">BBA / BBA Honours Coordinator</h4>
                   <ul className="list-disc list-inside space-y-1 text-sm">
                     <li>Undergraduate placement support</li>
                     <li>Entry-level opportunity mapping</li>

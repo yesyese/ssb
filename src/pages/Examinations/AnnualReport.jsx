@@ -74,7 +74,7 @@ export default function AnnualExaminationReport() {
                       <td className="p-3">7.6</td>
                     </tr>
                     <tr className="border-b border-[var(--border-light)]">
-                      <td className="p-3">BBA</td>
+                      <td className="p-3">BBA / BBA Honours</td>
                       <td className="p-3">150</td>
                       <td className="p-3">94.7%</td>
                       <td className="p-3">76.7%</td>

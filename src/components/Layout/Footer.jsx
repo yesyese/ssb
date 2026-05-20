@@ -26,7 +26,7 @@ export default function Footer() {
           <ul className="space-y-2 text-sm">
             <li><Link to="/about/overview" className="hover:text-white transition-colors">About</Link></li>
             <li><Link to="/academics/mba" className="hover:text-white transition-colors">MBA Program</Link></li>
-            <li><Link to="/academics/bba" className="hover:text-white transition-colors">BBA Program</Link></li>
+            <li><Link to="/academics/bba" className="hover:text-white transition-colors">BBA / BBA Honours</Link></li>
             <li><Link to="/admissions/courses" className="hover:text-white transition-colors">Admissions</Link></li>
           </ul>
         </div>
@@ -49,7 +49,7 @@ export default function Footer() {
                 admissions.director@sanskrithibschool.com
               </a>
             </p>
-            <p>+91 9100064545</p>
+            <p>+91 9100974544</p>
           </div>
         </div>
       </div>

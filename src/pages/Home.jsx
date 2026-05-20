@@ -85,7 +85,7 @@ export default function Home() {
       to: "/academics/pgdm",
     },
     {
-      title: "BBA Program",
+      title: "BBA / BBA Honours",
       desc: "Bachelor of Business Administration building foundational business knowledge.",
       chip: "3 Years Full-time",
       img: progBba,

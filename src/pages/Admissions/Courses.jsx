@@ -15,7 +15,7 @@ export default function Courses() {
 
   const programs = {
     bba: {
-      title: "Bachelor of Business Administration (BBA)",
+      title: "Bachelor of Business Administration (BBA / BBA Honours)",
       duration: "3 Years Full-time",
       totalSeats: "120",
       description: "A comprehensive undergraduate management program building foundational business knowledge and preparing students for corporate careers or higher studies.",
@@ -207,7 +207,7 @@ export default function Courses() {
                         : 'bg-[var(--surface-2)] text-[var(--text)] border border-[var(--border-light)] hover:bg-[var(--surface-3)]'
                     }`}
                   >
-                    BBA ({programs.bba.totalSeats} Seats)
+                    BBA / BBA Honours ({programs.bba.totalSeats} Seats)
                   </button>
                   <button
                     onClick={() => setSelectedProgram('mba')}

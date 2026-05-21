@@ -21,8 +21,8 @@ export default function AboutRISE() {
           <div className="mt-16 space-y-24">
             
             {/* SECTION 1: THE RESEARCH FRONTIER - Split 50/50 No Card */}
-            <div className="flex flex-col lg:flex-row items-stretch">
-              <div className="lg:w-1/2 flex flex-col justify-center pr-12 pb-8 lg:pb-0">
+            <div className="flex flex-col lg:flex-row items-start">
+              <div className="lg:w-1/2 flex flex-col justify-start pr-12 pb-8 lg:pb-0">
                 <span className="text-orange-600 font-bold tracking-widest uppercase text-sm mb-2">Pillar One</span>
                 <h2 className="text-4xl font-extrabold mb-6">Advanced Research Frontier</h2>
                 <p className="text-lg leading-relaxed text-gray-700">
@@ -34,7 +34,7 @@ export default function AboutRISE() {
                 </div>
               </div>
               <div className="lg:w-1/2">
-                <img src={riseImage1} alt="Research" className="w-full h-[450px] object-cover rounded-none lg:rounded-l-3xl shadow-2xl" />
+                <img src={riseImage1} alt="Research" className="w-full h-[450px] object-cover rounded-none lg:rounded-l-3xl shadow-2xl" loading="lazy" />
               </div>
             </div>
 
@@ -56,7 +56,7 @@ export default function AboutRISE() {
                   { title: "M4: Architecture", img: riseImage5, text: "OOP, Design Patterns, SQLite, and professional Git/GitHub workflows." }
                 ].map((item, i) => (
                   <div key={i} className="group overflow-hidden border-r border-gray-100 last:border-r-0">
-                    <img src={item.img} className="w-full h-48 object-cover grayscale group-hover:grayscale-0 transition duration-500" alt={item.title} />
+                    <img src={item.img} className="w-full h-48 object-cover grayscale group-hover:grayscale-0 transition duration-500" alt={item.title} loading="lazy" />
                     <div className="p-6">
                       <h4 className="font-bold text-xl mb-2">{item.title}</h4>
                       <p className="text-sm text-gray-600 leading-relaxed">{item.text}</p>
@@ -67,7 +67,7 @@ export default function AboutRISE() {
             </div>
 
             {/* SECTION 3: INNOVATION INCUBATION - Asymmetrical Layout */}
-            <div className="flex flex-col lg:flex-row-reverse items-center">
+            <div className="flex flex-col lg:flex-row-reverse items-start">
               <div className="lg:w-1/2 lg:pl-20 py-10">
                 <span className="text-orange-600 font-bold tracking-widest uppercase text-sm mb-2">Pillar Three</span>
                 <h2 className="text-4xl font-extrabold mb-6">The Innovation Incubator</h2>
@@ -86,7 +86,7 @@ export default function AboutRISE() {
                 </ul>
               </div>
               <div className="lg:w-1/2 w-full">
-                <img src={riseImage6} alt="Incubator" className="w-full h-[600px] object-cover rounded-none lg:rounded-r-3xl" />
+                <img src={riseImage6} alt="Incubator" className="w-full h-[600px] object-cover rounded-none lg:rounded-r-3xl" loading="lazy" />
               </div>
             </div>
 

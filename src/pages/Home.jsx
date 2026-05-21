@@ -75,21 +75,21 @@ export default function Home() {
       desc: "Master of Business Administration with multiple specializations and industry exposure.",
       chip: "2 Years Full-time",
       img: progMba,
-      to: "/academics/mba",
+      to: "/admissions/courses",
     },
     {
       title: "PGDM Program",
       desc: "Post Graduate Diploma in Management with practical business applications.",
       chip: "Industry Focused",
       img: progPgdm,
-      to: "/academics/pgdm",
+      to: "/admissions/courses",
     },
     {
       title: "BBA / BBA Honours",
       desc: "Bachelor of Business Administration building foundational business knowledge.",
       chip: "3 Years Full-time",
       img: progBba,
-      to: "/academics/bba",
+      to: "/admissions/courses",
     },
   ];
 
@@ -147,7 +147,7 @@ export default function Home() {
                   key={r.name + idx}
                   className="shrink-0 px-6 py-3 rounded-xl border border-[var(--border-light)] bg-white flex items-center justify-center h-14"
                 >
-                  <img src={r.logo} alt={r.name} className="h-8 object-contain max-w-[120px]" />
+                  <img src={r.logo} alt={r.name} className="h-8 object-contain max-w-[120px]" loading="lazy" />
                 </div>
               ))}
             </div>
@@ -166,11 +166,9 @@ export default function Home() {
                 href={p.to}
                 className="group relative rounded-2xl overflow-hidden border border-[var(--border-light)] bg-[var(--surface-2)] block hover:border-[var(--border-medium)] transition-colors duration-200"
               >
-                <img
-                  src={p.img}
+                <img src={p.img}
                   alt={p.title}
-                  className="h-72 w-full object-cover transition-transform duration-300 group-hover:scale-102"
-                />
+                  className="h-72 w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]" loading="lazy" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <span className="inline-flex text-[10px] tracking-wide uppercase bg-[var(--surface-2)] border border-[var(--border-light)] px-3 py-1.5 rounded-full text-[var(--text-soft)] font-semibold">
@@ -264,7 +262,7 @@ export default function Home() {
           </p>
           <div className="mt-6 flex items-center justify-center gap-3">
             <a
-              href="/inquiry"
+              href="/inquiry?type=admission"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-gradient-to-r from-orange-500 to-red-600 text-white font-medium hover:scale-105 hover:shadow-xl transition focus-ring"
             >
               Apply Online
@@ -392,9 +390,9 @@ export default function Home() {
             <p className="text-[var(--text-muted)] mt-2 max-w-xl mx-auto">Visit our campus or reach out — we&apos;re here to help you take the next step.</p>
           </div>
           <div className="grid md:grid-cols-2 gap-8 items-stretch">
-            <div className="reveal group rounded-2xl overflow-hidden border border-[var(--border-light)] bg-[var(--surface-2)] shadow-lg hover:shadow-xl hover:border-[var(--brand)]/30 transition-all duration-300">
-              <div className="relative aspect-[16/9] overflow-hidden">
-                <img src={homeCampus} alt="Campus" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div className="reveal group rounded-2xl overflow-hidden border border-[var(--border-light)] bg-[var(--surface-2)] shadow-lg hover:shadow-xl hover:border-[var(--brand)]/30 transition-all duration-300 flex flex-col">
+              <div className="relative aspect-[16/9] overflow-hidden shrink-0">
+                <img src={homeCampus} alt="Campus" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
               </div>
               <div className="p-6 sm:p-8">
@@ -407,7 +405,7 @@ export default function Home() {
                 <p className="text-[var(--text-soft)] leading-relaxed">
                   Book a guided campus tour and interact with faculty. Experience our facilities firsthand.
                 </p>
-                <a href="/inquiry" className="mt-6 inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold hover:scale-105 hover:shadow-xl transition-all focus-ring">
+                <a href="/inquiry?type=schedule-visit" className="mt-6 inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold hover:scale-105 hover:shadow-xl transition-all focus-ring">
                   Schedule a Visit
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M5 12h12.17l-4.58-4.59L13 6l7 7-7 7-1.41-1.41L17.17 13H5z"/></svg>
                 </a>
@@ -423,8 +421,8 @@ export default function Home() {
               <p className="text-[var(--text-soft)] leading-relaxed flex-1">
                 We usually respond within 24 hours on working days. Submit your inquiry using our form — admission, schedule visit, or general contact.
               </p>
-              <a href="/inquiry" className="mt-6 inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold hover:scale-105 hover:shadow-xl transition-all focus-ring w-fit">
-                Send Inquiry
+              <a href="/inquiry?type=contact" className="mt-6 inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold hover:scale-105 hover:shadow-xl transition-all focus-ring w-fit">
+                Get in Touch
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M5 12h12.17l-4.58-4.59L13 6l7 7-7 7-1.41-1.41L17.17 13H5z"/></svg>
               </a>
             </div>
@@ -440,14 +438,16 @@ export default function Home() {
 
 function Header({ title, subtitle }) {
   return (
-    <div className="reveal flex items-end justify-between flex-wrap gap-4">
-      <div>
-        <h2 className="text-3xl md:text-4xl font-semibold text-white">
-          {title}
-        </h2>
-        <p className="text-[var(--muted)] mt-1">{subtitle}</p>
+    <div className="reveal">
+      <div className="flex items-start justify-between flex-wrap gap-4">
+        <div>
+          <h2 className="text-3xl md:text-4xl font-semibold text-white">
+            {title}
+          </h2>
+          <p className="text-[var(--text-muted)] mt-1">{subtitle}</p>
+        </div>
       </div>
-      <div className="h-px w-24 bg-gradient-to-r from-[var(--brand)]/70 to-transparent rounded-full" />
+      <div className="mt-4 h-[2px] w-24 bg-gradient-to-r from-[var(--brand)]/70 to-transparent rounded-full" />
     </div>
   );
 }
@@ -478,14 +478,12 @@ function Card({ title, desc }) {
 
 function Testimonial({ quote, name, role, img }) {
   return (
-    <div className="reveal relative overflow-hidden rounded-2xl border border-[var(--border-light)] bg-[var(--surface-1)] p-6">
+    <div className="reveal relative overflow-hidden rounded-2xl border border-[var(--border-light)] bg-[var(--surface-1)] p-6 h-full flex flex-col">
       <div className="absolute -top-8 -right-8 h-32 w-32 rounded-full bg-[var(--brand)]/8 pointer-events-none" />
       <div className="flex items-start gap-4">
-        <img
-          src={img}
+        <img src={img}
           alt={name}
-          className="h-16 w-16 rounded-xl object-cover border border-[var(--border-light)]"
-        />
+          className="h-16 w-16 rounded-xl object-cover border border-[var(--border-light)]" loading="lazy" />
         <div>
           <p className="text-[var(--text)] italic leading-relaxed">"{quote}"</p>
           <div className="mt-3 text-sm text-[var(--text-soft)]">
@@ -499,13 +497,11 @@ function Testimonial({ quote, name, role, img }) {
 
 function Facility({ title, img, points }) {
   return (
-    <div className="reveal group relative overflow-hidden rounded-2xl border border-[var(--border-light)] bg-[var(--surface-1)]">
+    <div className="reveal group relative overflow-hidden rounded-2xl border border-[var(--border-light)] bg-[var(--surface-1)] h-full flex flex-col">
       <div className="aspect-[4/3] overflow-hidden">
-        <img
-          src={img}
+        <img src={img}
           alt={title}
-          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-102"
-        />
+          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]" loading="lazy" />
       </div>
       <div className="p-5">
         <h3 className="text-xl font-semibold text-[var(--text)]">{title}</h3>
@@ -534,7 +530,7 @@ function FAQ({ q, a }) {
           </svg>
         </span>
       </summary>
-      <div id={id} className="pt-3 text-[var(--muted)]">
+      <div id={id} className="pt-3 text-[var(--text-muted)]">
         {a}
       </div>
     </details>
@@ -546,11 +542,9 @@ function EventCard({ type, title, date, desc, image, link, urgent = false }) {
     <div className="reveal group relative rounded-2xl overflow-hidden border border-[var(--border-light)] bg-[var(--surface-1)] hover:bg-[var(--surface-2)] transition-colors duration-200">
       <div className="grid md:grid-cols-3 gap-0">
         <div className="md:col-span-1">
-          <img
-            src={image}
+          <img src={image}
             alt={title}
-            className="w-full h-48 md:h-full object-cover transition-transform duration-300 group-hover:scale-102"
-          />
+            className="w-full h-48 md:h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]" loading="lazy" />
         </div>
         <div className="md:col-span-2 p-6">
           <div className="flex items-start justify-between mb-3">

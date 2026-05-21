@@ -119,7 +119,7 @@ export default function MOUs() {
                 Active Memorandums of Understanding
               </h2>
               
-              <div className="grid gap-8 lg:grid-cols-2">
+              <div className="grid gap-8 lg:grid-cols-3">
                 {mouData.map((mou, index) => (
                   <div
                     key={index}
@@ -278,7 +278,7 @@ export default function MOUs() {
               
               <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
                 <a 
-                  href="/inquiry" 
+                  href="/inquiry?type=contact" 
                   style={{
                     background: 'var(--brand-gradient)',
                     color: 'white',
@@ -290,7 +290,7 @@ export default function MOUs() {
                     display: 'inline-block',
                     minWidth: '220px'
                   }}
-                  className="hover:scale-105 hover:shadow-lg"
+                  className="hover:scale-105 hover:shadow-lg w-full sm:w-auto text-center"
                 >
                   Partnership Inquiries
                 </a>
@@ -308,6 +308,7 @@ export default function MOUs() {
                     display: 'inline-block',
                     minWidth: '220px'
                   }}
+                  className="w-full sm:w-auto text-center"
                   className="hover:bg-[var(--surface-3)] hover:border-[var(--border-medium)]"
                 >
                   Learn More About SSB

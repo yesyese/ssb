@@ -226,7 +226,7 @@ export default function FeeStructure() {
                           {years >= 3 && (
                             <td className="p-4 text-center text-[var(--text)]">{program.yearlyFee}</td>
                           )}
-                          <td className="p-4 text-center text-2xl text-[var(--text)]">{program.totalFee}</td>
+                          <td className="p-4 text-center font-bold text-[var(--text)]">{program.totalFee}</td>
                           {hasNotes && <td className="p-4" />}
                         </tr>
                       </tbody>
@@ -327,8 +327,8 @@ export default function FeeStructure() {
             </Card>
 
             {/* Bank Details & Contact */}
-            <div className="grid md:grid-cols-2 gap-6">
-              <Card>
+            <div className="grid md:grid-cols-2 gap-6 items-stretch">
+              <Card className="h-full flex flex-col">
                 <h3 className="text-xl font-bold text-[var(--text)] mb-4 flex items-center gap-2">
                   <span className="text-2xl">🏦</span>
                   Bank Details
@@ -357,7 +357,7 @@ export default function FeeStructure() {
                 </div>
               </Card>
 
-              <Card>
+              <Card className="h-full flex flex-col">
                 <h3 className="text-xl font-bold text-[var(--text)] mb-4 flex items-center gap-2">
                   <span className="text-2xl">📞</span>
                   Fee Enquiries
@@ -378,10 +378,10 @@ export default function FeeStructure() {
                 </div>
                 <div className="mt-6">
                   <a 
-                    href="/inquiry" 
+                    href="/inquiry?type=fee" 
                     className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[var(--brand)] to-[var(--brand-light)] text-white font-semibold rounded-lg hover:scale-105 transition-transform"
                   >
-                    Contact Us
+                    Fee Enquiry
                   </a>
                 </div>
               </Card>

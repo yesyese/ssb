@@ -20,11 +20,9 @@ export default function FeePayment() {
       {/* Hero section with large image */}
       <section className="relative min-h-[45vh] md:min-h-[55vh] flex items-end">
         <div className="absolute inset-0">
-          <img
-            src={campusImg}
+          <img src={campusImg}
             alt="Sanskrithi Campus"
-            className="w-full h-full object-cover"
-          />
+            className="w-full h-full object-cover" loading="lazy" />
           <div className="absolute inset-0 bg-gradient-to-t from-[var(--base)] via-[var(--base)]/60 to-transparent" />
           <div className="absolute inset-0 bg-[var(--brand)]/20" />
         </div>
@@ -83,11 +81,9 @@ export default function FeePayment() {
                       Use GPay, PhonePe, Paytm or any UPI app to pay your fees instantly.
                     </p>
                     <div className="p-5 bg-white rounded-2xl border-2 border-[var(--border-light)] shadow-lg">
-                      <img
-                        src={paymentQR}
+                      <img src={paymentQR}
                         alt="Payment QR Code - Scan to pay fees"
-                        className="w-44 h-44 md:w-52 md:h-52 lg:w-56 lg:h-56 object-contain"
-                      />
+                        className="w-44 h-44 md:w-52 md:h-52 lg:w-56 lg:h-56 object-contain" loading="lazy" />
                     </div>
                     <p className="text-sm text-[var(--text-muted)] mt-4">
                       Scan with your camera or UPI app
@@ -95,16 +91,14 @@ export default function FeePayment() {
                   </div>
                   {/* Side image */}
                   <div className="relative min-h-[280px] md:min-h-[400px] hidden md:block">
-                    <img
-                      src={campusImg2}
+                    <img src={campusImg2}
                       alt="Campus"
-                      className="absolute inset-0 w-full h-full object-cover"
-                    />
+                      className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-black/20 to-black/60" />
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                       <p className="text-sm font-medium text-white/90">Need help with payment?</p>
                       <a
-                        href="/inquiry"
+                        href="/inquiry?type=fee"
                         className="inline-flex items-center gap-2 mt-2 text-white font-semibold hover:underline"
                       >
                         Submit an inquiry
@@ -165,10 +159,10 @@ export default function FeePayment() {
                   For fee structure, payment issues, or receipt download, visit our admissions office or submit an inquiry.
                 </p>
                 <a
-                  href="/inquiry"
+                  href="/inquiry?type=fee"
                   className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[var(--accent)]/20 text-[var(--accent)] font-semibold hover:bg-[var(--accent)]/30 transition-colors relative"
                 >
-                  Submit Inquiry
+                  Fee Enquiry
                   <ArrowRight className="w-4 h-4" />
                 </a>
               </div>
@@ -201,7 +195,7 @@ export default function FeePayment() {
             />
             <div className="grid md:grid-cols-3 gap-4 md:gap-6 mt-8">
               <div className="group relative rounded-2xl overflow-hidden aspect-[4/3] shadow-lg">
-                <img src={campusImg} alt="Campus view" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <img src={campusImg} alt="Campus view" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-60" />
                 <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                   <h4 className="font-bold text-lg">Main Campus</h4>
@@ -209,7 +203,7 @@ export default function FeePayment() {
                 </div>
               </div>
               <div className="group relative rounded-2xl overflow-hidden aspect-[4/3] shadow-lg">
-                <img src={campusImg2} alt="Campus facilities" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <img src={campusImg2} alt="Campus facilities" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-60" />
                 <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                   <h4 className="font-bold text-lg">Modern Facilities</h4>
@@ -217,7 +211,7 @@ export default function FeePayment() {
                 </div>
               </div>
               <div className="group relative rounded-2xl overflow-hidden aspect-[4/3] shadow-lg">
-                <img src={campusImg3} alt="Campus life" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <img src={campusImg3} alt="Campus life" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-60" />
                 <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                   <h4 className="font-bold text-lg">Campus Life</h4>

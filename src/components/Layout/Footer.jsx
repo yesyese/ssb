@@ -3,19 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
-    <footer
-      className="theme-dark"
-      style={{
-        background:
-          'linear-gradient(180deg, rgba(255,178,120,0.72) 0%, rgba(249,132,61,0.75) 45%, rgba(214,99,38,0.82) 100%)',
-        backdropFilter: 'blur(16px) saturate(180%)',
-        WebkitBackdropFilter: 'blur(16px) saturate(180%)',
-        borderTop: '2px solid #8E3D19',
-        borderBottom: '3px solid #8E3D19',
-        boxShadow:
-          'inset 0 1px 0 rgba(255,255,255,0.45), inset 0 -1px 0 rgba(110,40,10,0.20)',
-      }}
-    >
+    <footer className="theme-dark footer-glass">
       <div className="container py-8 grid gap-6 md:grid-cols-4 text-white/80">
         <div>
           <div className="text-white font-semibold text-base mb-2">Sanskrithi School of Business</div>
@@ -25,8 +13,7 @@ export default function Footer() {
           <div className="text-white font-medium text-sm mb-3">Explore</div>
           <ul className="space-y-2 text-sm">
             <li><Link to="/about/overview" className="hover:text-white transition-colors">About</Link></li>
-            <li><Link to="/academics/mba" className="hover:text-white transition-colors">MBA Program</Link></li>
-            <li><Link to="/academics/bba" className="hover:text-white transition-colors">BBA / BBA Honours</Link></li>
+            <li><Link to="/admissions/courses" className="hover:text-white transition-colors">Courses Offered (BBA / MBA / PGDM)</Link></li>
             <li><Link to="/admissions/courses" className="hover:text-white transition-colors">Admissions</Link></li>
           </ul>
         </div>
@@ -45,7 +32,7 @@ export default function Footer() {
             <p>Behind Sri Sathya Sai Super Speciality Hospital</p>
             <p>Sri Sathyasai District, Andhra Pradesh</p>
             <p className="mt-2">
-              <a href="mailto:admissions.director@sanskrithibschool.com" className="hover:text-white transition-colors">
+              <a href="mailto:admissions.director@sanskrithibschool.com" className="hover:text-white transition-colors break-all">
                 admissions.director@sanskrithibschool.com
               </a>
             </p>

@@ -25,7 +25,7 @@ export default function Courses() {
     mba: {
       title: "Master of Business Administration (MBA)",
       duration: "2 Years Full-time",
-      totalSeats: "120",
+      totalSeats: "180",
       description: "A comprehensive management program designed to develop leadership skills and business acumen for modern corporate challenges.",
       specializations: [
         {
@@ -273,7 +273,7 @@ export default function Courses() {
               </h2>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
                 {programs[selectedProgram].specializations.map((spec, i) => (
-                  <div key={i} className="p-4 sm:p-6 rounded-xl bg-[var(--surface-1)] border border-[var(--border-light)] hover:bg-[var(--surface-2)] transition-colors">
+                  <div key={i} className="p-4 sm:p-6 rounded-xl bg-[var(--surface-1)] border border-[var(--border-light)] hover:bg-[var(--surface-2)] transition-colors h-full flex flex-col">
                     <div className="flex items-start gap-4 mb-4">
                       <div className="w-12 h-12 rounded-lg bg-[var(--glass-bg)] backdrop-blur-sm border border-[var(--glass-border)] flex items-center justify-center">
                         <span className="text-2xl">{spec.icon}</span>
@@ -385,7 +385,7 @@ export default function Courses() {
                 {industryConnections.map((partner, i) => (
                   <div key={i} className="text-center p-4 sm:p-6 rounded-xl bg-[var(--surface-1)] border border-[var(--border-light)] hover:bg-[var(--surface-2)] transition-colors">
                     <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center mx-auto mb-4 p-2 overflow-hidden">
-                      <img src={partner.logo} alt={partner.company} className="w-full h-full object-contain" />
+                      <img src={partner.logo} alt={partner.company} className="w-full h-full object-contain" loading="lazy" />
                     </div>
                     <h4 className="font-semibold text-[var(--text)] mb-2">{partner.company}</h4>
                     <p className="text-sm text-[var(--text-soft)]">{partner.type}</p>
@@ -402,14 +402,14 @@ export default function Courses() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a 
-                  href="/inquiry" 
-                  className="px-8 py-4 bg-gradient-to-r from-[var(--brand)] to-[var(--brand-light)] text-white font-semibold rounded-xl hover:scale-105 transition-transform shadow-lg"
+                  href="/inquiry?type=admission" 
+                  className="px-8 py-4 bg-gradient-to-r from-[var(--brand)] to-[var(--brand-light)] text-white font-semibold rounded-xl hover:scale-105 transition-transform shadow-lg w-full sm:w-auto text-center"
                 >
                   Apply Now
                 </a>
                 <a 
                   href="/admissions/admission-procedure" 
-                  className="px-8 py-4 bg-[var(--surface-2)] text-[var(--text)] font-semibold rounded-xl border border-[var(--border-light)] hover:bg-[var(--surface-3)] transition-colors"
+                  className="px-8 py-4 bg-[var(--surface-2)] text-[var(--text)] font-semibold rounded-xl border border-[var(--border-light)] hover:bg-[var(--surface-3)] transition-colors w-full sm:w-auto text-center"
                 >
                   View Admission Process
                 </a>

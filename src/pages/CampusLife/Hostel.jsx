@@ -144,8 +144,8 @@ export default function HostelFacility() {
                 </div>
                 <div className="text-center p-4">
                   <span className="text-3xl block mb-2">❄️</span>
-                  <span className="text-2xl font-bold text-[var(--text)] block mb-1">AC</span>
-                  <p className="text-[var(--text-soft)] text-sm">Rooms Available</p>
+                  <span className="text-2xl font-bold text-[var(--text)] block mb-1">100%</span>
+                  <p className="text-[var(--text-soft)] text-sm">AC Rooms</p>
                 </div>
                 <div className="text-center p-4">
                   <span className="text-3xl block mb-2">🔒</span>
@@ -154,14 +154,14 @@ export default function HostelFacility() {
                 </div>
                 <div className="text-center p-4">
                   <span className="text-3xl block mb-2">📶</span>
-                  <span className="text-2xl font-bold text-[var(--text)] block mb-1">WiFi</span>
-                  <p className="text-[var(--text-soft)] text-sm">Connectivity</p>
+                  <span className="text-2xl font-bold text-[var(--text)] block mb-1">100%</span>
+                  <p className="text-[var(--text-soft)] text-sm">WiFi Coverage</p>
                 </div>
               </div>
             </Card>
 
             {/* Hostel Gallery */}
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 justify-items-center">
               {[
                 { src: hostelGroup1, alt: 'Students studying together in hostel common room' },
                 { src: hostelStudy2, alt: 'Hostel study area' },
@@ -319,16 +319,10 @@ export default function HostelFacility() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a 
-                    href="/inquiry"
+                    href="/inquiry?type=admission"
                     className="px-8 py-4 bg-gradient-to-r from-[var(--brand)] to-[var(--brand-light)] text-white font-semibold rounded-xl hover:scale-105 transition-transform shadow-lg"
                   >
-                    Apply for Hostel
-                  </a>
-                  <a 
-                    href="/inquiry"
-                    className="px-8 py-4 bg-[var(--surface-2)] text-[var(--text)] font-semibold rounded-xl border border-[var(--border-light)] hover:bg-[var(--surface-3)] transition-colors"
-                  >
-                    Contact Hostel Office
+                    Apply Now
                   </a>
                 </div>
               </div>

@@ -26,11 +26,9 @@ const programSections = [
           <span><strong className="text-[var(--brand)]">5000+</strong> Lives Impacted</span>
         </div>
        <div className="mb-6">
-        <img
-          src={Img5}
+        <img src={Img5}
           alt="nss"
-          className="w-full pt-4 h-80 object-cover rounded-2xl shadow-lg"
-        />
+          className="w-full pt-4 h-80 object-cover rounded-2xl shadow-lg" loading="lazy" />
       </div>
       </>
     )
@@ -55,11 +53,9 @@ const programSections = [
         </div>
 
          <div className="mb-6">
-        <img
-          src={Img4}
+        <img src={Img4}
           alt="UnnaBharat Green Club"
-          className="w-full pt-4 h-80 object-cover rounded-2xl shadow-lg"
-        />
+          className="w-full pt-4 h-80 object-cover rounded-2xl shadow-lg" loading="lazy" />
       </div>
       </>
     )
@@ -82,11 +78,9 @@ const programSections = [
           <span><strong className="text-[var(--brand)]">150+</strong> Student Volunteers</span>
         </div>
          <div className="mb-6">
-        <img
-          src={Img1}
+        <img src={Img1}
           alt="Unnat Bharat Abhiyaan"
-          className="w-full pt-4 h-80 object-cover rounded-2xl shadow-lg"
-        />
+          className="w-full pt-4 h-80 object-cover rounded-2xl shadow-lg" loading="lazy" />
       </div>
       </>
       )},
@@ -104,11 +98,9 @@ const programSections = [
         </div>
 
          <div className="mb-6">
-        <img
-          src={Img2}
+        <img src={Img2}
           alt="Ek Bharat Shreshtha Bharat"
-          className="w-full pt-4 h-80 object-cover rounded-2xl "
-        />
+          className="w-full pt-4 h-80 object-cover rounded-2xl " loading="lazy" />
       </div>
       </>
     )
@@ -127,11 +119,9 @@ const programSections = [
         </div>
 
          <div className="mb-6">
-        <img
-          src={Img3}
+        <img src={Img3}
           alt="Viksit Bharat @2047"
-          className="w-full pt-4 h-80 object-cover rounded-2xl shadow-lg"
-        />
+          className="w-full pt-4 h-80 object-cover rounded-2xl shadow-lg" loading="lazy" />
       </div>
       </>
     )

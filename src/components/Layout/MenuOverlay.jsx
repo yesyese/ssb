@@ -27,15 +27,11 @@ const SECTIONS = [
   {
     label: 'Academics',
     color: '#F9843D',
-    href: '/academics/mba',
+    href: '/admissions/courses',
     items: [
-      { label: 'BBA / BBA Honours', href: '/academics/bba' },
-      { label: 'MBA', href: '/academics/mba' },
-      { label: 'Courses Offered', href: '/admissions/courses' },
+      { label: 'Courses Offered (BBA / BBA Honours, MBA, PGDM)', href: '/admissions/courses' },
       { label: 'Academic Calendar', href: '/admissions/calendar' },
-      { label: 'Examinations Team', href: '/examinations/team' },
-      { label: 'Evaluation Procedure', href: '/examinations/evaluation-procedure' },
-      { label: 'Examinations Calendar', href: '/examinations/calendar' },
+      { label: 'Examination Section', href: '/examinations' },
     ],
   },
   {
@@ -47,8 +43,6 @@ const SECTIONS = [
       { label: 'Admissions Committee', href: '/admissions/admissions-committee' },
       { label: 'Fee Structure', href: '/admissions/fee-structure' },
       { label: 'Fee Payment', href: '/admissions/fee-payment' },
-      { label: 'Scholarships', href: '/admissions/scholarships' },
-      { label: 'ICET Ranks', href: '/admissions/ranks' },
     ],
   },
   {
@@ -212,19 +206,47 @@ export default function MenuOverlay({ open, onClose }) {
 
                   {isActive && (
                     <div className="pl-9 pr-6 pb-3" style={{ animation: 'flyoutFadeIn 200ms ease' }}>
-                      <ul className="space-y-0.5">
-                        {section.items.map((item) => (
-                          <li key={item.href}>
-                            <Link
-                              to={item.href}
-                              onClick={onClose}
-                              className="block py-1.5 text-[13.5px] text-white/70 hover:text-white transition-colors"
-                            >
-                              {item.label}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
+                      {section.groups ? (
+                        <div className="space-y-4">
+                          {section.groups.map((group) => (
+                            <div key={group.title}>
+                              <div
+                                className="text-[10px] uppercase tracking-[0.18em] font-semibold mb-1.5"
+                                style={{ color: section.color }}
+                              >
+                                {group.title}
+                              </div>
+                              <ul className="space-y-0.5">
+                                {group.items.map((item) => (
+                                  <li key={item.href}>
+                                    <Link
+                                      to={item.href}
+                                      onClick={onClose}
+                                      className="block py-1.5 text-[13.5px] text-white/75 hover:text-white transition-colors"
+                                    >
+                                      {item.label}
+                                    </Link>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          ))}
+                        </div>
+                      ) : (
+                        <ul className="space-y-0.5">
+                          {section.items.map((item) => (
+                            <li key={item.href}>
+                              <Link
+                                to={item.href}
+                                onClick={onClose}
+                                className="block py-1.5 text-[13.5px] text-white/70 hover:text-white transition-colors"
+                              >
+                                {item.label}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
                       <Link
                         to={section.href}
                         onClick={onClose}
@@ -248,7 +270,7 @@ export default function MenuOverlay({ open, onClose }) {
           style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}
         >
           <Link
-            to="/inquiry"
+            to="/inquiry?type=admission"
             onClick={onClose}
             className="flex items-center justify-center gap-2 w-full px-4 py-3 rounded-md bg-[var(--brand)] hover:bg-[var(--brand-dark)] text-white text-[13px] font-semibold tracking-wider uppercase transition-colors"
           >

@@ -111,15 +111,10 @@ export const NAV = [
     href: '/academics',
     description: 'Our academic programs and excellence',
     children: [
-      { 
-        label: 'About BBA / BBA Honours', 
-        href: '/academics/bba',
-        description: 'Bachelor of Business Administration program'
-      },
-      { 
-        label: 'About MBA', 
-        href: '/academics/mba',
-        description: 'Master of Business Administration program'
+      {
+        label: 'Courses Offered',
+        href: '/admissions/courses',
+        description: 'BBA / BBA Honours, MBA and PGDM programs with specialisations'
       },
    
     ]

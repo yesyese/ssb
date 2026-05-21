@@ -26,11 +26,9 @@ export default function AboutChairperson() {
                     boxShadow: 'var(--shadow-medium)',
                     border: '1px solid var(--border-light)'
                   }} className="p-4 sm:p-6 md:p-8 rounded-xl">
-                    <img
-                      src={chairman}
+                    <img src={chairman}
                       alt="B. Vijay Reddy - Chairman, Sanskrithi Group"
-                      className="w-40 h-40 sm:w-52 sm:h-52 md:w-[220px] md:h-[220px] rounded-full object-cover mx-auto mb-6 block border-4 border-[var(--brand)]"
-                    />
+                      className="w-40 h-40 sm:w-52 sm:h-52 md:w-[220px] md:h-[220px] rounded-full object-cover mx-auto mb-6 block border-4 border-[var(--brand)]" loading="lazy" />
                     <h3 style={{ marginBottom: '0.5rem', color: 'var(--brand)', fontSize: '1.4em' }}>
                       B. Vijay Reddy
                     </h3>

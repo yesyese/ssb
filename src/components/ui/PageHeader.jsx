@@ -14,7 +14,26 @@ import { ChevronRight, Home } from 'lucide-react';
  * Background is the brand brown -> orange gradient, kept dark so the
  * downstream light-theme content sections have visual separation.
  */
+const breadcrumbLabels = {
+  'iqac': 'IQAC',
+  'iic': 'IIC',
+  'nptel': 'NPTEL',
+  'dvv': 'DVV',
+  'naac': 'NAAC',
+  'nss': 'NSS',
+  'ncc': 'NCC',
+  'mous': 'MOUs',
+  'sop': 'SOP',
+  'rnd-cell': 'R&D Cell',
+  'sc-st-cell': 'SC/ST Cell',
+  'elearning': 'E-Learning',
+  'bba': 'BBA',
+  'mba': 'MBA',
+  'pgdm': 'PGDM',
+};
+
 function humanise(segment) {
+  if (breadcrumbLabels[segment]) return breadcrumbLabels[segment];
   return segment
     .replace(/-/g, ' ')
     .replace(/\b\w/g, (c) => c.toUpperCase());

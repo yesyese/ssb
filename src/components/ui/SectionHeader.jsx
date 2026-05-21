@@ -44,6 +44,7 @@ export default function SectionHeader({
       <span
         aria-hidden="true"
         className="block h-[3px] w-16 rounded-full bg-[var(--accent)] mb-5"
+        style={{ width: 'clamp(48px, 15%, 64px)' }}
       />
 
       {description && (

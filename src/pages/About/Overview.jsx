@@ -8,7 +8,8 @@ export default function AboutOverview() {
     display: 'flex',
     gap: '2rem',
     marginTop: '2rem',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
+    justifyContent: 'center'
   };
 
   const statItemStyle = {
@@ -76,58 +77,46 @@ export default function AboutOverview() {
             <div className="panel">
               <h2>Inspired Beginnings</h2>
               <p className="text-intro">
-                Our journey began with a simple yet powerful vision - to create business leaders who lead with purpose
+                Rooted in the divine vision of Bhagawan Sri Sathya Sai Baba
               </p>
-              
-              <div className="grid gap-8 lg:grid-cols-2 mb-12 items-center">
+
+              <div className="grid gap-8 lg:grid-cols-2 mb-12 items-start">
                 <div>
-                  <img
-                    src={foundationImage}
+                  <img src={foundationImage}
                     alt="Sanskrithi School of Business resource centre"
-                    className="image-frame"
-                  />
+                    className="image-frame" loading="lazy" />
                   <p className="image-caption">
                     SSB Campus — modern facilities, focused learning
                   </p>
                 </div>
                 <div className="px-4">
-                  <h3 style={{ marginBottom: '1.5rem', color: 'var(--brand)' }}>The Foundation</h3>
-                  <p style={{ marginBottom: '1.5rem', lineHeight: '1.6', color: 'var(--text-primary)' }}>
-                    Established in 2008 in the spiritual town of Puttaparthi, Sanskrithi School of Business 
-                    was founded on the principles of excellence, integrity, and social responsibility. Our 
-                    founders envisioned an institution that would bridge the gap between traditional business 
-                    education and modern industry requirements.
+                  <p style={{ marginBottom: '1.5rem', lineHeight: '1.7', color: 'var(--text-primary)' }}>
+                    Sanskrithi owes its inspiration to the edifice of spiritual, social and economic development — 
+                    <strong style={{ color: 'var(--brand)' }}>Bhagawan Sri Sathya Sai Baba</strong>. Encouraged by His mission to provide free value-based education to all, 
+                    the Sanskrithi Educational Society was incorporated in 2010, which manages the Sanskrithi School of Business 
+                    and Sanskrithi School of Engineering.
+                  </p>
+                  <p style={{ marginBottom: '1.5rem', lineHeight: '1.7', color: 'var(--text-primary)' }}>
+                    Since then, over <strong>1200 students</strong> have graduated from the portals of SSB. Sanskrithi has established itself 
+                    in the education scenario by providing affordable values-based, quality education, along with international exposure 
+                    via its numerous associations and tie-ups.
+                  </p>
+                  <p style={{ marginBottom: '1.5rem', lineHeight: '1.7', color: 'var(--text-primary)' }}>
+                    With its student-centric approach and innovative blend of modern and traditional styles of learning and architecture, 
+                    the campus is the perfect destination for innovative ideas and the realization of dreams.
                   </p>
                   <div style={statGroupStyle}>
                     <div style={statItemStyle}>
-                      <div style={{ fontSize: '2em', fontWeight: 'bold', color: 'var(--brand)' }}>2008</div>
-                      <div style={{ fontSize: '0.9em', color: 'var(--text-muted)' }}>Established</div>
+                      <div style={{ fontSize: '2em', fontWeight: 'bold', color: 'var(--brand)' }}>2010</div>
+                      <div style={{ fontSize: '0.9em', color: 'var(--text-muted)' }}>Society Founded</div>
+                    </div>
+                    <div style={statItemStyle}>
+                      <div style={{ fontSize: '2em', fontWeight: 'bold', color: 'var(--brand)' }}>1200+</div>
+                      <div style={{ fontSize: '0.9em', color: 'var(--text-muted)' }}>Graduates</div>
                     </div>
                     <div style={statItemStyle}>
                       <div style={{ fontSize: '2em', fontWeight: 'bold', color: 'var(--brand)' }}>15+</div>
                       <div style={{ fontSize: '0.9em', color: 'var(--text-muted)' }}>Years of Excellence</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="grid gap-8 lg:grid-cols-2 items-center">
-                <div className="px-4">
-                  <h3 style={{ marginBottom: '1.5rem', color: 'var(--brand)' }}>Our Growth</h3>
-                  <p style={{ marginBottom: '1.5rem', lineHeight: '1.6', color: 'var(--text-primary)' }}>
-                    From humble beginnings with 60 students, we have grown into a premier institution with 
-                    over 1200+ alumni working across Fortune 500 companies globally. Our commitment to 
-                    quality education and holistic development has earned us recognition from industry and 
-                    academic bodies alike.
-                  </p>
-                  <div style={statGroupStyle}>
-                    <div style={statItemStyle}>
-                      <div style={{ fontSize: '2em', fontWeight: 'bold', color: 'var(--brand)' }}>1200+</div>
-                      <div style={{ fontSize: '0.9em', color: 'var(--text-muted)' }}>Alumni Network</div>
-                    </div>
-                    <div style={statItemStyle}>
-                      <div style={{ fontSize: '2em', fontWeight: 'bold', color: 'var(--brand)' }}>95%</div>
-                      <div style={{ fontSize: '0.9em', color: 'var(--text-muted)' }}>Placement Rate</div>
                     </div>
                   </div>
                 </div>
@@ -147,7 +136,9 @@ export default function AboutOverview() {
                   background: 'var(--surface-1)', 
                   borderRadius: '12px',
                   border: '1px solid var(--border-light)',
-                  position: 'relative'
+                  position: 'relative',
+                  display: 'flex',
+                  flexDirection: 'column'
                 }}>
                   <div style={{ 
                     position: 'absolute', 
@@ -162,22 +153,21 @@ export default function AboutOverview() {
                   }}>
                     OUR VISION
                   </div>
-                  <div style={{ marginTop: '1rem' }}>
+                  <div style={{ marginTop: '1rem', flex: '1 1 auto', display: 'flex', flexDirection: 'column' }}>
                     <p style={{ fontSize: '1.1em', lineHeight: '1.7', marginBottom: '2rem' }}>
                       To be a globally recognized institution that transforms aspiring professionals into 
                       ethical business leaders, fostering innovation, sustainability, and social responsibility 
                       in the dynamic global economy.
                     </p>
-                    <img 
-                      src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=600&auto=format&fit=crop"
+                    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=600&auto=format&fit=crop"
                       alt="Global Business Leadership Vision"
                       style={{
                         width: '100%',
                         height: '200px',
                         objectFit: 'cover',
-                        borderRadius: '8px'
-                      }}
-                    />
+                        borderRadius: '8px',
+                        marginTop: 'auto'
+                      }} loading="lazy" />
                   </div>
                 </div>
                 
@@ -186,7 +176,9 @@ export default function AboutOverview() {
                   background: 'var(--surface-1)', 
                   borderRadius: '12px',
                   border: '1px solid var(--border-light)',
-                  position: 'relative'
+                  position: 'relative',
+                  display: 'flex',
+                  flexDirection: 'column'
                 }}>
                   <div style={{ 
                     position: 'absolute', 
@@ -201,7 +193,7 @@ export default function AboutOverview() {
                   }}>
                     OUR MISSION
                   </div>
-                  <div style={{ marginTop: '1rem' }}>
+                  <div style={{ marginTop: '1rem', flex: '1 1 auto', display: 'flex', flexDirection: 'column' }}>
                     <ul style={{ listStyle: 'none', padding: 0, marginBottom: '2rem' }}>
                       <li style={{ display: 'flex', alignItems: 'flex-start', marginBottom: '1rem', lineHeight: '1.6' }}>
                         <span style={{ color: 'var(--brand)', marginRight: '0.5rem', fontWeight: 'bold' }}>•</span>
@@ -220,16 +212,15 @@ export default function AboutOverview() {
                         Create value for all stakeholders through research, consultancy, and community engagement
                       </li>
                     </ul>
-                    <img 
-                      src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=600&auto=format&fit=crop"
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=600&auto=format&fit=crop"
                       alt="Excellence in Education Mission"
                       style={{
                         width: '100%',
                         height: '200px',
                         objectFit: 'cover',
-                        borderRadius: '8px'
-                      }}
-                    />
+                        borderRadius: '8px',
+                        marginTop: 'auto'
+                      }} loading="lazy" />
                   </div>
                 </div>
               </div>
@@ -252,8 +243,7 @@ export default function AboutOverview() {
                     boxShadow: 'var(--shadow-medium)',
                     border: '1px solid var(--border-light)'
                   }}>
-                    <img
-                      src={chairman}
+                    <img src={chairman}
                       alt="B. Vijay Reddy - Chairman, Sanskrithi Group"
                       style={{
                         width: 'min(220px, 100%)',
@@ -263,22 +253,20 @@ export default function AboutOverview() {
                         margin: '0 auto 1.5rem',
                         display: 'block',
                         border: '4px solid var(--brand)'
-                      }}
-                    />
+                      }} loading="lazy" />
                     <h3 style={{ marginBottom: '0.5rem', color: 'var(--brand)', fontSize: '1.4em' }}>B. Vijay Reddy</h3>
                     <p style={{ fontWeight: 'bold', marginBottom: '0.5rem', color: 'var(--accent)' }}>Founder &amp; Chairman</p>
                     <p style={{ fontSize: '0.9em', color: 'var(--text-muted)', lineHeight: '1.4' }}>
                       Sanskrithi Group of Institutions
                     </p>
 
-                    <div style={{ marginTop: '1.5rem', padding: '1rem', background: 'var(--surface-1)', borderRadius: '8px' }}>
-                      <div style={{ fontSize: '0.85em', color: 'var(--text-muted)', marginBottom: '0.5rem' }}>Contact</div>
-                      <div style={{ fontSize: '0.8em', color: 'var(--text-soft)', wordBreak: 'break-word' }}>
-                        <a href="mailto:chairman@sanskrithibschool.com" style={{ color: 'var(--brand-light)', textDecoration: 'none' }}>
+                    <div style={{ marginTop: '1.5rem', padding: '0.875rem', background: 'var(--surface-1)', borderRadius: '8px', textAlign: 'left' }}>
+                      <div style={{ fontSize: '0.8em', color: 'var(--text-muted)', marginBottom: '0.5rem' }}>Contact</div>
+                      <div style={{ fontSize: '0.75em', color: 'var(--text-soft)' }}>
+                        <a href="mailto:chairman@sanskrithibschool.com" style={{ color: 'var(--brand-light)', textDecoration: 'none', wordBreak: 'break-all', display: 'block', lineHeight: '1.5' }}>
                           chairman@sanskrithibschool.com
                         </a>
-                        <br/>
-                        <a href="https://www.linkedin.com/in/vijay-reddy-bhaskar-29a3b95a/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--brand-light)', textDecoration: 'none' }}>
+                        <a href="https://www.linkedin.com/in/vijay-reddy-bhaskar-29a3b95a/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--brand-light)', textDecoration: 'none', display: 'block', marginTop: '0.35rem', fontSize: '0.9em' }}>
                           LinkedIn Profile
                         </a>
                       </div>
@@ -351,16 +339,14 @@ export default function AboutOverview() {
                       </p>
                     </div>
                     <div>
-                      <img 
-                        src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=600&auto=format&fit=crop"
-                        alt="Leadership in Action"
+                      <img src={classroomImage}
+                        alt="SSB Classroom"
                         style={{
                           width: '100%',
                           height: 'clamp(180px, 38vw, 240px)',
                           objectFit: 'cover',
                           borderRadius: '8px'
-                        }}
-                      />
+                        }} loading="lazy" />
                     </div>
                   </div>
                   
@@ -460,7 +446,7 @@ export default function AboutOverview() {
               </p>
               <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
                 <a 
-                  href="/inquiry" 
+                  href="/inquiry?type=admission" 
                   style={{
                     background: 'var(--brand-gradient)',
                     color: 'white',

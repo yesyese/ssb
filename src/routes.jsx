@@ -1,4 +1,5 @@
 import { lazy, createElement } from 'react';
+import { Navigate } from 'react-router-dom';
 
 const Home = lazy(() => import('./pages/Home.jsx'));
 const About = lazy(() => import('./pages/About.jsx'));
@@ -22,8 +23,6 @@ const SOP = lazy(() => import('./pages/About/SOP.jsx'));
 
 // Academics pages
 const Academics = lazy(() => import('./pages/Academics/index.jsx'));
-const AboutBBA = lazy(() => import('./pages/Academics/BBA.jsx'));
-const AboutMBA = lazy(() => import('./pages/Academics/MBA.jsx'));
 const AboutPGDM = lazy(() => import('./pages/Academics/PGDM.jsx'));
 
 // Admissions sub-pages
@@ -32,8 +31,7 @@ const Courses = lazy(() => import('./pages/Admissions/Courses.jsx'));
 const AdmissionProcedure = lazy(() => import('./pages/Admissions/AdmissionProcedure.jsx'));
 const FeeStructure = lazy(() => import('./pages/Admissions/FeeStructure.jsx'));
 const FeePayment = lazy(() => import('./pages/Admissions/FeePayment.jsx'));
-const AdmissionScholarships = lazy(() => import('./pages/Admissions/Scholarships.jsx'));
-const Ranks = lazy(() => import('./pages/Admissions/Ranks.jsx'));
+// Scholarships and Ranks pages merged into AdmissionProcedure — imports removed
 const AdmissionsCommittee = lazy(() => import('./pages/Admissions/AdmissionsCommittee.jsx'));
 const AdmissionCalendar = lazy(() => import('./pages/Admissions/Calendar.jsx'));
 const AdmissionRegulations = lazy(() => import('./pages/Admissions/Regulations.jsx'));
@@ -54,9 +52,7 @@ const ActivitiesEvents = lazy(() => import('./pages/CampusLife/Activities.jsx'))
 const Examinations = lazy(() => import('./pages/Examinations/index.jsx'));
 
 // Examinations sub-pages
-const ExaminationTeam = lazy(() => import('./pages/Examinations/Team.jsx'));
-const EvaluationProcedure = lazy(() => import('./pages/Examinations/EvaluationProcedure.jsx'));
-const ExaminationCalendar = lazy(() => import('./pages/Examinations/Calendar.jsx'));
+// Team / Evaluation / Calendar pages merged into Examinations/index.jsx — imports removed
 const RecountingProcedure = lazy(() => import('./pages/Examinations/Recounting.jsx'));
 const Malpractices = lazy(() => import('./pages/Examinations/Malpractices.jsx'));
 const ExamsResultsCommittee = lazy(() => import('./pages/Examinations/Committee.jsx'));
@@ -135,8 +131,9 @@ export default [
   
   // Academics pages
   { path: '/academics', element: createElement(Academics) },
-  { path: '/academics/bba', element: createElement(AboutBBA) },
-  { path: '/academics/mba', element: createElement(AboutMBA) },
+  // BBA + MBA pages merged into Courses Offered; PGDM kept for now
+  { path: '/academics/bba', element: <Navigate to="/admissions/courses" replace /> },
+  { path: '/academics/mba', element: <Navigate to="/admissions/courses" replace /> },
   { path: '/academics/pgdm', element: createElement(AboutPGDM) },
   
   // Admissions sub-pages
@@ -145,8 +142,9 @@ export default [
   { path: '/admissions/admission-procedure', element: createElement(AdmissionProcedure) },
   { path: '/admissions/fee-structure', element: createElement(FeeStructure) },
   { path: '/admissions/fee-payment', element: createElement(FeePayment) },
-  { path: '/admissions/scholarships', element: createElement(AdmissionScholarships) },
-  { path: '/admissions/ranks', element: createElement(Ranks) },
+  // Scholarships + Ranks merged into AdmissionProcedure with anchor sections
+  { path: '/admissions/scholarships', element: <Navigate to="/admissions/admission-procedure#scholarships" replace /> },
+  { path: '/admissions/ranks', element: <Navigate to="/admissions/admission-procedure#exams" replace /> },
   { path: '/admissions/admissions-committee', element: createElement(AdmissionsCommittee) },
   { path: '/admissions/calendar', element: createElement(AdmissionCalendar) },
   { path: '/admissions/regulations', element: createElement(AdmissionRegulations) },
@@ -166,9 +164,10 @@ export default [
   { path: '/examinations', element: createElement(Examinations) },
   
   // Examinations sub-pages
-  { path: '/examinations/team', element: createElement(ExaminationTeam) },
-  { path: '/examinations/evaluation-procedure', element: createElement(EvaluationProcedure) },
-  { path: '/examinations/calendar', element: createElement(ExaminationCalendar) },
+  // Team / Evaluation / Calendar merged into the single Examination Section page (/examinations)
+  { path: '/examinations/team', element: <Navigate to="/examinations#team" replace /> },
+  { path: '/examinations/evaluation-procedure', element: <Navigate to="/examinations#evaluation" replace /> },
+  { path: '/examinations/calendar', element: <Navigate to="/examinations#calendar" replace /> },
   { path: '/examinations/recounting', element: createElement(RecountingProcedure) },
   { path: '/examinations/malpractices', element: createElement(Malpractices) },
   { path: '/examinations/committee', element: createElement(ExamsResultsCommittee) },

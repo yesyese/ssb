@@ -311,16 +311,10 @@ export default function AdmissionsCommittee() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a 
-                  href="/inquiry" 
+                  href="/inquiry?type=admission" 
                   className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-[var(--brand)] to-[var(--brand-light)] text-white font-semibold rounded-xl hover:scale-105 transition-transform shadow-lg"
                 >
-                  Contact Committee
-                </a>
-                <a 
-                  href="/inquiry" 
-                  className="w-full sm:w-auto px-8 py-4 bg-[var(--surface-2)] text-[var(--text)] font-semibold rounded-xl border border-[var(--border-light)] hover:bg-[var(--surface-3)] transition-colors"
-                >
-                  Start Application
+                  Apply Now
                 </a>
               </div>
             </Card>

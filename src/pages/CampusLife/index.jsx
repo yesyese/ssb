@@ -167,7 +167,7 @@ export default function CampusLife() {
                   <Link 
                     key={i} 
                     to={facility.link}
-                    className="block p-6 rounded-xl bg-[var(--surface-1)] border border-[var(--border-light)] hover:bg-[var(--surface-2)] transition-all hover:scale-[1.02] group"
+                    className="block p-6 rounded-xl bg-[var(--surface-1)] border border-[var(--border-light)] hover:bg-[var(--surface-2)] transition-all hover:scale-[1.02] group h-full"
                   >
                     <div className="flex items-start gap-6 mb-4">
                       <div className="w-16 h-16 rounded-xl bg-[var(--glass-bg)] backdrop-blur-sm border border-[var(--glass-border)] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
@@ -260,10 +260,10 @@ export default function CampusLife() {
                   Explore Campus
                 </Link>
                 <Link 
-                  to="/inquiry"
+                  to="/inquiry?type=schedule-visit"
                   className="px-8 py-4 bg-[var(--surface-2)] text-[var(--text)] font-semibold rounded-xl border border-[var(--border-light)] hover:bg-[var(--surface-3)] transition-colors"
                 >
-                  Apply Now
+                  Schedule a Visit
                 </Link>
               </div>
             </Card>

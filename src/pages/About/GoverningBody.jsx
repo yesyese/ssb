@@ -124,7 +124,7 @@ export default function GoverningBody() {
 
           {/* Dean's Message (Transparent/Glass) */}
           <div className="panel p-4 sm:p-6 md:p-8 mb-12 sm:mb-20" style={transparentPanelStyle}>
-  <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr] gap-6 lg:gap-12 items-center">
+  <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr] gap-6 lg:gap-12 items-start">
     {/* Left Column: Photo & Credentials */}
     <div style={{ 
       display: 'flex', 
@@ -139,11 +139,9 @@ export default function GoverningBody() {
         borderRadius: '12px',
         lineHeight: 0 // Prevents extra ghost space at bottom of image
       }}>
-        <img
-          src={dean}
+        <img src={dean}
           alt="Dr. M. Balakoteswari"
-          className="w-40 h-40 sm:w-52 sm:h-52 md:w-60 md:h-60 rounded-lg object-cover block"
-        />
+          className="w-40 h-40 sm:w-52 sm:h-52 md:w-60 md:h-60 rounded-lg object-cover block" loading="lazy" />
       </div>
       
       {/* Grouped text for better vertical spacing control */}

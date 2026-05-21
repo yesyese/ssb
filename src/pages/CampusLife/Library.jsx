@@ -136,18 +136,18 @@ export default function Library() {
                 </div>
                 <div className="text-center p-4">
                   <span className="text-3xl block mb-2">💻</span>
-                  <span className="text-2xl font-bold text-[var(--text)] block mb-1">Digital</span>
-                  <p className="text-[var(--text-soft)] text-sm">Library Access</p>
+                  <span className="text-2xl font-bold text-[var(--text)] block mb-1">24/7</span>
+                  <p className="text-[var(--text-soft)] text-sm">Digital Access</p>
                 </div>
                 <div className="text-center p-4">
                   <span className="text-3xl block mb-2">🕒</span>
-                  <span className="text-2xl font-bold text-[var(--text)] block mb-1">Extended</span>
-                  <p className="text-[var(--text-soft)] text-sm">Hours</p>
+                  <span className="text-2xl font-bold text-[var(--text)] block mb-1">12 hrs</span>
+                  <p className="text-[var(--text-soft)] text-sm">Daily Open</p>
                 </div>
                 <div className="text-center p-4">
                   <span className="text-3xl block mb-2">👨‍🏫</span>
-                  <span className="text-2xl font-bold text-[var(--text)] block mb-1">Expert</span>
-                  <p className="text-[var(--text-soft)] text-sm">Library Staff</p>
+                  <span className="text-2xl font-bold text-[var(--text)] block mb-1">10+</span>
+                  <p className="text-[var(--text-soft)] text-sm">Expert Staff</p>
                 </div>
               </div>
             </Card>
@@ -163,9 +163,9 @@ export default function Library() {
                     {resource.category}
                   </h2>
                   
-                  <div className="grid md:grid-cols-2 gap-8">
+                  <div className="grid md:grid-cols-2 gap-8 items-stretch">
                     {resource.items.map((item, j) => (
-                      <div key={j} className="p-6 rounded-xl bg-[var(--surface-1)] border border-[var(--border-light)]">
+                      <div key={j} className="p-6 rounded-xl bg-[var(--surface-1)] border border-[var(--border-light)] h-full">
                         <h3 className="text-lg font-semibold text-[var(--text)] mb-3">{item.name}</h3>
                         <p className="text-[var(--text-soft)] leading-relaxed">{item.description}</p>
                       </div>
@@ -274,7 +274,7 @@ export default function Library() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a 
-                    href="/inquiry"
+                    href="/inquiry?type=contact"
                     className="px-6 py-3 bg-gradient-to-r from-[var(--brand)] to-[var(--brand-light)] text-white font-semibold rounded-lg hover:scale-105 transition-transform"
                   >
                     Contact Library Staff

@@ -8,6 +8,7 @@ import promoCareers from '../../assets/home/promo/empowering-careers.jpg';
 
 const HeroCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
   const carouselSlides = [
     {
@@ -16,7 +17,7 @@ const HeroCarousel = () => {
       imageOnly: true,
       image: promoAdmissions,
       objectPosition: 'center',
-      cta: { label: 'Start Admissions', href: '/inquiry' },
+      cta: { label: 'Start Admissions', href: '/inquiry?type=admission' },
       ctaSecondary: { label: 'Fee Structure', href: '/admissions/fee-structure' },
     },
     {
@@ -24,7 +25,7 @@ const HeroCarousel = () => {
       image: promoCareers,
       objectPosition: 'center',
       cta: { label: 'View Placement Stories', href: '/placements/team' },
-      ctaSecondary: { label: 'Start Admissions', href: '/inquiry' },
+      ctaSecondary: { label: 'Start Admissions', href: '/inquiry?type=admission' },
     },
     {
       title: "Build a career that's",
@@ -57,18 +58,24 @@ const HeroCarousel = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % carouselSlides.length);
-    }, 6000); // Auto-advance every 6 seconds
+      if (!isPaused) {
+        setCurrentSlide((prev) => (prev + 1) % carouselSlides.length);
+      }
+    }, 8000); // Auto-advance every 8 seconds
 
     return () => clearInterval(interval);
-  }, [carouselSlides.length]);
+  }, [carouselSlides.length, isPaused]);
 
   const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % carouselSlides.length);
   const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + carouselSlides.length) % carouselSlides.length);
   const goToSlide = (index) => setCurrentSlide(index);
 
   return (
-    <section className="hero-carousel">
+    <section
+      className="hero-carousel"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+    >
         {/* Floating decorative elements */}
         <div className="floating-elements"></div>
 
@@ -91,23 +98,23 @@ const HeroCarousel = () => {
                 <div className="container mx-auto px-4 max-w-6xl h-full flex flex-col justify-end pb-12 sm:pb-14 md:pb-16">
                   <div className="flex flex-wrap gap-3">
                     {slide.cta && (
-                      <a
-                        href={slide.cta.href}
+                      <Link
+                        to={slide.cta.href}
                         className="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-[var(--brand)] hover:bg-[var(--brand-dark)] text-white font-semibold text-sm sm:text-base transition-colors shadow-lg"
                       >
                         {slide.cta.label}
                         <svg width="18" height="18" viewBox="0 0 24 24" className="opacity-90">
                           <path fill="currentColor" d="M5 12h12.17l-4.58-4.59L13 6l7 7-7 7-1.41-1.41L17.17 13H5z"/>
                         </svg>
-                      </a>
+                      </Link>
                     )}
                     {slide.ctaSecondary && (
-                      <a
-                        href={slide.ctaSecondary.href}
+                      <Link
+                        to={slide.ctaSecondary.href}
                         className="inline-flex items-center px-6 py-3 rounded-md bg-white/15 backdrop-blur-sm border border-white/40 text-white font-semibold text-sm sm:text-base hover:bg-white/25 transition-colors"
                       >
                         {slide.ctaSecondary.label}
-                      </a>
+                      </Link>
                     )}
                   </div>
                 </div>
@@ -137,21 +144,21 @@ const HeroCarousel = () => {
 
                     {/* Action Buttons - All lead to unified inquiry form */}
                     <div className="flex flex-wrap gap-3 mb-10">
-                      <a
-                        href="/inquiry"
+                      <Link
+                        to="/inquiry?type=admission"
                         className="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-[var(--brand)] hover:bg-[var(--brand-dark)] text-white font-semibold text-sm sm:text-base transition-colors"
                       >
                         Start Admissions
                         <svg width="18" height="18" viewBox="0 0 24 24" className="opacity-90">
                           <path fill="currentColor" d="M5 12h12.17l-4.58-4.59L13 6l7 7-7 7-1.41-1.41L17.17 13H5z"/>
                         </svg>
-                      </a>
-                      <a
-                        href="/inquiry"
+                      </Link>
+                      <Link
+                        to="/inquiry?type=schedule-visit"
                         className="inline-flex items-center px-6 py-3 rounded-md bg-white/10 border border-white/30 text-white font-semibold text-sm sm:text-base hover:bg-white/15 transition-colors"
                       >
                         Schedule Visit
-                      </a>
+                      </Link>
                     </div>
 
                     {/* Stats */}

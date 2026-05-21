@@ -15,26 +15,26 @@ export default function PlacementStatistics() {
           <div className="space-y-section">
             <div className="panel">
               <h2>Academic Year 2023-24 Highlights</h2>
-              <div className="grid md:grid-cols-4 gap-6">
-                <div className="text-center card">
+              <div className="grid md:grid-cols-4 gap-6 items-stretch">
+                <div className="text-center card h-full flex flex-col justify-center">
                   <div className="text-4xl font-bold text-[var(--brand)] mb-2">95.8%</div>
                   <p className="text-sm font-semibold">Overall Placement Rate</p>
-                  <p className="text-xs text-[var(--text-dim)]">380 out of 396 students</p>
+                  <p className="text-xs text-[var(--text-dim)] mt-auto">380 out of 396 students</p>
                 </div>
-                <div className="text-center card">
+                <div className="text-center card h-full flex flex-col justify-center">
                   <div className="text-4xl font-bold text-[var(--brand)] mb-2">₹8.5L</div>
                   <p className="text-sm font-semibold">Average Package</p>
-                  <p className="text-xs text-[var(--text-dim)]">20% increase from last year</p>
+                  <p className="text-xs text-[var(--text-dim)] mt-auto">20% increase from last year</p>
                 </div>
-                <div className="text-center card">
+                <div className="text-center card h-full flex flex-col justify-center">
                   <div className="text-4xl font-bold text-[var(--brand)] mb-2">₹22L</div>
                   <p className="text-sm font-semibold">Highest Package</p>
-                  <p className="text-xs text-[var(--text-dim)]">International consulting role</p>
+                  <p className="text-xs text-[var(--text-dim)] mt-auto">International consulting role</p>
                 </div>
-                <div className="text-center card">
+                <div className="text-center card h-full flex flex-col justify-center">
                   <div className="text-4xl font-bold text-[var(--brand)] mb-2">45</div>
                   <p className="text-sm font-semibold">Companies Visited</p>
-                  <p className="text-xs text-[var(--text-dim)]">15% increase from 2022-23</p>
+                  <p className="text-xs text-[var(--text-dim)] mt-auto">15% increase from 2022-23</p>
                 </div>
               </div>
             </div>

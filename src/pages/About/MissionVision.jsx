@@ -146,7 +146,7 @@ export default function MissionVision() {
               <h3 style={{ color: 'var(--text)', textAlign: 'center', marginBottom: '2rem', fontSize: '1.6em' }}>
                 Vision Pillars
               </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8" style={{ minWidth: 0 }}>
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 justify-items-center" style={{ minWidth: 0 }}>
                 {visionPillars.map((pillar, index) => (
                   <div key={index} style={{
                     background: 'var(--glass-bg)',
@@ -310,7 +310,7 @@ export default function MissionVision() {
               
               <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
                 <a 
-                  href="/inquiry" 
+                  href="/inquiry?type=admission" 
                   style={{
                     background: 'var(--brand-gradient)',
                     color: 'white',

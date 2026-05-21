@@ -169,11 +169,9 @@ export default function About() {
               className="card group relative overflow-hidden"
             >
               <div className="absolute top-0 left-0 right-0 h-32 overflow-hidden rounded-t-lg opacity-70 group-hover:opacity-90 transition-opacity">
-                <img 
-                  src={value.image} 
+                <img src={value.image} 
                   alt={value.title}
-                  className="w-full h-full object-cover"
-                />
+                  className="w-full h-full object-cover" loading="lazy" />
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-base/80"></div>
               </div>
               
@@ -240,11 +238,9 @@ export default function About() {
               className="card group text-center"
             >
               <div className="relative inline-block mb-6">
-                <img 
-                  src={leader.image} 
+                <img src={leader.image} 
                   alt={leader.name}
-                  className="w-24 h-24 rounded-full object-cover border-4 border-accent-primary"
-                />
+                  className="w-24 h-24 rounded-full object-cover border-4 border-accent-primary" loading="lazy" />
                 <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-gradient-to-r from-accent-primary to-emerald-600 rounded-full flex items-center justify-center text-white text-sm">
                   ✓
                 </div>

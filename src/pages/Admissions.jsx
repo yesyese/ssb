@@ -29,7 +29,7 @@ export default function Admissions() {
           </div>
           <h3 className="text-white font-medium">Ready?</h3>
           <p className="text-text-soft mt-2">Takes ~10 minutes to complete.</p>
-          <Button as="a" href="/inquiry" className="mt-4">Apply Now</Button>
+          <Button as="a" href="/inquiry?type=admission" className="mt-4">Apply Now</Button>
         </div>
       </div>
     </div>

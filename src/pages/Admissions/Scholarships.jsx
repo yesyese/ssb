@@ -249,7 +249,7 @@ export default function AcademicScholarships() {
               </div>
               <div className="mt-6">
                 <a 
-                  href="/inquiry" 
+                  href="/inquiry?type=admission" 
                   className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[var(--brand)] to-[var(--brand-light)] text-white font-semibold rounded-xl hover:scale-105 transition-transform shadow-lg"
                 >
                   Contact Financial Aid Team

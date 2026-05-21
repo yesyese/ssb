@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Send, MapPin, Mail, Phone, MessageSquare, GraduationCap, Calendar, FileText, Loader2 } from 'lucide-react';
 
@@ -14,28 +15,58 @@ const inquiryTypes = [
 const programs = ['BBA / BBA Honours', 'MBA', 'PGDM'];
 const qualifications = ['10+2 / Intermediate', 'Graduation', 'Post Graduation', 'Other'];
 
+const VALID_TYPES = inquiryTypes.map(t => t.value);
+
 export default function Inquiry() {
+  const [searchParams] = useSearchParams();
+  const urlType = searchParams.get('type');
+  const initialType = VALID_TYPES.includes(urlType) ? urlType : 'admission';
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
     qualification: '',
     programInterest: '',
-    inquiryType: 'admission',
+    inquiryType: initialType,
     subject: '',
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null); // 'success' | 'error' | null
+  const [errors, setErrors] = useState({});
+
+  const validate = () => {
+    const next = {};
+    if (!formData.name.trim()) next.name = 'Full name is required';
+    if (!formData.email.trim()) {
+      next.email = 'Email is required';
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      next.email = 'Please enter a valid email address';
+    }
+    if (!formData.phone.trim()) {
+      next.phone = 'Phone number is required';
+    } else if (!/^[\d\s+\-()]{10,}$/.test(formData.phone.replace(/\s/g, ''))) {
+      next.phone = 'Please enter a valid phone number';
+    }
+    if (!formData.message.trim()) next.message = 'Message is required';
+    setErrors(next);
+    return Object.keys(next).length === 0;
+  };
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+    // Clear field error on change
+    if (errors[e.target.name]) {
+      setErrors({ ...errors, [e.target.name]: undefined });
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsSubmitting(true);
     setSubmitStatus(null);
+    if (!validate()) return;
+    setIsSubmitting(true);
 
     // Netlify Forms expects application/x-www-form-urlencoded POST to '/'
     // with a 'form-name' field matching the static form in index.html.
@@ -84,6 +115,13 @@ export default function Inquiry() {
     }
   };
 
+  useEffect(() => {
+    if (urlType && VALID_TYPES.includes(urlType)) {
+      const formEl = document.getElementById('inquiry-form');
+      if (formEl) formEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, [urlType]);
+
   return (
     <div className="main-content min-h-screen">
       <div className="section-spacing">
@@ -129,6 +167,7 @@ export default function Inquiry() {
                 )}
 
                 <form
+                  id="inquiry-form"
                   name="inquiry"
                   method="POST"
                   data-netlify="true"
@@ -173,10 +212,10 @@ export default function Inquiry() {
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
-                        required
                         placeholder="Your name"
-                        className="w-full px-4 py-3 rounded-xl bg-[var(--surface-1)] border border-[var(--border-light)] text-[var(--text)] placeholder-[var(--text-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--brand)] focus:border-transparent"
+                        className={`w-full px-4 py-3 rounded-xl bg-[var(--surface-1)] border text-[var(--text)] placeholder-[var(--text-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--brand)] focus:border-transparent ${errors.name ? 'border-red-500' : 'border-[var(--border-light)]'}`}
                       />
+                      {errors.name && <p className="mt-1 text-sm text-red-500">{errors.name}</p>}
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-[var(--text-soft)] mb-2">Email *</label>
@@ -185,10 +224,10 @@ export default function Inquiry() {
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
-                        required
                         placeholder="your@email.com"
-                        className="w-full px-4 py-3 rounded-xl bg-[var(--surface-1)] border border-[var(--border-light)] text-[var(--text)] placeholder-[var(--text-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--brand)] focus:border-transparent"
+                        className={`w-full px-4 py-3 rounded-xl bg-[var(--surface-1)] border text-[var(--text)] placeholder-[var(--text-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--brand)] focus:border-transparent ${errors.email ? 'border-red-500' : 'border-[var(--border-light)]'}`}
                       />
+                      {errors.email && <p className="mt-1 text-sm text-red-500">{errors.email}</p>}
                     </div>
                   </div>
 
@@ -200,10 +239,10 @@ export default function Inquiry() {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        required
                         placeholder="+91 XXXXX XXXXX"
-                        className="w-full px-4 py-3 rounded-xl bg-[var(--surface-1)] border border-[var(--border-light)] text-[var(--text)] placeholder-[var(--text-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--brand)] focus:border-transparent"
+                        className={`w-full px-4 py-3 rounded-xl bg-[var(--surface-1)] border text-[var(--text)] placeholder-[var(--text-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--brand)] focus:border-transparent ${errors.phone ? 'border-red-500' : 'border-[var(--border-light)]'}`}
                       />
+                      {errors.phone && <p className="mt-1 text-sm text-red-500">{errors.phone}</p>}
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-[var(--text-soft)] mb-2">Qualification</label>
@@ -254,11 +293,11 @@ export default function Inquiry() {
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
-                      required
                       rows="5"
                       placeholder="Tell us how we can help you..."
-                      className="w-full px-4 py-3 rounded-xl bg-[var(--surface-1)] border border-[var(--border-light)] text-[var(--text)] placeholder-[var(--text-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--brand)] focus:border-transparent resize-none"
+                      className={`w-full px-4 py-3 rounded-xl bg-[var(--surface-1)] border text-[var(--text)] placeholder-[var(--text-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--brand)] focus:border-transparent resize-none ${errors.message ? 'border-red-500' : 'border-[var(--border-light)]'}`}
                     />
+                    {errors.message && <p className="mt-1 text-sm text-red-500">{errors.message}</p>}
                   </div>
 
                   <button
@@ -304,8 +343,8 @@ export default function Inquiry() {
                 <h3 className="font-bold text-[var(--text)] mb-4">Quick Contact</h3>
                 <div className="space-y-3 text-sm text-[var(--text-soft)]">
                   <a href="mailto:admissions.director@sanskrithibschool.com" className="flex items-center gap-3 hover:text-[var(--brand)] transition-colors">
-                    <Mail className="w-5 h-5 text-[var(--brand)]" />
-                    admissions.director@sanskrithibschool.com
+                    <Mail className="w-5 h-5 text-[var(--brand)] shrink-0" />
+                    <span className="break-all">admissions.director@sanskrithibschool.com</span>
                   </a>
                   <a href="tel:+919100974544" className="flex items-center gap-3 hover:text-[var(--brand)] transition-colors">
                     <Phone className="w-5 h-5 text-[var(--brand)]" />

@@ -283,7 +283,7 @@ export const admissionsCTA = {
     {
       icon: "🎓",
       title: "Limited Seats",
-      description: "Only 180 seats across both programs"
+      description: "Only 120 seats for BBA / BBA Honours"
     },
     {
       icon: "⏰",

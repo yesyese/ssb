@@ -275,7 +275,7 @@ export default function SportsFacility() {
                   View Activities
                 </a>
                 <a 
-                  href="/inquiry"
+                  href="/inquiry?type=contact"
                   className="w-full sm:w-auto px-8 py-4 bg-[var(--surface-2)] text-[var(--text)] font-semibold rounded-xl border border-[var(--border-light)] hover:bg-[var(--surface-3)] transition-colors"
                 >
                   Contact Sports Coordinator

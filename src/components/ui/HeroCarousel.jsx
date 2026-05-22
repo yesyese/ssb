@@ -18,7 +18,7 @@ const HeroCarousel = () => {
       image: promoAdmissions,
       objectPosition: 'center',
       cta: { label: 'Start Admissions', href: '/inquiry?type=admission' },
-      ctaSecondary: { label: 'Fee Structure', href: '/admissions/fee-structure' },
+      ctaSecondary: { label: 'Fees & Payment', href: '/admissions/fees' },
     },
     {
       imageOnly: true,

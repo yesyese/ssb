@@ -353,8 +353,8 @@ export default function Home() {
                     icon="📅"
                   />
                   <QuickLink
-                    title="Fee Payment"
-                    href="/admissions/fee-payment"
+                    title="Fees & Payment"
+                    href="/admissions/fees"
                     icon="💳"
                   />
                   <QuickLink

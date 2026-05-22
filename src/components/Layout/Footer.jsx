@@ -21,7 +21,7 @@ export default function Footer() {
           <div className="text-white font-medium text-sm mb-3">Resources</div>
           <ul className="space-y-2 text-sm">
             <li><Link to="/examinations/downloads" className="hover:text-white transition-colors">Downloads</Link></li>
-            <li><Link to="/admissions/fee-payment" className="hover:text-white transition-colors">Fee Payment</Link></li>
+            <li><Link to="/admissions/fees" className="hover:text-white transition-colors">Fees & Payment</Link></li>
             <li><Link to="/committees/iqac" className="hover:text-white transition-colors">IQAC</Link></li>
             <li><Link to="/naac" className="hover:text-white transition-colors">NAAC</Link></li>
           </ul>

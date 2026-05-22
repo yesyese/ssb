@@ -72,15 +72,10 @@ export const NAV = [
         href: '/admissions/admission-procedure',
         description: 'Step-by-step admission process'
       },
-      { 
-        label: 'Fee Structure', 
-        href: '/admissions/fee-structure',
-        description: 'Course fees and payment details'
-      },
-      { 
-        label: 'Fee Payment', 
-        href: '/admissions/fee-payment',
-        description: 'QR code payment and fee information'
+      {
+        label: 'Fees & Payment',
+        href: '/admissions/fees',
+        description: 'Fee components, scholarships, online payment and bank details'
       },
       { 
         label: 'Scholarships', 

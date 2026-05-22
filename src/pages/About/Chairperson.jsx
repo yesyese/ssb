@@ -148,7 +148,6 @@ export default function AboutChairperson() {
                     fontWeight: 'bold',
                     color: 'var(--brand)'
                   }} className="pt-4 sm:pt-6 text-base sm:text-lg md:text-xl">
-                    Warm Regards,<br/>
                     <span style={{ fontSize: '1.1em' }}>B. Vijay Reddy</span><br/>
                     <span style={{ fontSize: '0.9em', color: 'var(--text-soft)' }}>Founder &amp; Chairman, Sanskrithi Group</span>
                   </div>

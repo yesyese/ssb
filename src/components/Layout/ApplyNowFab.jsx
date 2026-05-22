@@ -22,7 +22,7 @@ export default function ApplyNowFab() {
     <Link
       to="/inquiry?type=admission"
       aria-label="Apply Now"
-      className={`fixed bottom-6 right-6 z-40 inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-[var(--brand)] text-white text-sm font-semibold shadow-lg hover:bg-[var(--brand-dark)] transition-all duration-200 ${
+      className={`fixed bottom-24 right-6 z-40 inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-[var(--brand)] text-white text-sm font-semibold shadow-lg hover:bg-[var(--brand-dark)] transition-all duration-200 ${
         visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3 pointer-events-none'
       }`}
       style={{ boxShadow: '0 10px 24px -6px rgba(142,61,25,0.35)' }}

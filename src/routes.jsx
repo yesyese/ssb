@@ -29,8 +29,8 @@ const AboutPGDM = lazy(() => import('./pages/Academics/PGDM.jsx'));
 const TestPage = lazy(() => import('./pages/Admissions/TestPage.jsx'));
 const Courses = lazy(() => import('./pages/Admissions/Courses.jsx'));
 const AdmissionProcedure = lazy(() => import('./pages/Admissions/AdmissionProcedure.jsx'));
-const FeeStructure = lazy(() => import('./pages/Admissions/FeeStructure.jsx'));
-const FeePayment = lazy(() => import('./pages/Admissions/FeePayment.jsx'));
+// Fee Structure + Fee Payment merged into single Fees & Payment page
+const Fees = lazy(() => import('./pages/Admissions/Fees.jsx'));
 // Scholarships and Ranks pages merged into AdmissionProcedure — imports removed
 const AdmissionsCommittee = lazy(() => import('./pages/Admissions/AdmissionsCommittee.jsx'));
 const AdmissionCalendar = lazy(() => import('./pages/Admissions/Calendar.jsx'));
@@ -140,8 +140,10 @@ export default [
   { path: '/admissions/test', element: createElement(TestPage) },
   { path: '/admissions/courses', element: createElement(Courses) },
   { path: '/admissions/admission-procedure', element: createElement(AdmissionProcedure) },
-  { path: '/admissions/fee-structure', element: createElement(FeeStructure) },
-  { path: '/admissions/fee-payment', element: createElement(FeePayment) },
+  // Combined Fees & Payment page
+  { path: '/admissions/fees', element: createElement(Fees) },
+  { path: '/admissions/fee-structure', element: <Navigate to="/admissions/fees" replace /> },
+  { path: '/admissions/fee-payment', element: <Navigate to="/admissions/fees#pay-online" replace /> },
   // Scholarships + Ranks merged into AdmissionProcedure with anchor sections
   { path: '/admissions/scholarships', element: <Navigate to="/admissions/admission-procedure#scholarships" replace /> },
   { path: '/admissions/ranks', element: <Navigate to="/admissions/admission-procedure#exams" replace /> },

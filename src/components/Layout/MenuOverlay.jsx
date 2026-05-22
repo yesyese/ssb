@@ -41,8 +41,7 @@ const SECTIONS = [
     items: [
       { label: 'Admission Procedure', href: '/admissions/admission-procedure' },
       { label: 'Admissions Committee', href: '/admissions/admissions-committee' },
-      { label: 'Fee Structure', href: '/admissions/fee-structure' },
-      { label: 'Fee Payment', href: '/admissions/fee-payment' },
+      { label: 'Fees & Payment', href: '/admissions/fees' },
     ],
   },
   {
@@ -247,15 +246,6 @@ export default function MenuOverlay({ open, onClose }) {
                           ))}
                         </ul>
                       )}
-                      <Link
-                        to={section.href}
-                        onClick={onClose}
-                        className="mt-3 inline-flex items-center gap-1.5 text-[11px] uppercase tracking-[0.16em] font-semibold transition-colors"
-                        style={{ color: section.color }}
-                      >
-                        Visit {section.label}
-                        <ArrowRight className="w-3 h-3" />
-                      </Link>
                     </div>
                   )}
                 </li>

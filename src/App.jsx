@@ -3,6 +3,7 @@ import { Link, Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Layout/Header.jsx';
 import Footer from './components/Layout/Footer.jsx';
 import ApplyNowFab from './components/Layout/ApplyNowFab.jsx';
+import ChatWidget from './components/Chat/ChatWidget.jsx';
 import routes from './routes.jsx';
 
 
@@ -47,6 +48,7 @@ export default function App() {
       </main>
       <Footer />
       <ApplyNowFab />
+      <ChatWidget />
     </div>
   );
 }

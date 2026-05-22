@@ -182,11 +182,11 @@ export default function AdmissionsApply() {
                 >
                   Apply Online Now
                 </a>
-                <a 
-                  href="/admissions/fee-structure" 
+                <a
+                  href="/admissions/fees"
                   className="px-8 py-4 bg-[var(--surface-2)] text-[var(--text)] font-semibold rounded-xl border border-[var(--border-light)] hover:bg-[var(--surface-3)] transition-colors"
                 >
-                  View Fee Structure
+                  View Fees & Payment
                 </a>
               </div>
             </Card>

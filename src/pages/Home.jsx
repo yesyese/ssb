@@ -289,29 +289,13 @@ export default function Home() {
             <div className="lg:col-span-2">
               <div className="grid gap-6">
                 <EventCard
-                  type="Upcoming Event"
-                  title="Annual Business Conclave 2026"
-                  date="March 15-16, 2026"
-                  desc="Join industry leaders and students for two days of inspiring talks, networking sessions, and business competitions."
-                  image="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=800&auto=format&fit=crop"
-                  link="/campus-life/activities"
-                />
-                <EventCard
                   type="Admission Alert"
-                  title="Final Round of Admissions 2026"
-                  date="Deadline: February 28, 2026"
-                  desc="Last chance to secure your seat for MBA/PGDM programs. Apply now with merit scholarships available."
+                  title="Admissions Open 2026"
+                  date="Ongoing"
+                  desc="Secure your seat for BBA / BBA Honours, MBA and PGDM programs. Apply now with merit scholarships available."
                   image="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=800&auto=format&fit=crop"
                   link="/admissions"
                   urgent={true}
-                />
-                <EventCard
-                  type="Campus Drive"
-                  title="TCS & Deloitte On-Campus Placement"
-                  date="March 8-10, 2026"
-                  desc="Multiple roles available for final year students. Pre-placement talk and selection process."
-                  image="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800&auto=format&fit=crop"
-                  link="/placements/campus-drives"
                 />
               </div>
             </div>

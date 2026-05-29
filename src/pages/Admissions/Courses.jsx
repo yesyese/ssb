@@ -47,22 +47,10 @@ export default function Courses() {
           icon: "👥"
         },
         {
-          name: "Operations Management",
-          description: "Supply chain management, quality control, project management, and process optimization.",
-          careerOptions: ["Operations Manager", "Supply Chain Manager", "Process Improvement Specialist", "Quality Manager"],
-          icon: "⚙️"
-        },
-        {
-          name: "Business Analytics",
+          name: "Data Analytics",
           description: "Data analysis, business intelligence, predictive modeling, and statistical analysis.",
-          careerOptions: ["Business Analyst", "Data Scientist", "Analytics Consultant", "Business Intelligence Manager"],
+          careerOptions: ["Data Analyst", "Data Scientist", "Analytics Consultant", "Business Intelligence Manager"],
           icon: "📊"
-        },
-        {
-          name: "International Business",
-          description: "Global trade, international finance, cross-cultural management, and export-import operations.",
-          careerOptions: ["International Trade Manager", "Export Manager", "Global Business Consultant", "Foreign Trade Analyst"],
-          icon: "🌍"
         }
       ],
       curriculum: {

@@ -96,14 +96,7 @@ export default function HostelFacility() {
     "Keep rooms and common areas clean",
     "No smoking, alcohol, or prohibited substances",
     "Visitors must register at the reception",
-    "Maintain silence during study hours (9 PM - 6 AM)"
-  ];
-
-  const feeStructure = [
-    { facility: "AC Room (Per Semester)", fee: "₹35,000", includes: "Accommodation + Electricity" },
-    { facility: "Non-AC Room (Per Semester)", fee: "₹25,000", includes: "Accommodation + Basic Utilities" },
-    { facility: "Mess Charges (Monthly)", fee: "₹4,500", includes: "3 Meals + Evening Snacks" },
-    { facility: "Security Deposit (Refundable)", fee: "₹5,000", includes: "One-time payment" }
+    "Maintain silence during designated quiet hours"
   ];
 
   return (
@@ -279,10 +272,6 @@ export default function HostelFacility() {
                       <span className="text-[var(--accent)] font-semibold">Until 10:00 PM</span>
                     </div>
                     <div className="flex justify-between items-center p-3 rounded-lg bg-[var(--glass-bg)] backdrop-blur-sm border border-[var(--glass-border)]">
-                      <span className="text-[var(--text)]">Study Hours</span>
-                      <span className="text-[var(--accent)] font-semibold">9:00 PM - 6:00 AM</span>
-                    </div>
-                    <div className="flex justify-between items-center p-3 rounded-lg bg-[var(--glass-bg)] backdrop-blur-sm border border-[var(--glass-border)]">
                       <span className="text-[var(--text)]">Visiting Hours</span>
                       <span className="text-[var(--accent)] font-semibold">10:00 AM - 6:00 PM</span>
                     </div>
@@ -291,38 +280,41 @@ export default function HostelFacility() {
               </div>
             </Card>
 
-            {/* Fee Structure */}
+            {/* Hostel Fee Enquiries */}
             <Card>
-              <h2 className="text-2xl font-bold text-[var(--text)] mb-8 flex items-center gap-4">
+              <h2 className="text-2xl font-bold text-[var(--text)] mb-6 flex items-center gap-4">
                 <div className="w-12 h-12 rounded-lg bg-[var(--glass-bg)] backdrop-blur-sm border border-[var(--glass-border)] flex items-center justify-center">
                   <span className="text-2xl">💰</span>
                 </div>
-                Hostel Fee Structure
+                Hostel Fee Details
               </h2>
-              
-              <div className="grid md:grid-cols-2 gap-8">
-                {feeStructure.map((fee, i) => (
-                  <div key={i} className="p-6 rounded-xl bg-[var(--surface-1)] border border-[var(--border-light)]">
-                    <div className="flex justify-between items-start mb-3">
-                      <h3 className="text-lg font-semibold text-[var(--text)]">{fee.facility}</h3>
-                      <span className="text-2xl font-bold text-[var(--accent)]">{fee.fee}</span>
-                    </div>
-                    <p className="text-[var(--text-soft)]">{fee.includes}</p>
-                  </div>
-                ))}
-              </div>
-              
-              <div className="mt-8 p-6 rounded-xl bg-gradient-to-r from-[var(--surface-1)] to-[var(--surface-2)] text-center">
-                <h3 className="text-lg font-semibold text-[var(--text)] mb-4">Ready to Apply for Hostel?</h3>
-                <p className="text-[var(--text-soft)] mb-6">
-                  Secure your accommodation at our comfortable and safe hostel facilities. Limited seats available.
+
+              <div className="p-6 rounded-xl bg-gradient-to-r from-[var(--surface-1)] to-[var(--surface-2)] text-center">
+                <p className="text-[var(--text-soft)] text-base sm:text-lg leading-relaxed mb-6 max-w-2xl mx-auto">
+                  For the latest hostel fee details — including AC/Non-AC accommodation, mess charges and security deposit — please contact the college admissions office.
                 </p>
+
+                <div className="grid sm:grid-cols-2 gap-4 max-w-xl mx-auto mb-6 text-left">
+                  <div className="p-4 rounded-lg bg-[var(--surface-1)] border border-[var(--border-light)]">
+                    <p className="text-[var(--text-soft)] text-sm mb-1">Email</p>
+                    <a href="mailto:admissions.director@sanskrithibschool.com" className="text-[var(--text)] font-semibold hover:text-[var(--accent)] transition-colors break-words">
+                      admissions.director@sanskrithibschool.com
+                    </a>
+                  </div>
+                  <div className="p-4 rounded-lg bg-[var(--surface-1)] border border-[var(--border-light)]">
+                    <p className="text-[var(--text-soft)] text-sm mb-1">Phone</p>
+                    <a href="tel:+919100974544" className="text-[var(--text)] font-semibold hover:text-[var(--accent)] transition-colors">
+                      +91 9100 974 544
+                    </a>
+                  </div>
+                </div>
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a 
+                  <a
                     href="/inquiry?type=admission"
                     className="px-8 py-4 bg-gradient-to-r from-[var(--brand)] to-[var(--brand-light)] text-white font-semibold rounded-xl hover:scale-105 transition-transform shadow-lg"
                   >
-                    Apply Now
+                    Enquire Now
                   </a>
                 </div>
               </div>

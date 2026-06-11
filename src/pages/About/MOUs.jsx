@@ -1,347 +1,238 @@
 import React from 'react';
 import SectionHeader from '../../components/ui/SectionHeader';
 
+// Technical & International partners
+import logoRISE from '../../assets/companylogos/rise.png';
+import logoIAESTE from '../../assets/companylogos/iaeste.png';
+
+// Affiliations & Recognitions
+import logoAICTE from '../../assets/companylogos/aicte.png';
+import logoAIMA from '../../assets/companylogos/aima.png';
+import logoAIMS from '../../assets/companylogos/aims.jpg';
+import logoJNTUA from '../../assets/companylogos/jntua.png';
+import logoMOE from '../../assets/companylogos/moe.jpg';
+import logoSkillIndia from '../../assets/companylogos/skill-india.png';
+
+// Strategic Partnerships & Global Collaborations
+import logoPeakmind from '../../assets/companylogos/peakmind.jpg';
+import logoRubicon from '../../assets/companylogos/rubicon.jpg';
+import logoNHRD from '../../assets/companylogos/nhrd.png';
+import logoIndiaSpark from '../../assets/companylogos/india-spark.jpg';
+import logoLondonSchool from '../../assets/companylogos/london-school-digital-business.webp';
+import logoVajraSoft from '../../assets/companylogos/vajrasoft.jpg';
+import logoDataWise from '../../assets/companylogos/datawise.png';
+import logoAPSSDC from '../../assets/companylogos/apssdc.jpg';
+import logoDELNET from '../../assets/companylogos/delnet.jpg';
+import logoNPTEL from '../../assets/companylogos/nptel.png';
+import logoSkyfi from '../../assets/companylogos/skyfi.jpg';
+import logoGryphon from '../../assets/companylogos/gryphon-academy.png';
+
+const TECHNICAL_PARTNERS = [
+  {
+    name: 'RISE',
+    full: 'Research & Innovation in Systems Engineering',
+    logo: logoRISE,
+    description: 'International technical partner. The RISE India Office at Sanskrithi creates a technology-driven learning environment with real-world projects, internships and industry exposure.',
+  },
+  {
+    name: 'IAESTE',
+    full: 'International Association for the Exchange of Students for Technical Experience',
+    logo: logoIAESTE,
+    description: 'Facilitates international student internships and technical-experience exchanges between India and partner countries.',
+  },
+];
+
+const AFFILIATIONS = [
+  { name: 'AICTE', logo: logoAICTE },
+  { name: 'AIMA', logo: logoAIMA },
+  { name: 'AIMS', logo: logoAIMS },
+  { name: 'JNTUA', logo: logoJNTUA },
+  { name: 'Ministry of Education', logo: logoMOE },
+  { name: 'Skill India', logo: logoSkillIndia },
+];
+
+const STRATEGIC_PARTNERS = [
+  { name: 'NPTEL', logo: logoNPTEL },
+  { name: 'DELNET', logo: logoDELNET },
+  { name: 'APSSDC', logo: logoAPSSDC },
+  { name: 'Peakmind', logo: logoPeakmind },
+  { name: 'Rubicon', logo: logoRubicon },
+  { name: 'NHRD', logo: logoNHRD },
+  { name: 'India Spark', logo: logoIndiaSpark },
+  { name: 'London School of Digital Business', logo: logoLondonSchool },
+  { name: 'VajraSoft', logo: logoVajraSoft },
+  { name: 'DataWise', logo: logoDataWise },
+  { name: 'Skyfi Labs', logo: logoSkyfi },
+  { name: 'Gryphon Academy', logo: logoGryphon },
+];
+
 export default function MOUs() {
-  const infoCardStyle = {
-    textAlign: 'center',
-    padding: 'clamp(1.1rem, 3vw, 1.5rem)',
-    background: 'var(--glass-bg)',
-    borderRadius: 'var(--radius-lg)',
-    border: '1px solid var(--border-light)'
-  };
-
-  const impactCardStyle = {
-    background: 'var(--glass-bg)',
-    backdropFilter: 'var(--glass-backdrop)',
-    border: '1px solid var(--border-light)',
-    borderRadius: 'var(--radius-lg)',
-    padding: 'clamp(1.25rem, 3vw, 2rem)',
-    textAlign: 'center'
-  };
-
-  const mouData = [
-    {
-      title: "RISE Europe MoU",
-      partner: "Research and Innovation in Science and Engineering - Europe",
-      type: "International Collaboration",
-      date: "2023",
-      description: "Strategic partnership for research collaboration, student exchange programs, and joint academic initiatives with European institutions.",
-      benefits: [
-        "Research collaboration opportunities",
-        "Faculty exchange programs", 
-        "Joint research publications",
-        "Access to European research networks",
-        "International conference participation"
-      ],
-      icon: "🇪🇺",
-      color: "var(--brand)"
-    },
-    {
-      title: "IAESTE India - Europe MoU", 
-      partner: "International Association for Exchange of Students for Technical Experience",
-      type: "Student Exchange Program",
-      date: "2022",
-      description: "Comprehensive agreement facilitating student internships and technical experience exchange between India and European countries.",
-      benefits: [
-        "International internship opportunities",
-        "Technical skill development abroad",
-        "Cultural exchange programs",
-        "Global industry exposure",
-        "Professional network building"
-      ],
-      icon: "🎓",
-      color: "var(--brand)"
-    },
-    {
-      title: "APSSDC Partnership",
-      partner: "Andhra Pradesh State Skill Development Corporation",
-      type: "Skill Development Initiative",
-      date: "2023", 
-      description: "Strategic partnership to enhance skill development, provide industry-relevant training, and improve employability of students.",
-      benefits: [
-        "Industry-aligned skill training",
-        "Certification programs",
-        "Placement assistance",
-        "Entrepreneurship development",
-        "Government scheme benefits"
-      ],
-      icon: "🏢",
-      color: "var(--brand)"
-    }
-  ];
-
   return (
     <div className="main-content">
       <div className="section-spacing">
         <div className="container">
           <SectionHeader
-            title="Memorandums of Understanding"
-            subtitle="Strategic partnerships and collaborations"
-            description="Building bridges for academic excellence and global opportunities"
+            title="MOUs & Partnerships"
+            subtitle="Awards, alliances and global impact"
+            description="A journey defined by excellence, innovation and impactful industry partnerships"
           />
-          
-          <div className="space-y-section">
-            {/* Introduction Section */}
-            <div className="panel">
-              <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-                <h2 style={{ color: 'var(--text)', marginBottom: '1rem' }}>Our Global Partnerships</h2>
-                <p style={{ color: 'var(--text-soft)', fontSize: 'clamp(1rem, 2.4vw, 1.1rem)', maxWidth: '800px', margin: '0 auto', lineHeight: '1.75' }}>
-                  SSB Puttaparthi has established strategic partnerships with leading international and national 
-                  organizations to provide our students with world-class opportunities for learning, research, 
-                  and professional development.
-                </p>
-              </div>
 
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.25rem', marginBottom: '3rem' }}>
-                <div style={infoCardStyle}>
-                  <div style={{ fontSize: '2.5em', marginBottom: '1rem' }}>🌍</div>
-                  <h4 style={{ color: 'var(--brand)', marginBottom: '0.5rem' }}>Global Reach</h4>
-                  <p style={{ color: 'var(--text-soft)', fontSize: '0.9em' }}>International partnerships across Europe and Asia</p>
-                </div>
-                
-                <div style={infoCardStyle}>
-                  <div style={{ fontSize: '2.5em', marginBottom: '1rem' }}>🤝</div>
-                  <h4 style={{ color: 'var(--brand)', marginBottom: '0.5rem' }}>Strategic Alliances</h4>
-                  <p style={{ color: 'var(--text-soft)', fontSize: '0.9em' }}>Meaningful collaborations with industry leaders</p>
-                </div>
-                
-                <div style={infoCardStyle}>
-                  <div style={{ fontSize: '2.5em', marginBottom: '1rem' }}>📈</div>
-                  <h4 style={{ color: 'var(--brand)', marginBottom: '0.5rem' }}>Growth Opportunities</h4>
-                  <p style={{ color: 'var(--text-soft)', fontSize: '0.9em' }}>Enhanced career prospects for our students</p>
-                </div>
-              </div>
+          <div className="space-y-section">
+            {/* Intro */}
+            <div className="panel">
+              <h2>Global Recognition & Strategic Collaborations</h2>
+              <p>
+                Sanskrithi School of Business continues to strengthen its global academic presence through
+                prestigious recognitions, corporate achievements, and international collaborations. These
+                associations empower students with world-class exposure, industry integration, and
+                future-ready learning experiences.
+              </p>
             </div>
 
-            {/* MOU Details */}
+            {/* Technical & International Partners */}
             <div className="panel">
-              <h2 style={{ color: 'var(--text)', textAlign: 'center', marginBottom: '3rem' }}>
-                Active Memorandums of Understanding
-              </h2>
-              
-              <div className="grid gap-8 lg:grid-cols-3">
-                {mouData.map((mou, index) => (
+              <h2>International Technical Partners</h2>
+              <div className="grid md:grid-cols-2 gap-6 mt-4">
+                {TECHNICAL_PARTNERS.map((p, i) => (
                   <div
-                    key={index}
-                    className="mou-card"
-                    style={{
-                      background: 'var(--glass-bg)',
-                      backdropFilter: 'var(--glass-backdrop)',
-                      border: '1px solid var(--border-light)',
-                      borderRadius: 'var(--radius-xl)',
-                      padding: 'clamp(1.25rem, 3vw, 2rem)',
-                      position: 'relative',
-                      overflow: 'hidden'
-                    }}
+                    key={i}
+                    className="rounded-2xl border border-[var(--border-light)] bg-[var(--surface-1)] p-6 flex flex-col items-start gap-4 hover:bg-[var(--surface-2)] transition-colors"
                   >
-                    {/* Background decoration */}
-                    <div style={{
-                      position: 'absolute',
-                      top: '-50px',
-                      right: '-50px',
-                      width: '150px',
-                      height: '150px',
-                      background: `radial-gradient(circle, ${mou.color}15, transparent)`,
-                      borderRadius: '50%'
-                    }} />
-                    
-                    <div
-                      className="grid gap-4 sm:grid-cols-[80px_minmax(0,1fr)] items-start"
-                      style={{ position: 'relative', zIndex: 1 }}
-                    >
-                      <div style={{
-                        fontSize: 'clamp(2.5rem, 7vw, 3rem)',
-                        textAlign: 'center',
-                        background: 'var(--surface-1)',
-                        borderRadius: 'var(--radius-lg)',
-                        padding: '0.75rem',
-                        border: '1px solid var(--border-light)'
-                      }}>
-                        {mou.icon}
-                      </div>
-
-                      <div className="min-w-0">
-                        <div
-                          className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 mb-4"
-                          style={{ marginBottom: 0 }}
-                        >
-                          <h3
-                            style={{ color: mou.color, fontSize: 'clamp(1.1rem, 3.4vw, 1.3rem)', fontWeight: 'bold', margin: 0, lineHeight: '1.3' }}
-                            className="break-words"
-                          >
-                            {mou.title}
-                          </h3>
-                          <span
-                            style={{
-                              background: mou.color + '20',
-                              color: mou.color,
-                              padding: '0.2rem 0.7rem',
-                              borderRadius: 'var(--radius)',
-                              fontSize: '0.75em',
-                              fontWeight: 'bold'
-                            }}
-                            className="inline-flex w-max"
-                          >
-                            {mou.date}
-                          </span>
-                        </div>
-                        
-                        <h4 style={{ color: 'var(--text)', fontSize: 'clamp(1rem, 3vw, 1.1rem)', marginBottom: '0.75rem', lineHeight: '1.5' }}>
-                          {mou.partner}
-                        </h4>
-                        
-                        <div style={{
-                          background: 'var(--surface-1)',
-                          padding: '0.5rem 1rem',
-                          borderRadius: 'var(--radius)',
-                          display: 'inline-block',
-                          marginBottom: '1.5rem',
-                          border: '1px solid var(--border-light)'
-                        }}>
-                          <span style={{ color: 'var(--text-soft)', fontSize: '0.9em', fontWeight: '600' }}>
-                            {mou.type}
-                          </span>
-                        </div>
-                        
-                        <p style={{ color: 'var(--text-primary)', lineHeight: '1.75', marginBottom: '1.5rem' }}>
-                          {mou.description}
-                        </p>
-                        
-                        <div style={{
-                          background: 'var(--surface-1)',
-                          padding: 'clamp(1rem, 3vw, 1.5rem)',
-                          borderRadius: 'var(--radius-lg)',
-                          border: '1px solid var(--border-light)'
-                        }}>
-                          <h5 style={{ color: mou.color, marginBottom: '1.5rem', fontSize: '1.1em' }}>
-                            Key Benefits & Opportunities
-                          </h5>
-                          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '0.9rem' }}>
-                            {mou.benefits.map((benefit, idx) => (
-                              <div key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem' }}>
-                                <span style={{ color: mou.color, fontSize: '1.2em' }}>✓</span>
-                                <span style={{ color: 'var(--text-soft)', fontSize: '0.95em', lineHeight: '1.55' }}>{benefit}</span>
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
+                    <div className="w-full h-20 sm:h-24 rounded-lg bg-white border border-[var(--border-light)] flex items-center justify-center p-3">
+                      <img
+                        src={p.logo}
+                        alt={p.name}
+                        className="max-h-full max-w-full object-contain"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-[var(--text)] mb-1">
+                        {p.name}
+                      </h3>
+                      <p className="text-xs uppercase tracking-wider text-[var(--brand)] font-medium mb-3">
+                        {p.full}
+                      </p>
+                      <p className="text-sm text-[var(--text-soft)] leading-relaxed">
+                        {p.description}
+                      </p>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Partnership Impact */}
+            {/* Affiliations & Recognitions */}
             <div className="panel">
-              <h2 style={{ color: 'var(--text)', textAlign: 'center', marginBottom: '3rem' }}>
-                Partnership Impact & Achievements
-              </h2>
-              
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
-                <div style={impactCardStyle}>
-                  <div style={{ fontSize: '3em', marginBottom: '1rem' }}>👥</div>
-                  <div style={{ fontSize: '2.5em', fontWeight: 'bold', color: 'var(--brand)', marginBottom: '0.5rem' }}>150+</div>
-                  <h4 style={{ color: 'var(--text)', marginBottom: '1rem' }}>Students Benefited</h4>
-                  <p style={{ color: 'var(--text-soft)', lineHeight: '1.6' }}>
-                    Students have participated in exchange programs and international opportunities
-                  </p>
+              <h2>Affiliations & Recognitions</h2>
+              <p className="text-sm text-[var(--text-soft)] mb-6">
+                Recognised and accredited by leading national bodies.
+              </p>
+              <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3 sm:gap-4">
+                {AFFILIATIONS.map((a, i) => (
+                  <div
+                    key={i}
+                    className="aspect-[3/2] rounded-lg bg-white border border-[var(--border-light)] flex items-center justify-center p-3 hover:shadow-md transition-shadow"
+                    title={a.name}
+                  >
+                    <img
+                      src={a.logo}
+                      alt={a.name}
+                      className="max-w-full max-h-full object-contain"
+                      loading="lazy"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Strategic Partnerships & Global Collaborations */}
+            <div className="panel">
+              <h2>Strategic Partnerships & Global Collaborations</h2>
+              <p className="text-sm text-[var(--text-soft)] mb-6">
+                Academic, skill development, and industry partners that enrich the SSB learning experience.
+              </p>
+              <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-3 sm:gap-4">
+                {STRATEGIC_PARTNERS.map((p, i) => (
+                  <div
+                    key={i}
+                    className="aspect-[3/2] rounded-lg bg-white border border-[var(--border-light)] flex items-center justify-center p-3 hover:shadow-md transition-shadow"
+                    title={p.name}
+                  >
+                    <img
+                      src={p.logo}
+                      alt={p.name}
+                      className="max-w-full max-h-full object-contain"
+                      loading="lazy"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* What partnerships bring students */}
+            <div className="panel">
+              <h2>What These Partnerships Enable</h2>
+              <div className="grid md:grid-cols-2 gap-6 mt-2">
+                <div>
+                  <h4 className="font-semibold mb-2">For Students</h4>
+                  <ul className="list-disc list-inside space-y-1 text-sm">
+                    <li>Real-world software development office on campus (RISE India)</li>
+                    <li>International internships and technical exchange (IAESTE)</li>
+                    <li>NPTEL and DELNET access for online courses and digital library resources</li>
+                    <li>Industry-aligned skill development and certifications</li>
+                    <li>Mentorship and live projects with industry professionals</li>
+                  </ul>
                 </div>
-                
-                <div style={impactCardStyle}>
-                  <div style={{ fontSize: '3em', marginBottom: '1rem' }}>🔬</div>
-                  <div style={{ fontSize: '2.5em', fontWeight: 'bold', color: 'var(--brand)', marginBottom: '0.5rem' }}>25+</div>
-                  <h4 style={{ color: 'var(--text)', marginBottom: '1rem' }}>Research Projects</h4>
-                  <p style={{ color: 'var(--text-soft)', lineHeight: '1.6' }}>
-                    Collaborative research initiatives with international partners
-                  </p>
-                </div>
-                
-                <div style={impactCardStyle}>
-                  <div style={{ fontSize: '3em', marginBottom: '1rem' }}>🏆</div>
-                  <div style={{ fontSize: '2.5em', fontWeight: 'bold', color: 'var(--brand)', marginBottom: '0.5rem' }}>40+</div>
-                  <h4 style={{ color: 'var(--text)', marginBottom: '1rem' }}>Certifications</h4>
-                  <p style={{ color: 'var(--text-soft)', lineHeight: '1.6' }}>
-                    International certifications and skill development achievements
-                  </p>
+                <div>
+                  <h4 className="font-semibold mb-2">For the Institution</h4>
+                  <ul className="list-disc list-inside space-y-1 text-sm">
+                    <li>National accreditation and recognition (AICTE, AIMA, AIMS, JNTUA, MOE)</li>
+                    <li>Industry-aligned curriculum and faculty development</li>
+                    <li>Joint research initiatives and innovation labs</li>
+                    <li>Access to global academic networks</li>
+                    <li>Brand recognition and credibility for placements</li>
+                  </ul>
                 </div>
               </div>
             </div>
 
-            {/* Future Partnerships */}
-            <div className="panel" style={{ textAlign: 'center' }}>
-              <h2 style={{ color: 'var(--text)', marginBottom: '2rem' }}>Expanding Our Network</h2>
-              <p style={{ color: 'var(--text-soft)', fontSize: 'clamp(1rem, 2.4vw, 1.1rem)', maxWidth: '600px', margin: '0 auto 2rem', lineHeight: '1.75' }}>
-                We continue to explore new partnerships and strengthen existing collaborations to provide 
-                even more opportunities for our students and faculty.
+            {/* Inquiries CTA */}
+            <div className="panel bg-gradient-to-r from-[var(--surface-1)] to-[var(--surface-2)] text-center">
+              <h2>Partnership Inquiries</h2>
+              <p className="mb-6">
+                Interested in collaborating with Sanskrithi School of Business? Reach out to our admissions office.
               </p>
-              
-              <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-                <a 
-                  href="/inquiry?type=contact" 
-                  style={{
-                    background: 'var(--brand-gradient)',
-                    color: 'white',
-                    padding: '0.875rem 2rem',
-                    borderRadius: 'var(--radius)',
-                    textDecoration: 'none',
-                    fontWeight: '600',
-                    transition: 'all var(--transition-fast)',
-                    display: 'inline-block',
-                    minWidth: '220px'
-                  }}
-                  className="hover:scale-105 hover:shadow-lg w-full sm:w-auto text-center"
-                >
-                  Partnership Inquiries
-                </a>
-                <a 
-                  href="/about/overview" 
-                  style={{
-                    background: 'var(--surface-2)',
-                    color: 'var(--text)',
-                    padding: '0.875rem 2rem',
-                    borderRadius: 'var(--radius)',
-                    textDecoration: 'none',
-                    fontWeight: '600',
-                    border: '1px solid var(--border-light)',
-                    transition: 'all var(--transition-fast)',
-                    display: 'inline-block',
-                    minWidth: '220px'
-                  }}
-                  className="w-full sm:w-auto text-center"
-                  className="hover:bg-[var(--surface-3)] hover:border-[var(--border-medium)]"
-                >
-                  Learn More About SSB
-                </a>
+              <div className="grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto mb-6 text-left">
+                <div className="p-4 rounded-lg bg-[var(--surface-1)] border border-[var(--border-light)]">
+                  <p className="text-[var(--text-soft)] text-sm mb-1">Email</p>
+                  <a
+                    href="mailto:admissions.director@sanskrithibschool.com"
+                    className="font-semibold hover:text-[var(--accent)] transition-colors break-words"
+                  >
+                    admissions.director@sanskrithibschool.com
+                  </a>
+                </div>
+                <div className="p-4 rounded-lg bg-[var(--surface-1)] border border-[var(--border-light)]">
+                  <p className="text-[var(--text-soft)] text-sm mb-1">Phone</p>
+                  <a
+                    href="tel:+919100974544"
+                    className="font-semibold hover:text-[var(--accent)] transition-colors"
+                  >
+                    +91 9100 974 544
+                  </a>
+                </div>
               </div>
+              <a
+                href="/inquiry?type=contact"
+                className="inline-block px-8 py-3 rounded-xl bg-gradient-to-r from-[var(--brand)] to-[var(--brand-light)] text-white font-semibold hover:scale-105 transition-transform shadow-lg"
+              >
+                Get in Touch
+              </a>
             </div>
           </div>
         </div>
       </div>
-      <style>{`
-        @media (max-width: 640px) {
-          .main-content .panel {
-            padding: 1.25rem;
-          }
-
-          .main-content .panel h2 {
-            margin-bottom: 1.25rem !important;
-          }
-
-          .mou-card {
-            border-radius: 1.25rem;
-          }
-
-          .mou-card [class*='sm:grid-cols-[80px'] {
-            grid-template-columns: 1fr !important;
-          }
-
-          .main-content .panel a {
-            width: 100%;
-            text-align: center;
-          }
-        }
-      `}</style>
     </div>
   );
 }

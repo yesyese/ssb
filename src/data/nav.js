@@ -87,12 +87,7 @@ export const NAV = [
         href: '/admissions/ranks',
         description: 'Entrance exam rank requirements'
       },
-      { 
-        label: 'Admissions Committee', 
-        href: '/admissions/admissions-committee',
-        description: 'Admissions committee members and policies'
-      },
-      { 
+      {
         label: 'Academic Calendar', 
         href: '/admissions/calendar',
         description: 'Important academic dates and events'

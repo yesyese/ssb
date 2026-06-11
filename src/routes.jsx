@@ -32,7 +32,7 @@ const AdmissionProcedure = lazy(() => import('./pages/Admissions/AdmissionProced
 // Fee Structure + Fee Payment merged into single Fees & Payment page
 const Fees = lazy(() => import('./pages/Admissions/Fees.jsx'));
 // Scholarships and Ranks pages merged into AdmissionProcedure — imports removed
-const AdmissionsCommittee = lazy(() => import('./pages/Admissions/AdmissionsCommittee.jsx'));
+// Admissions Committee page removed
 const AdmissionCalendar = lazy(() => import('./pages/Admissions/Calendar.jsx'));
 const AdmissionRegulations = lazy(() => import('./pages/Admissions/Regulations.jsx'));
 
@@ -147,7 +147,7 @@ export default [
   // Scholarships + Ranks merged into AdmissionProcedure with anchor sections
   { path: '/admissions/scholarships', element: <Navigate to="/admissions/admission-procedure#scholarships" replace /> },
   { path: '/admissions/ranks', element: <Navigate to="/admissions/admission-procedure#exams" replace /> },
-  { path: '/admissions/admissions-committee', element: createElement(AdmissionsCommittee) },
+  { path: '/admissions/admissions-committee', element: <Navigate to="/admissions/admission-procedure" replace /> },
   { path: '/admissions/calendar', element: createElement(AdmissionCalendar) },
   { path: '/admissions/regulations', element: createElement(AdmissionRegulations) },
   

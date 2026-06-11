@@ -1,6 +1,159 @@
 import React from 'react';
 import SectionHeader from '../../components/ui/SectionHeader';
 
+// Recruiter logos
+import logoAccenture from '../../assets/companylogos/Accenture.svg.png';
+import logoAmazon from '../../assets/companylogos/amazon.png';
+import logoDeloitte from '../../assets/companylogos/Deloitte_Logo.png';
+import logoGenpact from '../../assets/companylogos/800px-Genpact_logo.svg.png';
+import logoHDFC from '../../assets/companylogos/HDFC_Bank_Logo.svg.png';
+import logoICICI from '../../assets/companylogos/icici.png';
+import logoJPMorgan from '../../assets/companylogos/jp  morgam.png';
+import logoNoBroker from '../../assets/companylogos/nobroker-logo.jpg';
+import logoTCS from '../../assets/companylogos/Tata_Consultancy_Services_Logo.svg.png';
+import logoUpgrad from '../../assets/companylogos/upgrad-logo.png';
+import logoWipro from '../../assets/companylogos/Wipro-logo.png';
+import logoYesBank from '../../assets/companylogos/yes bank.png';
+import logo247 from '../../assets/companylogos/24.7.png';
+import logoCognizant from '../../assets/companylogos/cognizant.png';
+import logoInfosys from '../../assets/companylogos/infosys.png';
+import logoSamsung from '../../assets/companylogos/samsung.png';
+import logoKPMG from '../../assets/companylogos/kpmg.png';
+import logoTechMahindra from '../../assets/companylogos/tech-mahindra.png';
+import logoSBI from '../../assets/companylogos/sbi.png';
+import logoIDFC from '../../assets/companylogos/idfc-first-bank.png';
+import logoCSB from '../../assets/companylogos/csb-bank.png';
+import logoCityUnion from '../../assets/companylogos/city-union-bank.png';
+import logoBajaj from '../../assets/companylogos/bajaj-finserv.png';
+import logoPoonawalla from '../../assets/companylogos/poonawalla-fincorp.png';
+import logoGodrej from '../../assets/companylogos/godrej-capital.png';
+import logoManappuram from '../../assets/companylogos/manappuram-finance.jpeg';
+import logoMuthoot from '../../assets/companylogos/muthoot-finance.png';
+import logoUber from '../../assets/companylogos/uber.png';
+import logoSlice from '../../assets/companylogos/slice.png';
+import logoKIA from '../../assets/companylogos/kia.png';
+import logoUltraTech from '../../assets/companylogos/ultratech-cement.jpg';
+import logoDelhivery from '../../assets/companylogos/delhivery.png';
+import logoQuess from '../../assets/companylogos/quess.png';
+import logoCareernet from '../../assets/companylogos/careernet.png';
+import logoCorizo from '../../assets/companylogos/corizo.png';
+import logoTeachnook from '../../assets/companylogos/teachnook.png';
+import logoBrihaspathi from '../../assets/companylogos/brihaspathi.webp';
+import logoSelfeey from '../../assets/companylogos/selfeey.png';
+import logoTricon from '../../assets/companylogos/tricon-infotech.png';
+import logoWayspire from '../../assets/companylogos/wayspire.png';
+import logoStarsManagement from '../../assets/companylogos/stars-management.png';
+import logoMovidu from '../../assets/companylogos/movidu.jpg';
+import logoIntrainz from '../../assets/companylogos/intrainz.jpg';
+import logoRinex from '../../assets/companylogos/rinex.webp';
+import logoMOS from '../../assets/companylogos/mos.png';
+import logoTotal from '../../assets/companylogos/total.png';
+import logoHCL from '../../assets/companylogos/hcl.png';
+import logoEY from '../../assets/companylogos/ey.png';
+import logoPayPal from '../../assets/companylogos/paypal.png';
+import logoFactset from '../../assets/companylogos/factset.png';
+
+// Student photos
+import photoSandhya from '../../assets/placements/students/j-sandhya.jpg';
+import photoSwapna from '../../assets/placements/students/swapna-bai.jpg';
+import photoChitambaram from '../../assets/placements/students/sai-chitambaram.jpg';
+import photoGovardhan from '../../assets/placements/students/govardhan.jpg';
+import photoGousiya from '../../assets/placements/students/gousiya.png';
+import photoNazneen from '../../assets/placements/students/nazneen.png';
+import photoYaswitha from '../../assets/placements/students/yaswitha.png';
+import photoArchana from '../../assets/placements/students/archana.jpeg';
+import photoSudhaRani from '../../assets/placements/students/sudha-rani.png';
+import photoGowthami from '../../assets/placements/students/gowthami.png';
+import photoAnusha from '../../assets/placements/students/anusha.png';
+import photoSaiNath from '../../assets/placements/students/sai-nath.jpg';
+import photoBaba from '../../assets/placements/students/baba-fakrudein.png';
+import photoLokesh from '../../assets/placements/students/lokesh.png';
+import photoYasmin from '../../assets/placements/students/yasmin.png';
+import photoGeetha from '../../assets/placements/students/geetha.png';
+
+// Recently-placed students with photos
+const RECENT_PLACEMENTS = [
+  { name: 'J. Sandhya', company: 'Deloitte', photo: photoSandhya },
+  { name: 'Swapna Bai', company: 'Factset', photo: photoSwapna },
+  { name: 'C. Sai Chitambaram', company: 'Genpact', photo: photoChitambaram },
+  { name: 'B. Govardhan', company: 'Deloitte', photo: photoGovardhan },
+  { name: 'S. Gousiya', company: 'KPMG', photo: photoGousiya },
+  { name: 'S. Nazneen', company: 'PayPal', photo: photoNazneen },
+  { name: 'Yaswitha', company: 'Amazon', photo: photoYaswitha },
+  { name: 'Archana', company: 'HCL', photo: photoArchana },
+  { name: 'Sudha Rani', company: 'J.P. Morgan', photo: photoSudhaRani },
+  { name: 'C. Gowthami', company: 'Accenture', photo: photoGowthami },
+  { name: 'J. Anusha', company: 'upGrad', photo: photoAnusha },
+  { name: 'S. Sai Nath', company: 'EY', photo: photoSaiNath },
+  { name: 'N. Baba Fakrudein', company: 'TCS', photo: photoBaba },
+  { name: 'B. Lokesh', company: 'Infosys', photo: photoLokesh },
+  { name: 'S. Yasmin', company: 'YES Bank', photo: photoYasmin },
+  { name: 'D. Geetha', company: 'Infosys', photo: photoGeetha },
+];
+
+// Full recruiter list — every entry has a logo now (only Zepto missing from brochure)
+const RECRUITERS = [
+  { name: 'Accenture', logo: logoAccenture },
+  { name: 'TCS', logo: logoTCS },
+  { name: 'Wipro', logo: logoWipro },
+  { name: 'Infosys', logo: logoInfosys },
+  { name: 'Cognizant', logo: logoCognizant },
+  { name: 'Genpact', logo: logoGenpact },
+  { name: 'Amazon', logo: logoAmazon },
+  { name: 'Samsung', logo: logoSamsung },
+  { name: 'HCL', logo: logoHCL },
+  { name: 'Deloitte', logo: logoDeloitte },
+  { name: 'KPMG', logo: logoKPMG },
+  { name: 'EY', logo: logoEY },
+  { name: 'PayPal', logo: logoPayPal },
+  { name: 'Factset', logo: logoFactset },
+  { name: 'J.P. Morgan', logo: logoJPMorgan },
+  { name: 'Tech Mahindra', logo: logoTechMahindra },
+  { name: 'upGrad', logo: logoUpgrad },
+  { name: 'HDFC Bank', logo: logoHDFC },
+  { name: 'ICICI Bank', logo: logoICICI },
+  { name: 'SBI', logo: logoSBI },
+  { name: 'Yes Bank', logo: logoYesBank },
+  { name: 'IDFC First Bank', logo: logoIDFC },
+  { name: 'CSB Bank', logo: logoCSB },
+  { name: 'City Union Bank', logo: logoCityUnion },
+  { name: 'Bajaj Finserv', logo: logoBajaj },
+  { name: 'Poonawalla Fincorp', logo: logoPoonawalla },
+  { name: 'Godrej Capital', logo: logoGodrej },
+  { name: 'Manappuram Finance', logo: logoManappuram },
+  { name: 'Muthoot Finance', logo: logoMuthoot },
+  { name: 'Zepto', logo: null },
+  { name: 'Uber', logo: logoUber },
+  { name: 'Slice', logo: logoSlice },
+  { name: 'NoBroker', logo: logoNoBroker },
+  { name: 'KIA', logo: logoKIA },
+  { name: 'UltraTech Cement', logo: logoUltraTech },
+  { name: 'Delhivery', logo: logoDelhivery },
+  { name: 'Quess', logo: logoQuess },
+  { name: 'Careernet', logo: logoCareernet },
+  { name: '[24]7.ai', logo: logo247 },
+  { name: 'Corizo', logo: logoCorizo },
+  { name: 'Teachnook', logo: logoTeachnook },
+  { name: 'Brihaspathi', logo: logoBrihaspathi },
+  { name: 'Selfeey', logo: logoSelfeey },
+  { name: 'Tricon Infotech', logo: logoTricon },
+  { name: 'Wayspire', logo: logoWayspire },
+  { name: 'Stars Management', logo: logoStarsManagement },
+  { name: 'Movidu', logo: logoMovidu },
+  { name: 'InTrAinz', logo: logoIntrainz },
+  { name: 'Rinex', logo: logoRinex },
+  { name: 'MOS', logo: logoMOS },
+  { name: 'Total', logo: logoTotal },
+];
+
+const RECENT_DRIVES = [
+  { company: 'Sutherland', profiles: 'Consultant', eligibility: 'MBA', package: '2.7 LPA' },
+  { company: 'TCS', profiles: 'IT & BPS', eligibility: 'MBA', package: '—' },
+  { company: 'FUNNL', profiles: 'B2B Sales', eligibility: 'MBA', package: '1.8 LPA' },
+  { company: 'Middle Earth HR', profiles: 'Sales Executive', eligibility: 'MBA', package: '2.5 LPA' },
+  { company: 'Learning Routes', profiles: 'Sales Associate', eligibility: 'MBA', package: '6 LPA' },
+];
+
 export default function CampusDrives() {
   return (
     <div className="main-content">
@@ -9,26 +162,27 @@ export default function CampusDrives() {
           <SectionHeader
             title="Campus Drives"
             subtitle="On-campus recruitment activities"
-            description="Direct recruitment opportunities by leading companies"
+            description="Direct recruitment opportunities by leading companies that visit Sanskrithi every year"
           />
-          
+
           <div className="space-y-section">
             <div className="panel">
               <h2>Campus Recruitment Overview</h2>
               <p>
-                Campus drives are the cornerstone of our placement process, bringing 
-                leading companies directly to our campus to recruit talented students. 
-                These recruitment events provide students with direct access to 
-                prestigious organizations and exciting career opportunities.
+                Campus drives are the cornerstone of our placement process, bringing
+                leading companies directly to our campus to recruit talented students.
+                These recruitment events provide students with direct access to
+                prestigious organisations and exciting career opportunities.
               </p>
             </div>
 
+            {/* Placement Track Record */}
             <div className="panel">
-              <h2>Current Academic Year Drives</h2>
-              <div className="grid md:grid-cols-3 gap-6">
+              <h2>Placement Track Record</h2>
+              <div className="grid md:grid-cols-4 gap-6 mt-4">
                 <div className="text-center card">
-                  <div className="text-3xl font-bold text-[var(--brand)] mb-2">45+</div>
-                  <p className="text-sm">Companies Visiting</p>
+                  <div className="text-3xl font-bold text-[var(--brand)] mb-2">50+</div>
+                  <p className="text-sm">Recruiting Companies</p>
                 </div>
                 <div className="text-center card">
                   <div className="text-3xl font-bold text-[var(--brand)] mb-2">80+</div>
@@ -36,116 +190,106 @@ export default function CampusDrives() {
                 </div>
                 <div className="text-center card">
                   <div className="text-3xl font-bold text-[var(--brand)] mb-2">95%</div>
-                  <p className="text-sm">Student Participation</p>
+                  <p className="text-sm">Placement Rate</p>
+                </div>
+                <div className="text-center card">
+                  <div className="text-3xl font-bold text-[var(--brand)] mb-2">1200+</div>
+                  <p className="text-sm">Alumni Network</p>
                 </div>
               </div>
             </div>
 
+            {/* Recent Campus Drives */}
             <div className="panel">
-              <h2>Upcoming Campus Drives</h2>
+              <h2>Recent Campus Drives</h2>
+              <p className="text-sm text-[var(--text-soft)] mb-4">
+                A snapshot of recent on-campus recruitment activity.
+              </p>
               <div className="overflow-x-auto">
                 <table className="w-full border-collapse">
                   <thead>
                     <tr className="border-b border-[var(--border-light)]">
                       <th className="text-left p-3">Company</th>
-                      <th className="text-left p-3">Date</th>
-                      <th className="text-left p-3">Profiles</th>
+                      <th className="text-left p-3">Profile</th>
                       <th className="text-left p-3">Eligibility</th>
-                      <th className="text-left p-3">Package (LPA)</th>
+                      <th className="text-left p-3">Package</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr className="border-b border-[var(--border-light)]">
-                      <td className="p-3">TechCorp Solutions</td>
-                      <td className="p-3">March 15, 2026</td>
-                      <td className="p-3">Business Analyst, Marketing Executive</td>
-                      <td className="p-3">MBA/PGDM</td>
-                      <td className="p-3">6.5 - 8.5</td>
-                    </tr>
-                    <tr className="border-b border-[var(--border-light)]">
-                      <td className="p-3">Global Finance Ltd.</td>
-                      <td className="p-3">March 18, 2026</td>
-                      <td className="p-3">Financial Analyst, Investment Advisor</td>
-                      <td className="p-3">MBA Finance</td>
-                      <td className="p-3">7.0 - 9.0</td>
-                    </tr>
-                    <tr className="border-b border-[var(--border-light)]">
-                      <td className="p-3">InnovateTech</td>
-                      <td className="p-3">March 22, 2026</td>
-                      <td className="p-3">Management Trainee, HR Executive</td>
-                      <td className="p-3">All Programs</td>
-                      <td className="p-3">5.5 - 7.5</td>
-                    </tr>
-                    <tr className="border-b border-[var(--border-light)]">
-                      <td className="p-3">MarketPro Agency</td>
-                      <td className="p-3">March 25, 2026</td>
-                      <td className="p-3">Digital Marketing Specialist</td>
-                      <td className="p-3">MBA Marketing</td>
-                      <td className="p-3">6.0 - 8.0</td>
-                    </tr>
+                    {RECENT_DRIVES.map((drive, i) => (
+                      <tr key={i} className="border-b border-[var(--border-light)]">
+                        <td className="p-3 font-medium">{drive.company}</td>
+                        <td className="p-3">{drive.profiles}</td>
+                        <td className="p-3">{drive.eligibility}</td>
+                        <td className="p-3">{drive.package}</td>
+                      </tr>
+                    ))}
                   </tbody>
                 </table>
               </div>
             </div>
-           <div className="panel">
-  <h2>Upcoming Campus Drives</h2>
-  <div className="overflow-x-auto">
-    <table className="w-full border-collapse">
-      <thead>
-        <tr className="border-b border-[var(--border-light)]">
-          <th className="text-left p-3">Company</th>
-          <th className="text-left p-3">Date</th>
-          <th className="text-left p-3">Profiles</th>
-          <th className="text-left p-3">Eligibility</th>
-          <th className="text-left p-3">Package (LPA)</th>
-        </tr>
-      </thead>
-      <tbody>
-        {/* Sutherland */}
-        <tr className="border-b border-[var(--border-light)]">
-          <td className="p-3">Sutherland</td>
-          <td className="p-3">Feb 25th</td>
-          <td className="p-3">Consultant</td>
-          <td className="p-3">MBA</td>
-          <td className="p-3">2.7LPA</td>
-        </tr>
-        {/* TCS */}
-        <tr className="border-b border-[var(--border-light)]">
-          <td className="p-3">TCS</td>
-          <td className="p-3">-</td>
-          <td className="p-3">IT & BPS</td>
-          <td className="p-3">MBA</td>
-          <td className="p-3">-</td>
-        </tr>
-        {/* FUNNL */}
-        <tr className="border-b border-[var(--border-light)]">
-          <td className="p-3">FUNNL</td>
-          <td className="p-3">-</td>
-          <td className="p-3">B2B Sales</td>
-          <td className="p-3">MBA</td>
-          <td className="p-3">1.8LPA</td>
-        </tr>
-        {/* Middle Earth HR */}
-        <tr className="border-b border-[var(--border-light)]">
-          <td className="p-3">Middle Earth HR</td>
-          <td className="p-3">-</td>
-          <td className="p-3">Sales Executives</td>
-          <td className="p-3">MBA</td>
-          <td className="p-3">2.5LPA</td>
-        </tr>
-        {/* Learning Routes */}
-        <tr className="border-b border-[var(--border-light)]">
-          <td className="p-3">Learning Routes</td>
-          <td className="p-3">-</td>
-          <td className="p-3">Sales Associate</td>
-          <td className="p-3">MBA</td>
-          <td className="p-3">6LPA</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
 
+            {/* Recent Placements — students with photos */}
+            <div className="panel">
+              <h2>Recent Placements</h2>
+              <p className="text-sm text-[var(--text-soft)] mb-6">
+                Some of our recently placed students and their companies.
+              </p>
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
+                {RECENT_PLACEMENTS.map((student, i) => (
+                  <div
+                    key={i}
+                    className="card border border-[var(--border-light)] rounded-xl p-4 hover:bg-[var(--surface-2)] transition-colors flex flex-col items-center text-center"
+                  >
+                    <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden bg-[var(--surface-2)] border-2 border-[var(--brand)]/30 mb-3">
+                      <img
+                        src={student.photo}
+                        alt={student.name}
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                    <h4 className="font-semibold text-[var(--text)] mb-1 text-sm sm:text-base leading-tight">
+                      {student.name}
+                    </h4>
+                    <p className="text-xs sm:text-sm text-[var(--brand)] font-medium">
+                      {student.company}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Our Recruiters — logos + text fallback */}
+            <div className="panel">
+              <h2>Our Recruiters</h2>
+              <p className="text-sm text-[var(--text-soft)] mb-6">
+                A selection of organisations that hire from Sanskrithi.
+              </p>
+              <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-3 sm:gap-4">
+                {RECRUITERS.map((r, i) => (
+                  <div
+                    key={i}
+                    className="aspect-[3/2] rounded-lg bg-white border border-[var(--border-light)] flex items-center justify-center p-3 hover:shadow-md transition-shadow"
+                  >
+                    {r.logo ? (
+                      <img
+                        src={r.logo}
+                        alt={r.name}
+                        className="max-w-full max-h-full object-contain"
+                        loading="lazy"
+                      />
+                    ) : (
+                      <span className="text-[11px] sm:text-xs font-semibold text-[#1A1410] text-center leading-tight">
+                        {r.name}
+                      </span>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Campus Drive Process */}
             <div className="panel">
               <h2>Campus Drive Process</h2>
               <div className="grid md:grid-cols-2 gap-6">
@@ -157,15 +301,15 @@ export default function CampusDrives() {
                     <li>Student eligibility verification</li>
                     <li>Pre-placement talk (PPT) scheduling</li>
                     <li>Online application and shortlisting</li>
-                    <li>Assessment schedule finalization</li>
+                    <li>Assessment schedule finalisation</li>
                   </ol>
                 </div>
-                
+
                 <div>
                   <h4 className="font-semibold mb-3">Recruitment Day Activities</h4>
                   <ol className="list-decimal list-inside space-y-2 text-sm">
                     <li>Company presentation and Q&A session</li>
-                    <li>Written test/online assessment</li>
+                    <li>Written test / online assessment</li>
                     <li>Technical interview rounds</li>
                     <li>HR interview and final selection</li>
                     <li>Offer letter distribution</li>
@@ -175,55 +319,7 @@ export default function CampusDrives() {
               </div>
             </div>
 
-            <div className="panel">
-              <h2>Types of Campus Drives</h2>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="card">
-                  <h4 className="font-semibold mb-2">🏢 Regular Placement Drives</h4>
-                  <p className="text-sm mb-3">Standard full-time recruitment for final year students</p>
-                  <ul className="list-disc list-inside space-y-1 text-xs">
-                    <li>Full-time permanent positions</li>
-                    <li>Comprehensive benefits package</li>
-                    <li>Career growth opportunities</li>
-                    <li>Training and development programs</li>
-                  </ul>
-                </div>
-                
-                <div className="card">
-                  <h4 className="font-semibold mb-2">🚀 Off-Campus Opportunities</h4>
-                  <p className="text-sm mb-3">External recruitment support and guidance</p>
-                  <ul className="list-disc list-inside space-y-1 text-xs">
-                    <li>Job portal registrations</li>
-                    <li>Application guidance and support</li>
-                    <li>Interview preparation assistance</li>
-                    <li>Reference and recommendation letters</li>
-                  </ul>
-                </div>
-                
-                <div className="card">
-                  <h4 className="font-semibold mb-2">⏰ Fast-Track Recruitment</h4>
-                  <p className="text-sm mb-3">Expedited hiring for urgent requirements</p>
-                  <ul className="list-disc list-inside space-y-1 text-xs">
-                    <li>Streamlined selection process</li>
-                    <li>Quick decision-making</li>
-                    <li>Immediate joining opportunities</li>
-                    <li>Project-based assignments</li>
-                  </ul>
-                </div>
-                
-                <div className="card">
-                  <h4 className="font-semibold mb-2">🌍 Virtual Campus Drives</h4>
-                  <p className="text-sm mb-3">Online recruitment for remote and global opportunities</p>
-                  <ul className="list-disc list-inside space-y-1 text-xs">
-                    <li>Video conferencing interviews</li>
-                    <li>Online assessment platforms</li>
-                    <li>Digital document verification</li>
-                    <li>Remote work opportunities</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
+            {/* Student Preparation Guidelines */}
             <div className="panel">
               <h2>Student Preparation Guidelines</h2>
               <div className="grid md:grid-cols-2 gap-6">
@@ -238,7 +334,7 @@ export default function CampusDrives() {
                     <li>Gather all required documents</li>
                   </ul>
                 </div>
-                
+
                 <div>
                   <h4 className="font-semibold mb-2">During the Drive</h4>
                   <ul className="list-disc list-inside space-y-1 text-sm">
@@ -253,65 +349,27 @@ export default function CampusDrives() {
               </div>
             </div>
 
-            <div className="panel">
-  <h2 className="text-1xl font-bold mb-6">Recent Success Stories</h2>
-  <div className="grid md:grid-cols-3 gap-6">
-    {/* 1. Corizo Ed Tech */}
-    <div className="card border p-4 rounded-lg shadow-sm">
-      <h4 className="font-semibold mb-2">Corizo Ed Tech</h4>
-      <p className="text-sm mb-2 text-blue-600 font-medium">3 students selected</p>
-      <p className="text-xs text-[var(--text-dim)]">Package: 6.5 LPA</p>
-      <p className="text-xs text-[var(--text-dim)]">Role: Inside Sales Representative</p>
-    </div>
-    
-    {/* 2. Glow logics Solutions Pvt Ltd */}
-    <div className="card border p-4 rounded-lg shadow-sm">
-      <h4 className="font-semibold mb-2">Glow logics Solutions Pvt Ltd</h4>
-      <p className="text-sm mb-2 text-blue-600 font-medium">12 students selected</p>
-      <p className="text-xs text-[var(--text-dim)]">Package: 7 LPA</p>
-      <p className="text-xs text-[var(--text-dim)]">Role: Inside Sales Representative</p>
-    </div>
-    
-    {/* 3. Inspire AI Pvt Ltd */}
-    <div className="card border p-4 rounded-lg shadow-sm">
-      <h4 className="font-semibold mb-2">Inspire AI Pvt Ltd</h4>
-      <p className="text-sm mb-2 text-blue-600 font-medium">26 students selected</p>
-      <p className="text-xs text-[var(--text-dim)]">Package: 6.2 LPA</p>
-      <p className="text-xs text-[var(--text-dim)]">Role: Business Development Associate</p>
-    </div>
-  </div>
-</div>
-
-            <div className="panel">
-              <h2>Campus Drive Statistics (2023-24)</h2>
-              <div className="grid md:grid-cols-4 gap-6">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-[var(--brand)] mb-2">42</div>
-                  <p className="text-sm">Total Companies</p>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-[var(--brand)] mb-2">380</div>
-                  <p className="text-sm">Students Placed</p>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-[var(--brand)] mb-2">8.5 LPA</div>
-                  <p className="text-sm">Average Package</p>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-[var(--brand)] mb-2">95%</div>
-                  <p className="text-sm">Placement Rate</p>
-                </div>
-              </div>
-            </div>
-
+            {/* Register / Contact */}
             <div className="panel">
               <h2>Register for Upcoming Drives</h2>
               <p>Stay updated with campus drive schedules and register for opportunities:</p>
-              <div className="mt-4">
-                <p><strong>Placement Portal:</strong> <a href="#" className="text-[var(--brand)] hover:underline">student.ssbputtaparthi.edu.in</a></p>
-                <p><strong>Email Notifications:</strong> placement-updates@ssbputtaparthi.edu.in</p>
-                <p><strong>WhatsApp Updates:</strong> +91-XXXX-XXXXXX</p>
-                <p><strong>Office Contact:</strong> +91-XXXX-XXXXXX</p>
+              <div className="mt-4 space-y-1">
+                <p>
+                  <strong>Email:</strong>{' '}
+                  <a
+                    href="mailto:admissions.director@sanskrithibschool.com"
+                    className="text-[var(--brand)] hover:underline break-words"
+                  >
+                    admissions.director@sanskrithibschool.com
+                  </a>
+                </p>
+                <p>
+                  <strong>Phone:</strong>{' '}
+                  <a href="tel:+919100974544" className="text-[var(--brand)] hover:underline">
+                    +91 9100 974 544
+                  </a>
+                </p>
+                <p><strong>Office Hours:</strong> Monday – Friday, 9:00 AM – 5:00 PM</p>
               </div>
             </div>
           </div>

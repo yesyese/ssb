@@ -16,8 +16,11 @@ import logoAmazon from "../assets/companylogos/amazon.png";
 import logoYesBank from "../assets/companylogos/yes bank.png";
 import logoGenpact from "../assets/companylogos/800px-Genpact_logo.svg.png";
 import logoMphasis from "../assets/companylogos/mphasis-logo (1).png";
-import test1 from "../assets/test1.png";
-import test2 from "../assets/test2.png";
+import testYashwitha from "../assets/placements/students/yaswitha.png";
+import testSaiKishore from "../assets/placements/students/sai-kishore.png";
+import testKalyanReddy from "../assets/placements/students/kalyan-reddy.png";
+import testChaitanya from "../assets/placements/students/m-chaitanya.png";
+import testNagaveena from "../assets/placements/students/p-nagaveena.png";
 import lab from "../assets/lab.jpeg";
 /**
  * SSB — Sanskrithi School of Business
@@ -203,19 +206,40 @@ export default function Home() {
               desc="Dedicated placement support with industry connections and career guidance."
             />
           </div>
-          {/* testimonial row */}
-          <div className="mt-10 grid md:grid-cols-2 gap-6">
+          {/* Testimonials */}
+          <div className="mt-16">
+            <Header title="Testimonials" subtitle="Voices from our students" />
+          </div>
+          <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <Testimonial
-              quote="SSB's industry-focused curriculum and practical exposure prepared me for the consulting world. The mentorship and live projects made all the difference."
-              name="H ASMA BANU"
-              role="HR Executive, Tech Mahindra, 2022-2024"
-              img={test1}
+              quote="SSB provides a safe and supportive environment that allows students to focus entirely on their academic and personal growth. The secure campus and positive atmosphere make it an ideal place to learn, collaborate, and thrive."
+              name="S YASHWITHA"
+              role="MBA Student, Amazon"
+              img={testYashwitha}
             />
             <Testimonial
-              quote="The analytical thinking and business fundamentals from SSB helped me excel in e-commerce. Strong foundation for a career in analytics and operations."
-              name="BABA FAKRUDDIEN N"
-              role="Developer, TCS, 2020-2022"
-              img={test2}
+              quote="SSB shaped my perspective toward the business world through practical learning, industry exposure, and collaborative experiences. The campus fosters innovation, discipline, and leadership qualities essential for future success."
+              name="SAI KISHORE"
+              role="MBA Student, TCS"
+              img={testSaiKishore}
+            />
+            <Testimonial
+              quote="I'm sincerely thankful to SSB for enabling my placement at Accenture with a CTC of 6 LPA. The consistent mentorship, industry exposure, and nurturing academic environment were instrumental in my development. SSB has been the cornerstone of my journey toward professional success."
+              name="KALYAN REDDY"
+              role="MBA Student, Accenture"
+              img={testKalyanReddy}
+            />
+            <Testimonial
+              quote="Receiving the Sai Prudent Scholarship has truly been a life-changing opportunity, allowing me to pursue my MBA without any financial burden. The industry-relevant curriculum and hands-on skill development were instrumental in securing my placement at Zepto."
+              name="M. CHAITANYA"
+              role="MBA Student, Accenture"
+              img={testChaitanya}
+            />
+            <Testimonial
+              quote="SSB has been a game-changer in my academic journey. The faculty is incredibly supportive and dedicated, always guiding us to do our best. The hands-on project work helped me gain real-world insights and apply what I learned in class."
+              name="P. NAGAVEENA"
+              role="MBA Student, Infosys"
+              img={testNagaveena}
             />
           </div>
         </div>

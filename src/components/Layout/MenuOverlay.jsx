@@ -40,7 +40,6 @@ const SECTIONS = [
     href: '/admissions/admission-procedure',
     items: [
       { label: 'Admission Procedure', href: '/admissions/admission-procedure' },
-      { label: 'Admissions Committee', href: '/admissions/admissions-committee' },
       { label: 'Fees & Payment', href: '/admissions/fees' },
     ],
   },

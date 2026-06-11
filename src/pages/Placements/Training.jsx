@@ -245,17 +245,6 @@ export default function TrainingPrograms() {
               </div>
             </div>
 
-            <div className="panel">
-              <h2>Registration & Contact</h2>
-              <p>To enroll in our training programs or get more information:</p>
-              <div className="mt-4">
-                <p><strong>Training Coordinator</strong></p>
-                <p>Email: training@ssbputtaparthi.edu.in</p>
-                <p>Phone: +91-XXXX-XXXXXX</p>
-                <p>Office: Placement Cell, Training Division</p>
-                <p>Registration: Online portal available</p>
-              </div>
-            </div>
           </div>
         </div>
       </div>

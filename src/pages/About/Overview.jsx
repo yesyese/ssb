@@ -45,20 +45,6 @@ export default function AboutOverview() {
       qualification: "",
       experience: "",
       expertise: ""
-    },
-    {
-      name: "Ms. S Khuteja",
-      position: "Associate Professor",
-      qualification: "MBA (PhD)",
-      experience: "10+ years in Teaching",
-      expertise: "Finance, Human Resources, Management"
-    },
-    {
-      name: "Mr. P. Lingamaiah",
-      position: "Assistant Professor",
-      qualification: "MBA",
-      experience: "8+ years in Management Education",
-      expertise: "Business Management, Operations"
     }
   ];
   

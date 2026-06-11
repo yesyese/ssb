@@ -1,6 +1,23 @@
 import React from 'react';
 import SectionHeader from '../../components/ui/SectionHeader';
 import Card from '../../components/ui/Card';
+import sports1 from '../../assets/campus/sports/sports-1.jpg';
+import sports2 from '../../assets/campus/sports/sports-2.jpg';
+import sports3 from '../../assets/campus/sports/sports-3.jpg';
+import sports4 from '../../assets/campus/sports/sports-4.jpg';
+import sports5 from '../../assets/campus/sports/sports-5.jpg';
+import sports6 from '../../assets/campus/sports/sports-6.jpg';
+import sports7 from '../../assets/campus/sports/sports-7.jpg';
+
+// Hero uses sports5 (volleyball). Gallery shows the other six.
+const SPORTS_GALLERY = [
+  { src: sports1, alt: 'Cricket batting at SSB ground' },
+  { src: sports3, alt: 'Cricket practice session' },
+  { src: sports4, alt: 'Cricket match at SSB' },
+  { src: sports2, alt: 'Kabaddi tournament at SSB' },
+  { src: sports6, alt: 'Inter-college sports tournament' },
+  { src: sports7, alt: 'SSB sports team' },
+];
 
 export default function SportsFacility() {
   const sportsCategories = [
@@ -110,6 +127,16 @@ export default function SportsFacility() {
           />
           
           <div className="space-y-section">
+            {/* Sports Hero Image */}
+            <div className="rounded-2xl overflow-hidden border border-[var(--border-light)]">
+              <img
+                src={sports5}
+                alt="Volleyball match at SSB Sanskrithi sports ground"
+                className="w-full h-[260px] sm:h-[360px] md:h-[440px] object-cover"
+                loading="lazy"
+              />
+            </div>
+
             {/* Sports Introduction */}
             <Card className="text-center bg-gradient-to-r from-[var(--surface-1)] to-[var(--surface-2)]">
               <h2 className="text-2xl sm:text-3xl font-bold gradient-text mb-6">Holistic Development Through Sports</h2>
@@ -165,6 +192,28 @@ export default function SportsFacility() {
                 </Card>
               ))}
             </div>
+
+            {/* Sports Gallery */}
+            <Card>
+              <h2 className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 text-xl sm:text-2xl font-bold text-[var(--text)] mb-6">
+                <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-lg bg-[var(--glass-bg)] backdrop-blur-sm border border-[var(--glass-border)] flex items-center justify-center shrink-0">
+                  <span className="text-2xl">📸</span>
+                </div>
+                <span className="leading-tight">Sports in Action</span>
+              </h2>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
+                {SPORTS_GALLERY.map((img, i) => (
+                  <div key={i} className="rounded-xl overflow-hidden border border-[var(--border-light)]">
+                    <img
+                      src={img.src}
+                      alt={img.alt}
+                      className="w-full h-[160px] sm:h-[200px] md:h-[220px] object-cover hover:scale-[1.02] transition-transform duration-300"
+                      loading="lazy"
+                    />
+                  </div>
+                ))}
+              </div>
+            </Card>
 
             {/* Gymnasium Facilities */}
             <Card>

@@ -28,3 +28,6 @@ dist-ssr
 
 # Claude workspace
 .claude/
+
+# Source brochure assets (raw originals — copy what's needed into src/assets/)
+SSB-Brochure/

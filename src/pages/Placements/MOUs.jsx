@@ -7,70 +7,71 @@ export default function PlacementMOUs() {
       <div className="section-spacing">
         <div className="container">
           <SectionHeader
-            title="MOUs & Collaborations"
-            subtitle="Industry partnerships and collaborations"
-            description="Strategic alliances for enhanced placement opportunities"
+            title="Placement MOUs & Collaborations"
+            subtitle="Industry partnerships for placements"
+            description="Strategic alliances that bring leading recruiters to the Sanskrithi campus"
           />
-          
+
           <div className="space-y-section">
             <div className="panel">
               <h2>Strategic Partnerships Overview</h2>
               <p>
-                Our Memorandums of Understanding (MOUs) and strategic collaborations 
-                with leading organizations create a robust network that benefits our 
-                students through enhanced placement opportunities, industry exposure, 
-                and skill development programs.
+                Our Memorandums of Understanding and recruitment partnerships with leading
+                organisations create a robust placement network for Sanskrithi students.
+                These collaborations span banking, IT services, consulting, FMCG, finance,
+                logistics, e-commerce and startups.
               </p>
+              <div className="mt-4">
+                <a
+                  href="/placements/campus-drives"
+                  className="inline-block px-5 py-2.5 rounded-lg bg-gradient-to-r from-[var(--brand)] to-[var(--brand-light)] text-white font-semibold text-sm hover:scale-105 transition-transform"
+                >
+                  View All Recruiters →
+                </a>
+              </div>
             </div>
 
             <div className="panel">
-              <h2>Corporate Partners</h2>
+              <h2>Sectors Where Our Partners Recruit</h2>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="card">
-                  <h4 className="font-semibold mb-2">🏢 Multinational Corporations</h4>
-                  <p className="text-sm mb-3">Global companies offering diverse opportunities</p>
+                  <h4 className="font-semibold mb-2">🏢 IT Services & Consulting</h4>
+                  <p className="text-sm mb-3">Technology consulting, BPS, business analysis roles</p>
                   <ul className="list-disc list-inside space-y-1 text-xs">
-                    <li>IBM India - Technology and consulting roles</li>
-                    <li>Accenture - Business consulting and digital services</li>
-                    <li>Deloitte - Audit, consulting, and advisory services</li>
-                    <li>Microsoft - Technology and business solutions</li>
-                    <li>Amazon - E-commerce and cloud services</li>
+                    <li>TCS, Wipro, Cognizant, Infosys, HCL, Tech Mahindra</li>
+                    <li>Accenture, Deloitte, KPMG, EY</li>
+                    <li>Genpact, Quess, Tricon Infotech</li>
                   </ul>
                 </div>
-                
+
                 <div className="card">
-                  <h4 className="font-semibold mb-2">🏦 Financial Services</h4>
-                  <p className="text-sm mb-3">Banking and financial sector partnerships</p>
+                  <h4 className="font-semibold mb-2">🏦 Banking & Financial Services</h4>
+                  <p className="text-sm mb-3">Retail and corporate banking, NBFCs, financial services</p>
                   <ul className="list-disc list-inside space-y-1 text-xs">
-                    <li>HDFC Bank - Banking and financial services</li>
-                    <li>ICICI Bank - Retail and corporate banking</li>
-                    <li>Axis Bank - Financial products and services</li>
-                    <li>Bajaj Finance - Consumer financing solutions</li>
-                    <li>SBI Life - Insurance and investment services</li>
+                    <li>HDFC Bank, ICICI Bank, SBI, Yes Bank, IDFC First Bank</li>
+                    <li>CSB Bank, City Union Bank</li>
+                    <li>Bajaj Finserv, Poonawalla Fincorp, Godrej Capital, Manappuram Finance, Muthoot Finance</li>
+                    <li>J.P. Morgan, PayPal, Factset</li>
                   </ul>
                 </div>
-                
+
                 <div className="card">
-                  <h4 className="font-semibold mb-2">🏭 Manufacturing & Retail</h4>
-                  <p className="text-sm mb-3">Industry leaders in manufacturing and retail</p>
+                  <h4 className="font-semibold mb-2">🛍️ E-commerce, Retail & Logistics</h4>
+                  <p className="text-sm mb-3">Marketplace ops, supply chain, last-mile delivery</p>
                   <ul className="list-disc list-inside space-y-1 text-xs">
-                    <li>Reliance Industries - Petrochemicals and retail</li>
-                    <li>Tata Group - Diversified industrial conglomerate</li>
-                    <li>Mahindra Group - Automotive and technology</li>
-                    <li>ITC Limited - FMCG and hospitality</li>
-                    <li>Flipkart - E-commerce and logistics</li>
+                    <li>Amazon, Uber, Slice, NoBroker, Zepto</li>
+                    <li>UltraTech Cement, KIA, Delhivery</li>
                   </ul>
                 </div>
-                
+
                 <div className="card">
-                  <h4 className="font-semibold mb-2">🚀 Startups & SMEs</h4>
+                  <h4 className="font-semibold mb-2">🚀 EdTech, Startups & Specialised Firms</h4>
                   <p className="text-sm mb-3">Emerging companies and growth-stage businesses</p>
                   <ul className="list-disc list-inside space-y-1 text-xs">
-                    <li>Byju's - EdTech and learning solutions</li>
-                    <li>Zomato - Food delivery and restaurant tech</li>
-                    <li>Paytm - Fintech and digital payments</li>
-                    <li>Ola - Mobility and transportation services</li>
-                    <li>Swiggy - Food delivery and logistics</li>
+                    <li>upGrad, Teachnook, Corizo</li>
+                    <li>Brihaspathi, Selfeey, Wayspire</li>
+                    <li>Stars Management, Movidu, InTrAinz, Rinex, MOS</li>
+                    <li>Samsung, Total, Careernet, [24]7.ai</li>
                   </ul>
                 </div>
               </div>
@@ -82,36 +83,33 @@ export default function PlacementMOUs() {
                 <div>
                   <h4 className="font-semibold mb-2">For Students</h4>
                   <ul className="list-disc list-inside space-y-1 text-sm">
-                    <li>Guaranteed placement opportunities</li>
+                    <li>Direct placement opportunities</li>
                     <li>Industry-specific training programs</li>
                     <li>Mentorship from industry experts</li>
                     <li>Real-world project experience</li>
-                    <li>Fast-track career progression</li>
-                    <li>Professional networking opportunities</li>
+                    <li>Professional networking</li>
                   </ul>
                 </div>
-                
+
                 <div>
                   <h4 className="font-semibold mb-2">For Institution</h4>
                   <ul className="list-disc list-inside space-y-1 text-sm">
-                    <li>Enhanced placement statistics</li>
                     <li>Industry-aligned curriculum</li>
-                    <li>Faculty exchange programs</li>
-                    <li>Research collaboration opportunities</li>
+                    <li>Guest faculty from industry</li>
+                    <li>Joint research initiatives</li>
                     <li>Infrastructure development support</li>
-                    <li>Brand recognition and credibility</li>
+                    <li>Enhanced placement track record</li>
                   </ul>
                 </div>
-                
+
                 <div>
                   <h4 className="font-semibold mb-2">For Industry Partners</h4>
                   <ul className="list-disc list-inside space-y-1 text-sm">
                     <li>Access to quality talent pool</li>
                     <li>Reduced recruitment costs</li>
                     <li>Early talent identification</li>
-                    <li>Customized skill development</li>
-                    <li>Innovation and fresh perspectives</li>
-                    <li>Corporate social responsibility</li>
+                    <li>Customised skill development</li>
+                    <li>Fresh perspectives and innovation</li>
                   </ul>
                 </div>
               </div>
@@ -128,10 +126,9 @@ export default function PlacementMOUs() {
                     <li>Pre-defined job profiles and packages</li>
                     <li>Streamlined selection processes</li>
                     <li>Priority access to students</li>
-                    <li>Long-term partnership benefits</li>
                   </ul>
                 </div>
-                
+
                 <div className="card">
                   <h4 className="font-semibold mb-2">🎓 Academic Partnerships</h4>
                   <p className="text-sm mb-3">Educational collaboration and curriculum enhancement</p>
@@ -139,11 +136,10 @@ export default function PlacementMOUs() {
                     <li>Guest faculty from industry</li>
                     <li>Curriculum advisory committees</li>
                     <li>Joint research projects</li>
-                    <li>Student exchange programs</li>
                     <li>Certification program partnerships</li>
                   </ul>
                 </div>
-                
+
                 <div className="card">
                   <h4 className="font-semibold mb-2">💼 Internship Agreements</h4>
                   <p className="text-sm mb-3">Structured internship and training programs</p>
@@ -152,104 +148,17 @@ export default function PlacementMOUs() {
                     <li>Live project assignments</li>
                     <li>Mentorship during internships</li>
                     <li>Pre-placement offers (PPOs)</li>
-                    <li>Skill assessment and feedback</li>
                   </ul>
                 </div>
-                
+
                 <div className="card">
                   <h4 className="font-semibold mb-2">🔬 Research Collaborations</h4>
                   <p className="text-sm mb-3">Joint research and innovation initiatives</p>
                   <ul className="list-disc list-inside space-y-1 text-xs">
-                    <li>Industry-sponsored research projects</li>
+                    <li>Industry-sponsored research</li>
                     <li>Innovation labs and incubators</li>
-                    <li>Technology transfer programs</li>
-                    <li>Patent filing support</li>
                     <li>Startup incubation partnerships</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div className="panel">
-              <h2>Partnership Statistics</h2>
-              <div className="grid md:grid-cols-4 gap-6">
-                <div className="text-center card">
-                  <div className="text-3xl font-bold text-[var(--brand)] mb-2">75+</div>
-                  <p className="text-sm">Active MOUs</p>
-                </div>
-                <div className="text-center card">
-                  <div className="text-3xl font-bold text-[var(--brand)] mb-2">85%</div>
-                  <p className="text-sm">Placement through Partners</p>
-                </div>
-                <div className="text-center card">
-                  <div className="text-3xl font-bold text-[var(--brand)] mb-2">200+</div>
-                  <p className="text-sm">Internship Opportunities</p>
-                </div>
-                <div className="text-center card">
-                  <div className="text-3xl font-bold text-[var(--brand)] mb-2">5 Years</div>
-                  <p className="text-sm">Average Partnership Duration</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="panel">
-              <h2>Recent Partnership Achievements</h2>
-              <ul className="list-disc list-inside space-y-2">
-                <li><strong>Technology Sector:</strong> Signed MOU with 5 new IT companies for 100+ placement opportunities</li>
-                <li><strong>Banking & Finance:</strong> Extended partnership with leading banks for specialized finance roles</li>
-                <li><strong>Consulting:</strong> Established collaboration with top consulting firms for management trainee positions</li>
-                <li><strong>E-commerce:</strong> Partnership with online retail giants for digital marketing and analytics roles</li>
-                <li><strong>Healthcare:</strong> New agreements with healthcare companies for management positions</li>
-                <li><strong>Manufacturing:</strong> Industrial partnerships for operations and supply chain management roles</li>
-              </ul>
-            </div>
-
-            <div className="panel">
-              <h2>Partnership Development Process</h2>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <h4 className="font-semibold mb-2">Identification & Outreach</h4>
-                  <ol className="list-decimal list-inside space-y-1 text-sm">
-                    <li>Market research and company identification</li>
-                    <li>Initial contact and relationship building</li>
-                    <li>Needs assessment and requirement analysis</li>
-                    <li>Proposal development and presentation</li>
-                  </ol>
-                </div>
-                
-                <div>
-                  <h4 className="font-semibold mb-2">Formalization & Implementation</h4>
-                  <ol className="list-decimal list-inside space-y-1 text-sm">
-                    <li>MOU drafting and legal review</li>
-                    <li>Agreement signing and documentation</li>
-                    <li>Implementation planning and scheduling</li>
-                    <li>Regular review and renewal processes</li>
-                  </ol>
-                </div>
-              </div>
-            </div>
-
-            <div className="panel">
-              <h2>Future Partnership Goals</h2>
-              <p>Our strategic objectives for expanding and strengthening industry partnerships:</p>
-              <div className="grid md:grid-cols-2 gap-6 mt-4">
-                <div>
-                  <h4 className="font-semibold mb-2">Short-term Goals (1-2 years)</h4>
-                  <ul className="list-disc list-inside space-y-1 text-sm">
-                    <li>Increase active MOUs to 100+</li>
-                    <li>Expand into emerging technology sectors</li>
-                    <li>Develop international partnership opportunities</li>
-                    <li>Strengthen startup ecosystem connections</li>
-                  </ul>
-                </div>
-                
-                <div>
-                  <h4 className="font-semibold mb-2">Long-term Vision (3-5 years)</h4>
-                  <ul className="list-disc list-inside space-y-1 text-sm">
-                    <li>Establish global corporate partnerships</li>
-                    <li>Create innovation and research hubs</li>
-                    <li>Develop industry-specific centers of excellence</li>
-                    <li>Build sustainable competitive advantages</li>
+                    <li>Technology transfer programs</li>
                   </ul>
                 </div>
               </div>
@@ -257,13 +166,26 @@ export default function PlacementMOUs() {
 
             <div className="panel">
               <h2>Partnership Inquiries</h2>
-              <p>For companies interested in establishing partnerships with SSB Puttaparthi:</p>
-              <div className="mt-4">
-                <p><strong>Corporate Relations Office</strong></p>
-                <p>Email: partnerships@ssbputtaparthi.edu.in</p>
-                <p>Phone: +91-XXXX-XXXXXX</p>
-                <p>Direct Line: +91-XXXX-XXXXXX (Corporate Relations Manager)</p>
-                <p>Office: Placement Block, First Floor</p>
+              <p>For companies interested in establishing placement partnerships with Sanskrithi School of Business:</p>
+              <div className="mt-4 grid sm:grid-cols-2 gap-4">
+                <div>
+                  <p className="text-[var(--text-soft)] text-sm mb-1">Email</p>
+                  <a
+                    href="mailto:admissions.director@sanskrithibschool.com"
+                    className="font-semibold hover:text-[var(--accent)] transition-colors break-words"
+                  >
+                    admissions.director@sanskrithibschool.com
+                  </a>
+                </div>
+                <div>
+                  <p className="text-[var(--text-soft)] text-sm mb-1">Phone</p>
+                  <a
+                    href="tel:+919100974544"
+                    className="font-semibold hover:text-[var(--accent)] transition-colors"
+                  >
+                    +91 9100 974 544
+                  </a>
+                </div>
               </div>
             </div>
           </div>

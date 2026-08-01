@@ -24,6 +24,7 @@ export default function Footer() {
             <li><Link to="/admissions/fees" className="hover:text-white transition-colors">Fees & Payment</Link></li>
             <li><Link to="/committees/iqac" className="hover:text-white transition-colors">IQAC</Link></li>
             <li><Link to="/naac" className="hover:text-white transition-colors">NAAC</Link></li>
+            <li><Link to="/bonafide" className="hover:text-white transition-colors">Bonafide Certificate</Link></li>
           </ul>
         </div>
         <div>

@@ -6,6 +6,7 @@ const About = lazy(() => import('./pages/About.jsx'));
 const Contact = lazy(() => import('./pages/Contact.jsx'));
 const Inquiry = lazy(() => import('./pages/Inquiry.jsx'));
 const Committees = lazy(() => import('./pages/Committees.jsx'));
+const Bonafide = lazy(() => import('./pages/Bonafide.jsx'));
 
 // About Us pages
 const AboutOverview = lazy(() => import('./pages/About/Overview.jsx'));
@@ -112,6 +113,7 @@ export default [
   { path: '/contact', element: createElement(Contact) },
   { path: '/inquiry', element: createElement(Inquiry) },
   { path: '/committees', element: createElement(Committees) },
+  { path: '/bonafide', element: createElement(Bonafide) },
   { path: '/admissions', element: createElement(Admissions) },
   
   // About Us pages
